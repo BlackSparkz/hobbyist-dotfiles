@@ -1,0 +1,13 @@
+sort=-time
+layer=overlay
+background-color=#00000040
+width=340
+height=120
+border-size=2
+border-color=#00000040
+border-radius=32
+margin=20
+padding=20
+max-icon-size=48
+default-timeout=10000
+font=Google Sans Flex 12
