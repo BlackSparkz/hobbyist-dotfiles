@@ -211,7 +211,6 @@ window-rule {
 }
 
 binds {
-    Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+T { spawn "kitty"; }
     Mod+B { spawn "librewolf"; }
     Mod+N { spawn "thunar"; }
@@ -358,8 +357,6 @@ binds {
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
-    Mod+Shift+E { quit skip-confirmation=true; }
-    Ctrl+Alt+Delete { quit skip-confirmation=true; }
+    Mod+ctrl+E { quit skip-confirmation=true; }
 
-    Mod+Shift+P { power-off-monitors; }
 }
