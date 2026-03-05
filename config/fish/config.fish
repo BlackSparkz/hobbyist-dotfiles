@@ -53,6 +53,11 @@ alias apti='sudo apt install'
 alias aptr='sudo apt remove'
 
 # ==============================
+# Arch based
+# ==============================
+alias pacup='sudo pacman -Syu'
+
+# ==============================
 # System / Power
 # ==============================
 alias logout='loginctl terminate-user $USER'

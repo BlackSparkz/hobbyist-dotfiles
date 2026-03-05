@@ -66,24 +66,11 @@ input {
         // scroll-method "no-scroll"
     }
 
-    trackpoint {
-        // off
-        // natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "on-button-down"
-        // scroll-button 273
-        // scroll-button-lock
-        // middle-emulation
-    }
-
-       warp-mouse-to-focus
        focus-follows-mouse max-scroll-amount="10%"
 }
 
 layout {
     gaps 10
-
     center-focused-column "never"
     preset-column-widths {
         proportion 0.33333
@@ -112,7 +99,6 @@ layout {
         width 4
         active-color "#ffc87f"
         inactive-color "#505050"
-
         urgent-color "#9b0000"
         // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
     }
@@ -134,6 +120,8 @@ layout {
 spawn-sh-at-startup "waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/Niri/style.css"
 spawn-sh-at-startup "swaybg -i ~/Wallpapers/5825766.jpg -m fill"
 spawn-at-startup "kitty"
+spawn-at-startup "kdeconnect-indicator"
+spawn-at-startup "mako"
 
 hotkey-overlay {
       skip-at-startup
@@ -142,19 +130,18 @@ hotkey-overlay {
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
-    // slowdown 3.0
 
     workspace-switch {
-        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
     }
 
     window-open {
-        duration-ms 150
+        duration-ms 200
         curve "ease-out-expo"
     }
 
     window-close {
-        duration-ms 150
+        duration-ms 200
         curve "ease-out-quad"
     }
 
@@ -197,7 +184,7 @@ window-rule {
     open-floating true
 }
 
-/-window-rule {
+window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
 
@@ -214,6 +201,8 @@ binds {
     Mod+T { spawn "kitty"; }
     Mod+B { spawn "librewolf"; }
     Mod+N { spawn "thunar"; }
+    Mod+Ctrl+R {spawn-sh "bash $HOME/.config/mango/partial_screenshot.sh";}
+    Mod+Ctrl+S {spawn-sh "bash $HOME/.config/mango/full_screenshot.sh";}
     Mod+space {spawn-sh "pkill rofi || rofi -show drun";}
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
@@ -328,7 +317,7 @@ binds {
 
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
-    Mod+Ctrl+R { reset-window-height; }
+    // Mod+Ctrl+R { reset-window-height; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
 
@@ -354,8 +343,6 @@ binds {
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
-
-    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     Mod+ctrl+E { quit skip-confirmation=true; }
 
