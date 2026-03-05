@@ -8,6 +8,7 @@ blur {
 window-rule {
     match app-id="^kitty$"
     match app-id="^wlogout$"
+    match app-id="^mako$"
  
     background-effect {
         blur true
@@ -17,6 +18,7 @@ window-rule {
 layer-rule {
     match namespace="^waybar$"
     match namespace="^rofi$"
+    match namespace="^mako$"
     match namespace="^wlogout$"
     background-effect {
         blur true

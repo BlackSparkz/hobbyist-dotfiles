@@ -25,7 +25,7 @@
         "format" : "󰣇   Arch Linux",
                 "tooltip": true,
                 "tooltip-format": "App launcher",
-                "on-click": "bash $HOME/.config/rofi/rofi-toggle.sh",
+                "on-click": "pkill rofi || rofi -show drun",
                 },
 
     "clock": {
