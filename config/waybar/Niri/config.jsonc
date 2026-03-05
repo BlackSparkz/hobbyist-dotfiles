@@ -6,7 +6,7 @@
     "position": "top",
     "spacing": 8,
     
-    "modules-left": [ "custom/logo","niri/workspaces","network#bandwidth" ],
+    "modules-left": [ "custom/logo","network#bandwidth","niri/workspaces" ],
 
     "modules-center": [ "clock" ],
 

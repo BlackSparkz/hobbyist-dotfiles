@@ -25,9 +25,3 @@ scrollbar never
 mouse_hide_wait 3.0
 allow_remote_control yes
 confirm_os_window_close 0
-
-
-# BEGIN_KITTY_THEME
-# Default
-include current-theme.conf
-# END_KITTY_THEME

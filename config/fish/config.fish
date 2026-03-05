@@ -11,12 +11,12 @@ alias kreload='kitty @ load-config'
 # ==============================
 # ls
 # ==============================
-alias ls="eza --icons --group-directories-first"
+alias ls="eza --icons -l --group-directories-first"
 alias ll="eza -lh --icons"
 alias la="eza -lha --icons"
 alias top="btop"
-alias cat="bat --style=header,grid"
-alias cd="z"
+alias cat="bat"
+# alias cd="z"
 alias tree='tree -C'
 alias t='tree'
 
@@ -94,6 +94,6 @@ alias py='python3'
 
 set -g fish_greeting ""
 
-zoxide init fish | source
+# zoxide init fish | source
 
 # starship init fish | source
