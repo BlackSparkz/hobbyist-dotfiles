@@ -1,12 +1,12 @@
 {
-    //"margin-top": 5,
-    //"margin-left": 10,
-    //"margin-right": 10,
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
     "layer": "top",
     "position": "top",
     "spacing": 8,
     
-    "modules-left": [ "custom/logo","hyprland/workspaces","network#bandwidth" ],
+    "modules-left": [ "custom/logo","network#bandwidth" ],
 
     "modules-center": [ "clock" ],
 
@@ -20,18 +20,6 @@
         "backlight",
         "battery",
     ],
-
-
-    "hyprland/workspaces": {
-	"format": "{name}: {icon}",
-	"format-icons": {
-		"active": "",
-		"default": ""
-	},
-       "persistent-workspaces": {
-             "*": 2, // 5 workspaces by default on every monitor
-       }
-},
 
 "custom/logo": {
         "format" : "󰣇   Arch Linux",

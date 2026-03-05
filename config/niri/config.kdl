@@ -7,6 +7,7 @@ blur {
 
 window-rule {
     match app-id="^kitty$"
+    match app-id="^wlogout$"
  
     background-effect {
         blur true
@@ -201,6 +202,7 @@ binds {
     Mod+T { spawn "kitty"; }
     Mod+B { spawn "librewolf"; }
     Mod+N { spawn "thunar"; }
+    Mod+P { spawn-sh "pkill wlogout || wlogout"; }
     Mod+Ctrl+R {spawn-sh "bash $HOME/.config/mango/partial_screenshot.sh";}
     Mod+Ctrl+S {spawn-sh "bash $HOME/.config/mango/full_screenshot.sh";}
     Mod+space {spawn-sh "pkill rofi || rofi -show drun";}

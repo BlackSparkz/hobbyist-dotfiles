@@ -25,31 +25,31 @@ button:focus, button:active, button:hover {
 }
 
 #lock {
-    border-radius: 0 0 50 0;
+    border-radius: 0px 0px 50px 0px;
     background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
 }
 
 #logout {
-    border-radius: 0 50 0 0 ;
+    border-radius: 0px 50px 0px 0px ;
     background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
 }
 
 #suspend {
-border-radius: 0 0 0 50 ;
+border-radius: 0px 0px 0px 50px ;
     background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
 }
 
 #hibernate {
-border-radius: 0 0 0 0;
+border-radius: 0px 0px 0px 0px;
     background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
 }
 
 #shutdown {
-border-radius: 50 0 0 0;
+border-radius: 50px 0px 0px 0px;
     background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
 }
 
 #reboot {
-border-radius: 0 0 0 0;
+border-radius: 0px 0px 0px 0px;
     background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
 }

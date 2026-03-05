@@ -23,20 +23,10 @@ alias t='tree'
 # ==============================
 # Navigation
 # ==============================
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias home='cd ~'
-alias desk='cd ~/Desktop'
+alias b='cd ..'
+alias bb='cd ../..'
+alias h='cd ~'
 alias d='cd ~/Downloads'
-alias docs='cd ~/Documents'
-
-# ==============================
-# Safe file operations
-# ==============================
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
 
 # ==============================
 # Fedora (dnf)
@@ -55,7 +45,10 @@ alias aptr='sudo apt remove'
 # ==============================
 # Arch based
 # ==============================
-alias pacup='sudo pacman -Syu'
+# alias pacup='sudo timeshift --create --comments "Before update" --tags O && sudo pacman -Syu --noconfirm && yay -Syu'
+alias pacup='sudo timeshift --create --comments "Before update" --tags O && yay -Syu && yay -Yc'
+alias paci='yay -S'
+alias pacr='yay -Rns'
 
 # ==============================
 # System / Power
