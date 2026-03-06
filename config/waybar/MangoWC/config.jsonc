@@ -116,7 +116,7 @@
         "smooth-scrolling-threshold": 0.5,
         "format": "{icon} {volume}%",
         "format-bluetooth": "{volume}% {icon}",
-        "format-muted": " ",
+        "format-muted": "   Muted",
         "format-icons": {
             "default": [" ", "  ", "   "]
         },
