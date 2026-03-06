@@ -28,7 +28,7 @@ alias b='cd ..'
 alias bb='cd ../..'
 alias h='cd ~'
 alias d='cd ~/Downloads'
-alias do='cd ~/Dotfiles'
+alias dd='cd ~/Dotfiles'
 
 # ==============================
 # Fedora (dnf)
