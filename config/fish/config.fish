@@ -104,5 +104,5 @@ alias top='btop --tty'
 alias py='python3'
 
 # zoxide init fish | source
-
 # starship init fish | source
+# fastfetch --logo none | pv -qL 400 | lolcat
