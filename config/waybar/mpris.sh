@@ -10,11 +10,11 @@ json_escape() {
 
 player_icon() {
   case "$1" in
-  *spotify*) printf '%s' "" ;;
+  *spotify*) printf '%s' " " ;;
   *firefox* | *zen*) printf '%s' " " ;;
-  *chromium*) printf '%s' "" ;;
-  *vlc*) printf '%s' "󰕼" ;;
-  *) printf '%s' "" ;;
+  *chromium*) printf '%s' " " ;;
+  *vlc*) printf '%s' "󰕼 " ;;
+  *) printf '%s' "  " ;;
   esac
 }
 

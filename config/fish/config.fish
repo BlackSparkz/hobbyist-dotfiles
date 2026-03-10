@@ -50,7 +50,6 @@ alias aptr='sudo apt remove'
 alias pacup='sudo timeshift --create --comments "Before update" --tags O && paru -Syu'
 alias paci='paru -S --needed'
 alias pacr='paru -Rns'
-alias pacc='paru -Rns $(paru -Qtdq)'
 
 # ==============================
 # System / Power

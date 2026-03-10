@@ -1,15 +1,20 @@
+layer-rule {
+    match namespace="^rofi$"
+    geometry-corner-radius 50 50 0 0
+    background-effect {
+        blur true
+    }
+}
+
 blur {
     passes 2
-    offset 4
+    offset 6
     noise 0.02
     saturation 1.5
 }
 
 window-rule {
     match app-id="^kitty$"
-    match app-id="^wlogout$"
-    match app-id="^mako$"
- 
     background-effect {
         blur true
     }
@@ -17,7 +22,6 @@ window-rule {
 
 layer-rule {
     match namespace="^waybar$"
-    match namespace="^rofi$"
     match namespace="^mako$"
     match namespace="^wlogout$"
     background-effect {
@@ -120,6 +124,7 @@ layout {
 spawn-sh-at-startup "waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/Niri/style.css"
 spawn-sh-at-startup "swaybg -i ~/Wallpapers/56943-3840x1947-desktop-hd-neon-wallpaper-image.jpg -m fill"
 spawn-at-startup "kitty"
+spawn-sh-at-startup "kitty -e btop"
 spawn-at-startup "kdeconnect-indicator"
 spawn-at-startup "mako"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
