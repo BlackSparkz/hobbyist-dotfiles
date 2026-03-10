@@ -116,10 +116,9 @@ layout {
     }
 }
 
-spawn-sh-at-startup "waybar -c $HOME/.config/waybar/MangoWC/config.jsonc -s $HOME/.config/waybar/MangoWC/style.css"
+spawn-sh-at-startup "waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/Niri/style.css &"
 spawn-sh-at-startup "swaybg -i ~/Wallpapers/japan-artistic-5120x2880-25406.jpg -m fill"
 spawn-at-startup "kitty"
-spawn-sh-at-startup "kitty -e btop"
 spawn-at-startup "kdeconnect-indicator"
 spawn-at-startup "mako"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
@@ -201,6 +200,7 @@ window-rule {
 
 binds {
     Mod+T { spawn "kitty"; }
+    Mod+R { spawn-sh "pkill waybar || waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/Niri/style.css &"; }
     Mod+B { spawn "librewolf"; }
     Mod+M { spawn "Telegram"; }
     Mod+N { spawn-sh "kitty -e yazi"; }
@@ -321,7 +321,7 @@ binds {
     Mod+Comma  { consume-window-into-column; }
     Mod+Period { expel-window-from-column; }
 
-    Mod+R { switch-preset-column-width; }
+    Mod+S { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     // Mod+Ctrl+R { reset-window-height; }
     Mod+F { maximize-column; }

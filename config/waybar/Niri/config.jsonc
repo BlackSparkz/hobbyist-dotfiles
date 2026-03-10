@@ -5,8 +5,9 @@
     "layer": "top",
     "position": "top",
     "spacing": 8,
+    "reload_style_on_change": true,
     
-    "modules-left": [ "custom/logo","custom/mpris","network#bandwidth","bluetooth" ],
+    "modules-left": [ "custom/logo","custom/mpris","niri/workspaces" ],
 
     "modules-center": [ "clock" ],
 
@@ -23,11 +24,20 @@
 
 "custom/logo": {
     "format" : "󰣇   Arch Linux",
-    "tooltip": true,
+    "tooltip": false,
     "tooltip-format": "App launcher",
     "on-click": "pkill rofi || rofi -show drun",
     "on-click-right": "kitty",
     },
+
+
+    "niri/workspaces": {
+	"format": "{icon}",
+	"format-icons": {
+		"active": "",
+		"default": ""
+	}
+},
 
 "custom/mpris": {
     "exec": "~/Dotfiles/config/waybar/mpris.sh",
@@ -44,6 +54,7 @@
     "format": "It's {:%H:%M:%S}",
     "format-alt": "It’s {:%H:%M:%S on %A, %d %B %Y}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "on-click-right": "kitty -e bluetui"
     },
 
 "cpu": {
@@ -100,28 +111,11 @@
     "network#wifi": {
         "interval": 1,
         "format-wifi": "    {essid}",
+        "format-alt": " {bandwidthUpBytes}   {bandwidthDownBytes}",
         "tooltip-format-wifi": "You are connected to {essid} ({signalStrength}%)",
         "format-disconnected": "   No internet",
         "on-click-right": "kitty -e nmtui"
     },
-
-
-
-    "network#bandwidth": {
-        "interval": 1,
-        "format": " {bandwidthUpBytes}   {bandwidthDownBytes}",
-        "tooltip": false,
-        "format-disconnected": "",
-     },
-
-
-     "bluetooth": {
-        "interval": 1,
-	"format": "",
-	"format-connected": "  {device_alias}",
-	"format-connected-battery": "  {device_alias} {device_battery_percentage}%",
-        "on-click-right": "kitty -e bluetui"
-     },
 
 
     "pulseaudio": {
