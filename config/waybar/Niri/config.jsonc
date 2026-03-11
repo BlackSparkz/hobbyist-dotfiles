@@ -14,8 +14,8 @@
     "modules-right": [
         "custom/power",
         "cpu",
-        "disk",
         "memory",
+        "disk",
         "network#wifi",
         "pulseaudio",
         "backlight",
@@ -50,11 +50,10 @@
 
 "clock": {
     "interval": 1,
-    "tooltip": true,
+    "tooltip": false,
     "format": "It's {:%H:%M:%S}",
     "format-alt": "It’s {:%H:%M:%S on %A, %d %B %Y}",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "on-click-right": "kitty -e bluetui"
+    "on-click-right": "kitty -e bluetui",
     },
 
 "cpu": {
@@ -86,13 +85,14 @@
 
 "backlight": {
         "reverse-scrolling": true,
-        "smooth-scrolling-threshold": 2.0,
+        "smooth-scrolling-threshold": 5.0,
         "on-scroll-up": "brightnessctl set 1%+",
         "on-scroll-down": "brightnessctl set 1%-",
         "tooltip": true,
         "tooltip-format": "Current brightness is {percent} percent",
         "format": "{icon}   {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-click-right": "bash $HOME/.config/SwayBg/random-wall.sh"
         },
 
    "battery": { "states": {"warning": 25,"critical": 15 },
@@ -121,7 +121,7 @@
     "pulseaudio": {
         "scroll-step": 1,
         "reverse-scrolling": true,
-        "smooth-scrolling-threshold": 0.5,
+        "smooth-scrolling-threshold": 2.0,
         "format": "{icon} {volume}%",
         "format-bluetooth":" {icon} {volume}%",
         "format-muted": "   Muted",

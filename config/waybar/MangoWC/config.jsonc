@@ -5,17 +5,18 @@
     "layer": "top",
     "position": "top",
     "spacing": 8,
+    "reload_style_on_change": true,
     
-    "modules-left": [ "custom/logo","custom/mpris","network#bandwidth","bluetooth" ],
+    "modules-left": [ "custom/logo","custom/mpris" ],
 
     "modules-center": [ "clock" ],
 
     "modules-right": [
         "custom/power",
         "cpu",
-        "disk",
         "memory",
-        "network#wifi",
+        "disk",
+        "network",
         "pulseaudio",
         "backlight",
         "battery",
@@ -44,6 +45,7 @@
     "format": "It's {:%H:%M:%S}",
     "format-alt": "It’s {:%H:%M:%S on %A, %d %B %Y}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "on-click-right": "kitty -e bluetui",
     },
 
 "cpu": {
@@ -75,13 +77,14 @@
 
 "backlight": {
         "reverse-scrolling": true,
-        "smooth-scrolling-threshold": 2.0,
+        "smooth-scrolling-threshold": 5.0,
         "on-scroll-up": "brightnessctl set 1%+",
         "on-scroll-down": "brightnessctl set 1%-",
         "tooltip": true,
         "tooltip-format": "Current brightness is {percent} percent",
         "format": "{icon}   {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-click-right": "bash $HOME/.config/SwayBg/random-wall.sh",
         },
 
    "battery": { "states": {"warning": 25,"critical": 15 },
@@ -97,37 +100,20 @@
         "format-icons": { "default": ["", "", "", "", ""]},
       },
 
-    "network#wifi": {
+    "network": {
         "interval": 1,
         "format-wifi": "    {essid}",
+        "format-alt": " {bandwidthUpBytes}   {bandwidthDownBytes}",
         "tooltip-format-wifi": "You are connected to {essid} ({signalStrength}%)",
         "format-disconnected": "   No internet",
         "on-click-right": "kitty -e nmtui"
     },
 
 
-
-    "network#bandwidth": {
-        "interval": 1,
-        "format": " {bandwidthUpBytes}   {bandwidthDownBytes}",
-        "tooltip": false,
-        "format-disconnected": "",
-     },
-
-
-     "bluetooth": {
-        "interval": 1,
-	"format": "",
-	"format-connected": "  {device_alias}",
-	"format-connected-battery": "  {device_alias} {device_battery_percentage}%",
-        "on-click-right": "kitty -e bluetui"
-     },
-
-
     "pulseaudio": {
         "scroll-step": 1,
         "reverse-scrolling": true,
-        "smooth-scrolling-threshold": 0.5,
+        "smooth-scrolling-threshold": 2.0,
         "format": "{icon} {volume}%",
         "format-bluetooth":" {icon} {volume}%",
         "format-muted": "   Muted",
