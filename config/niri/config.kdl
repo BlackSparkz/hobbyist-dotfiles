@@ -211,6 +211,7 @@ binds {
     Mod+Ctrl+R {spawn-sh "bash $HOME/.config/mango/partial_screenshot.sh";}
     Mod+Ctrl+S {spawn-sh "bash $HOME/.config/mango/full_screenshot.sh";}
     Mod+space {spawn-sh "pkill rofi || rofi -show drun";}
+    Mod+Ctrl+L { spawn-sh "bash ~/.config/hypr/randomwall.sh"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
@@ -243,7 +244,7 @@ binds {
     Mod+Ctrl+H     { move-column-left; }
     Mod+Ctrl+J     { move-window-down; }
     Mod+Ctrl+K     { move-window-up; }
-    Mod+Ctrl+L     { move-column-right; }
+    // Mod+Ctrl+L     { move-column-right; }
 
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }
