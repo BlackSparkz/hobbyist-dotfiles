@@ -125,15 +125,16 @@
     "format" : "",
         "tooltip": false,
         "tooltip-format": "Power menu",
-        "menu": "on-click",
+        //"menu": "on-click",
         "on-click-right": "wlogout",
-        "menu-file": "~/.config/waybar/power_menu.xml",
-        "menu-actions": {
-            "shutdown": "systemctl poweroff",
-            "reboot": "systemctl reboot",
-            "suspend": "systemctl suspend",
-            "logout": "loginctl terminate-user $USER",
-        },
+	"on-click": "wlogout"
+        //"menu-file": "~/.config/waybar/power_menu.xml",
+        //"menu-actions": {
+        //    "shutdown": "systemctl poweroff",
+        //    "reboot": "systemctl reboot",
+        //    "suspend": "systemctl suspend",
+        //    "logout": "loginctl terminate-user $USER",
+        //},
    },
 
 }

@@ -7,7 +7,7 @@ layer-rule {
 }
 
 blur {
-    passes 3
+    passes 4
     offset 6
     noise 0.02
     saturation 1.5
