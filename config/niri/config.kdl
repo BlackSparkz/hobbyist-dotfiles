@@ -348,9 +348,9 @@ binds {
 
    //  Mod+W { toggle-column-tabbed-display; }
 
-    Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Mod+Print { screenshot; }
+    Print { screenshot-screen; }
+    Mod+Ctrl+Print { screenshot-window; }
 
     Mod+ctrl+E { quit skip-confirmation=true; }
 

@@ -123,7 +123,7 @@
 
 "custom/power": {
     "format" : "",
-        "tooltip": false,
+        "tooltip": true,
         "tooltip-format": "Power menu",
         //"menu": "on-click",
         "on-click-right": "wlogout",
