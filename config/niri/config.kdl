@@ -206,6 +206,7 @@ binds {
     Mod+Ctrl+S {spawn-sh "bash $HOME/.config/mango/full_screenshot.sh";}
     Mod+space {spawn-sh "pkill rofi || rofi -show drun";}
     Mod+Ctrl+L { spawn-sh "bash ~/.config/hypr/randomwall.sh"; }
+    Mod+Ctrl+T { spawn "alacritty"; }
     Mod+Ctrl+delete { spawn-sh "cliphist wipe"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }

@@ -1,0 +1,14 @@
+[window]
+padding = { x = 24, y = 21 }
+decorations = "none"
+dynamic_padding = true
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "Google Sans Code NF"
+style = "Regular"
+
+[selection]
+save_to_clipboard = true
