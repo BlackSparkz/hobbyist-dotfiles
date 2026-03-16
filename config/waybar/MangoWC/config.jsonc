@@ -4,10 +4,10 @@
     //"margin-right": 10,
     "layer": "top",
     "position": "top",
-    "spacing": 8,
+    "spacing": 6,
     "reload_style_on_change": true,
     
-    "modules-left": [ "custom/logo","custom/mpris" ],
+    "modules-left": [ "custom/logo","custom/mpris","ext/workspaces" ],
 
     "modules-center": [ "clock" ],
 
@@ -21,6 +21,14 @@
         "backlight",
         "battery",
     ],
+
+  "ext/workspaces": {
+    "format": "{icon}",
+    "ignore-hidden": true,
+    "on-click": "activate",
+    "on-click-right": "deactivate",
+    "sort-by-id": true
+  },
 
 "custom/logo": {
     "format" : "󰣇   Arch Linux",
