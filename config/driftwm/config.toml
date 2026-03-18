@@ -2,7 +2,6 @@ mod_key = "super"
 
 autostart = [
      "kdeconnect-indicator",
-     "waybar -c $HOME/.config/waybar/driftwm/config.jsonc -s $HOME/.config/waybar/driftwm/style.css &",
      "wl-paste --type image --watch cliphist store",
      "wl-paste --type text --watch cliphist store",
      "mako",
@@ -30,8 +29,8 @@ size = 24
 
 [navigation]
 animation_speed = 0.1       # camera lerp factor (higher = faster)
-nudge_step = 20             # px per nudge-window action
-pan_step = 140.0            # px per pan-viewport action
+nudge_step = 40             # px per nudge-window action
+pan_step = 40.0            # px per pan-viewport action
 #Anchors: canvas points discoverable by center-nearest (4-finger swipe / Mod+Arrow)
 # even when no window is there. Uses Y-up coordinate system.
 # anchors = [[0, 0]]
@@ -107,24 +106,13 @@ shader_path = "~/Wallpapers/pink_cloud.glsl"
 "mod+m" = "fit-window"
 "mod+c" = "center-window"
 "mod+h" = "home-toggle"
-"mod+r" = "reload-config"
-"mod+down" = "center-nearest down"
-"mod+left" = "center-nearest left"
-"mod+right" = "center-nearest right"
-"mod+ctrl+up" = "nudge-window up"
-"mod+ctrl+down" = "nudge-window down"
-"mod+ctrl+left" = "nudge-window left"
-"mod+ctrl+right" = "nudge-window right"
-"mod+shift+up" = "pan-viewport up"
-"mod+shift+down" = "pan-viewport down"
-"mod+shift+left" = "pan-viewport left"
-"mod+shift+right" = "pan-viewport right"
+"mod+r" = "spawn pkill waybar || waybar -c $HOME/.config/waybar/driftwm/config.jsonc -s $HOME/.config/waybar/driftwm/style.css &"
 "alt+c" = "cycle-windows forward"
 "mod+alt+c" = "cycle-windows backward"
 "mod+equal" = "zoom-in"
 "mod+minus" = "zoom-out"
 "mod+0" = "zoom-reset"
-"mod+z" = "zoom-reset"
+"mod+z" = "reload-config"
 "mod+o" = "zoom-to-fit"
 # "mod+1" = "go-to -1750 1750"     # top-left
 # "mod+2" = "go-to 1750 1750"      # top-right
