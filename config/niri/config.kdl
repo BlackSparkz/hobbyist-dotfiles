@@ -47,14 +47,13 @@ cursor {
     xcursor-theme "Bibata-Modern-Ice"
     xcursor-size 24
     hide-when-typing
-    hide-after-inactive-ms 1000
+    hide-after-inactive-ms 3000
 }
 
 input {
     keyboard {
-        xkb {
-        }
-
+	    repeat-rate 60
+	    repeat-delay 300
     }
 
     touchpad {

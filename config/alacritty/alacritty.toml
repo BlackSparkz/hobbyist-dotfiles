@@ -1,7 +1,9 @@
-general.live_config_reload = true
+[general]
+live_config_reload = true
+
 [window]
 dimensions = { columns = 120, lines = 40 }
-padding = { x = 24, y = 24 }
+padding = { x = 28, y = 24 }
 decorations = "none"
 dynamic_padding = true
 
@@ -15,3 +17,16 @@ family = "ProFont IIx Nerd Font Mono"
 
 [selection]
 save_to_clipboard = true
+
+[cursor]
+style = { shape = "beam", blinking = "off" }
+thickness = 0.15
+
+
+
+[keyboard]
+bindings = [
+{ key = "V", mods = "Control", action = "Paste" },
+#{ key = "C", mods = "Control", action = "Copy" },
+]
+
