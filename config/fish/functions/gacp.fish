@@ -7,7 +7,7 @@ function gacp
     cd ~/Dotfiles
     git add .
 
-    if git commit -m "$argv";
+    if git commit -m (string join " " $argv)
         git push
     end
 
