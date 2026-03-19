@@ -22,8 +22,6 @@ save_to_clipboard = true
 style = { shape = "beam", blinking = "off" }
 thickness = 0.15
 
-
-
 [keyboard]
 bindings = [
 { key = "V", mods = "Control", action = "Paste" },
