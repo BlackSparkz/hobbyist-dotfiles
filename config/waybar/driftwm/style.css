@@ -29,6 +29,7 @@ tooltip label {
 
 #workspaces,
 #battery.critical:not(.charging),
+#custom-notification,
 #battery.warning:not(.charging),
 #battery.charging,
 #battery.plugged,
@@ -93,3 +94,5 @@ padding: 1px 16px 0px 12px;
 #pulseaudio.muted {
 background-color: #f2000e;
 }
+
+#custom-notification {}

@@ -7,7 +7,7 @@
     "spacing": 6,
     "reload_style_on_change": true,
     
-    "modules-left": [ "custom/logo","custom/mpris" ],
+    "modules-left": [ "custom/logo","custom/mpris","custom/notification" ],
 
     "modules-center": [ "clock" ],
 
@@ -21,6 +21,27 @@
         "backlight",
         "battery",
     ],
+
+"custom/notification": {
+    "tooltip": true,
+    "format": "<span size='12pt'>{icon}</span>",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
 
 "custom/logo": {
     "format" : "󰣇   Arch Linux",
