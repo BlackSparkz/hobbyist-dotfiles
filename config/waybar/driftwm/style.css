@@ -89,3 +89,7 @@ background-color: #5962ff;
 #custom-power {
 padding: 1px 16px 0px 12px;
 }
+
+#pulseaudio.muted {
+background-color: #f2000e;
+}

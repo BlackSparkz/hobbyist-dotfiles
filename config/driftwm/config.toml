@@ -49,8 +49,8 @@ fit_padding = 100.0         # canvas px padding for zoom-to-fit
 
 [snap]
 enabled = true               # magnetic edge snapping during window drag
-gap = 16.0                   # gap between snapped windows (canvas px)
-distance = 30.0              # activation threshold (screen px from edge)
+gap = 60.0                   # gap between snapped windows (canvas px)
+distance = 40.0              # activation threshold (screen px from edge)
 break_force = 40.0           # screen px past snap to break free
 
 [decorations]
@@ -124,7 +124,7 @@ shader_path = "~/Wallpapers/pink_cloud.glsl"
 # "mod+alt+right" = "send-to-output right"
 "mod+ctrl+l" = "spawn hyprlock"
 "mod+ctrl+e" = "quit"
-"XF86AudioRaiseVolume" = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+"
+"XF86AudioRaiseVolume" = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ -l 1.0 10%+"
 "XF86AudioLowerVolume" = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-"
 "XF86AudioMute" = "spawn wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 "XF86MonBrightnessUp" = "spawn brightnessctl set +10%"

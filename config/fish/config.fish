@@ -14,7 +14,6 @@ alias reload='source ~/.config/fish/config.fish ; kitty @ load-config'
 alias ls="eza --no-time --reverse --no-filesize --no-permissions --no-user --icons=always -hl --group-directories-first"
 alias lt='eza -a --tree --level=1 --icons=always'
 alias cat="bat"
-# alias cd="z"
 alias tree='tree -C'
 
 # ==============================
@@ -79,14 +78,5 @@ alias pingg='ping -c 5 archlinux.org'
 alias wifi='nmtui'
 alias bt='bluetui'
 
-# ==============================
-# Git
-# ==============================
-alias gs="git status"
-alias ga="git add ."
-alias gc="git commit -m"
-alias gp="git push"
-
 # zoxide init fish | source
 # starship init fish | source
-# fastfetch --logo none | pv -qL 400 | lolcat

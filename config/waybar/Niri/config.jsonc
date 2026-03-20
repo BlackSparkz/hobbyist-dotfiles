@@ -126,7 +126,8 @@
         "format-bluetooth":" {icon} {volume}%",
         "format-muted": "   Muted",
         "format-icons": { "default": [" ", "  ", "   "]},
-        "on-click-right": "pavucontrol"
+	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "kitty -e pulsemixer"
     },
 
 "custom/power": {
@@ -134,8 +135,8 @@
         "tooltip": true,
         "tooltip-format": "Power menu",
         //"menu": "on-click",
-	"on-click": "wlogout",
-        "on-click-right": "wlogout",
+	"on-click": "pkill wlogout || wlogout",
+        "on-click-right": "pkill wlogout || wlogout",
         //"menu-file": "~/.config/waybar/power_menu.xml",
         //"menu-actions": {
             //"shutdown": "systemctl poweroff",
