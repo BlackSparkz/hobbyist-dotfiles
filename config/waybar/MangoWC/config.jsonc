@@ -7,7 +7,7 @@
     "spacing": 6,
     "reload_style_on_change": true,
     
-    "modules-left": [ "custom/logo","custom/mpris","ext/workspaces" ],
+    "modules-left": [ "custom/logo","custom/mpris","ext/workspaces", ],
 
     "modules-center": [ "clock" ],
 
@@ -19,8 +19,17 @@
         "network",
         "pulseaudio",
         "backlight",
-        "battery",
+	"custom/battery"
+        /*"battery"*/
     ],
+
+"custom/battery": {
+    "exec": "~/.config/waybar/battery-anime.sh",
+    "interval": 1.0,
+    "return-type": "json",
+    "format": "{}",
+    "on-click-right": "kitty sh -c 'upower -i /org/freedesktop/UPower/devices/battery_BAT0; read'"
+},
 
   "ext/workspaces": {
     "format": "{icon}",
@@ -95,18 +104,27 @@
         "on-click-right": "bash $HOME/.config/SwayBg/random-wall.sh",
         },
 
-   "battery": { "states": {"warning": 25,"critical": 15 },
+   /*"battery": { "states": {"warning": 25,"critical": 15 },
         "interval": 1,
         "format": "{icon}   {capacity}%",
+	"format-time": "{H} hours {M} minutes",
         "on-click-right": "kitty sh -c 'upower -i /org/freedesktop/UPower/devices/battery_BAT0; read'",
         "format-full": "{icon}   Battery full {capacity}%",
         "format-warning": "{icon}   Battery low {capacity}%",
         "format-critical": "󰂃  Connect charger {capacity}%",
-        "format-charging": "  Charging {capacity}%",
-        "format-plugged": "  Plugged in {capacity}%",
+        //"format-charging": "{icon}  Charging {capacity}%",
+        "format-charging": " ",
         "format-alt": "{icon}   Health ({health}%)  Charge cycles ({cycles})",
-        "format-icons": { "default": ["", "", "", "", ""]},
-      },
+        "format-icons": {
+		"default": ["", "", "", "", ""],
+		"charging":["󱊤","󱊥","󱊦",]
+	},
+        "tooltip": true,
+	"tooltip-format": "Battery level: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
+        "tooltip-format-charging": "Charging at {capacity}%\nPower usage: {power} watts\nFull charge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
+        "tooltip-format-critical": "Low battery: {capacity}%\nPower usage: {power} watts\nShutdown in: {time}\nConnect the charger immediately.",
+        "tooltip-format-warning": "Low battery: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nConnect the charger soon.",
+      },*/
 
     "network": {
         "interval": 1,

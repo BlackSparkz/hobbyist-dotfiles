@@ -40,20 +40,21 @@ window#waybar {
 }
 
 tooltip {
-  border-radius: 24px;
+  border-radius: 32px;
   transition: all 0.2s ease-in-out;
 }
 
 tooltip label {
   color: white;
   transition: all 0.2s ease-in-out;
-  padding: 2px 12px 2px 12px;
+  padding: 12px 20px 12px 20px;
 }
 
 #workspaces,
 #battery.critical:not(.charging),
 #battery.warning:not(.charging),
 #battery.charging,
+#custom-battery,
 #battery.plugged,
 #battery.full,
 #custom-logo,
@@ -81,7 +82,7 @@ margin: 4px 0px 4px 0px;
 padding: 0px 4px 0px 4px;
 }
 
-#battery.charging, #battery.plugged {
+#battery.charging, #battery.plugged, #custom-battery.charging {
 background-color: #00aa01;
 }
 
