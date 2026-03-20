@@ -19,12 +19,12 @@ window#waybar {
 }
 
 tooltip {
-  border-radius: 24px;
+  border-radius: 32px;
 }
 
 tooltip label {
   color: white;
-  padding: 2px 12px 2px 12px;
+  padding: 12px 20px 12px 20px;
 }
 
 #workspaces,
