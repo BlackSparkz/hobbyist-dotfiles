@@ -26,7 +26,6 @@ window#waybar {
     border-radius: 24px;
     margin: 0px -3px 0px -3px;
     padding: 0px 8px 0px 8px;
-
 }
 
 #workspaces button:hover {
@@ -54,7 +53,7 @@ tooltip label {
 #battery.critical:not(.charging),
 #battery.warning:not(.charging),
 #battery.charging,
-#custom-battery,
+/*#custom-battery,*/
 #battery.plugged,
 #battery.full,
 #custom-logo,
@@ -82,7 +81,7 @@ margin: 4px 0px 4px 0px;
 padding: 0px 4px 0px 4px;
 }
 
-#battery.charging, #battery.plugged, #custom-battery.charging {
+#battery.charging, #battery.plugged /*#custom-battery.charging*/ {
 background-color: #00aa01;
 }
 
@@ -93,7 +92,8 @@ background-color: #00aa01;
     }
 }
 
-#battery.critical:not(.charging) {
+#battery.critical:not(.charging)
+/*#custom-battery.critical*/ {
 background-color: #f2000e;
 animation-name: blink;
 animation-duration: 1.0s;
@@ -102,7 +102,8 @@ animation-iteration-count: infinite;
 animation-direction: alternate;
 }
 
-#battery.warning:not(.charging) {
+#battery.warning:not(.charging)
+/*#custom-battery.warning*/ {
 background-color: #f74f08;
 }
 

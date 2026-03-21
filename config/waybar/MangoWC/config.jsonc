@@ -7,7 +7,7 @@
     "spacing": 6,
     "reload_style_on_change": true,
     
-    "modules-left": [ "custom/logo","custom/mpris","ext/workspaces", ],
+    "modules-left": [ "custom/logo","custom/mpris","ext/workspaces" ],
 
     "modules-center": [ "clock" ],
 
@@ -19,17 +19,17 @@
         "network",
         "pulseaudio",
         "backlight",
-	"custom/battery"
-        /*"battery"*/
+	/*"custom/battery"*/
+        "battery"
     ],
 
-"custom/battery": {
+/*"custom/battery": {
     "exec": "~/.config/waybar/battery-anime.sh",
     "interval": 1.0,
     "return-type": "json",
     "format": "{}",
     "on-click-right": "kitty sh -c 'upower -i /org/freedesktop/UPower/devices/battery_BAT0; read'"
-},
+},*/
 
   "ext/workspaces": {
     "format": "{icon}",
@@ -44,7 +44,7 @@
     "tooltip": false,
     "tooltip-format": "App launcher",
     "on-click": "pkill rofi || rofi -show drun",
-    "on-click-right": "kitty",
+    "on-click-right": "kitty"
     },
 
 "custom/mpris": {
@@ -62,7 +62,7 @@
     "format": "It's {:%H:%M:%S}",
     "format-alt": "It’s {:%H:%M:%S on %A, %d %B %Y}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "on-click-right": "kitty -e bluetui",
+    "on-click-right": "kitty -e bluetui"
     },
 
 "cpu": {
@@ -101,10 +101,10 @@
         "tooltip-format": "Current brightness is {percent} percent",
         "format": "{icon}   {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
-        "on-click-right": "bash $HOME/.config/SwayBg/random-wall.sh",
-        },
+        "on-click-right": "bash $HOME/.config/SwayBg/random-wall.sh"
+       },
 
-   /*"battery": { "states": {"warning": 25,"critical": 15 },
+     "battery": { "states": {"warning": 25,"critical": 15 },
         "interval": 1,
         "format": "{icon}   {capacity}%",
 	"format-time": "{H} hours {M} minutes",
@@ -112,19 +112,15 @@
         "format-full": "{icon}   Battery full {capacity}%",
         "format-warning": "{icon}   Battery low {capacity}%",
         "format-critical": "󰂃  Connect charger {capacity}%",
-        //"format-charging": "{icon}  Charging {capacity}%",
-        "format-charging": " ",
+        "format-charging": "  Charging {capacity}%",
         "format-alt": "{icon}   Health ({health}%)  Charge cycles ({cycles})",
-        "format-icons": {
-		"default": ["", "", "", "", ""],
-		"charging":["󱊤","󱊥","󱊦",]
-	},
+        "format-icons": { "default": ["", "", "", "", ""] },
         "tooltip": true,
 	"tooltip-format": "Battery level: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
         "tooltip-format-charging": "Charging at {capacity}%\nPower usage: {power} watts\nFull charge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
-        "tooltip-format-critical": "Low battery: {capacity}%\nPower usage: {power} watts\nShutdown in: {time}\nConnect the charger immediately.",
-        "tooltip-format-warning": "Low battery: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nConnect the charger soon.",
-      },*/
+        "tooltip-format-critical": "Battery low: {capacity}%\nPower usage: {power} watts\nShutdown in: {time}\nConnect the charger immediately.",
+        "tooltip-format-warning": "Battery low: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nConnect the charger soon."
+      },
 
     "network": {
         "interval": 1,
@@ -162,6 +158,6 @@
         //    "suspend": "systemctl suspend",
         //    "logout": "loginctl terminate-user $USER",
         //},
-   },
+   }
 
 }
