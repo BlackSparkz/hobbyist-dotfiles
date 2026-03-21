@@ -68,7 +68,7 @@ fi
 
 if [ -n "$DEVICE_ID" ]; then
     kdeconnect-cli -d "$DEVICE_ID" --share "$FILE" && \
-    notify-send "📸 Sent to phone" "$(basename "$FILE")"
+    notify-send "Sent to your phone" "$(basename "$FILE")"
 else
     notify-send "⚠️ No device found" "Saved locally"
 fi
