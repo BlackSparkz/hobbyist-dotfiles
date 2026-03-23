@@ -200,7 +200,7 @@ binds {
     Mod+N { spawn-sh "kitty -e yazi"; }
     Mod+X { spawn-sh "kitty -e cmus"; }
     Mod+P { spawn-sh "pkill wlogout || wlogout"; }
-    Mod+Ctrl+C { spawn-sh "pkill rofi ||cliphist list | rofi -dmenu -display-columns 2 -theme ~/Dotfiles/config/rofi/clipboard.rasi | cliphist decode | wl-copy"; }
+    Mod+Ctrl+C { spawn-sh "pkill rofi ||cliphist list | rofi -dmenu -display-columns 2 -theme ~/.config/rofi/clipboard.rasi | cliphist decode | wl-copy"; }
     Mod+Ctrl+R {spawn-sh "bash $HOME/.config/mango/partial_screenshot.sh";}
     Mod+Ctrl+S {spawn-sh "bash $HOME/.config/mango/full_screenshot.sh";}
     Mod+space {spawn-sh "pkill rofi || rofi -show drun";}
