@@ -98,7 +98,7 @@ background-color: /*#27D301*/#00aa01;
 #battery.critical:not(.charging),
 #temperature.critical
 /*#custom-battery.critical*/ {
-background-color: #FF1212;
+background-color: #FF0000;
 animation-name: blink;
 animation-duration: 1.0s;
 animation-timing-function: steps(20);

@@ -9,6 +9,7 @@ bluez-utils
 brightnessctl
 btop
 btrfs-progs
+clang
 cliphist
 cmus
 efibootmgr
@@ -66,6 +67,5 @@ xdg-desktop-portal
 xdg-desktop-portal-wlr
 xorg-xwayland
 yay
-yay-debug
 yazi
 zram-generator
