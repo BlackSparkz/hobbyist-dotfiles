@@ -127,7 +127,7 @@
     "network#wifi": {
         "interval": 1,
         "format-wifi": "    {essid}",
-        "format-alt": " {bandwidthUpBytes}   {bandwidthDownBytes}",
+	"format-alt": " {bandwidthUpBytes}   {bandwidthDownBytes}",
         "tooltip-format-wifi": "You are connected to {essid} ({signalStrength}%)",
         "format-disconnected": "   No internet",
         "on-click-right": "kitty -e nmtui"

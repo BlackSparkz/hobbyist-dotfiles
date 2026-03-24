@@ -85,7 +85,7 @@ padding: 0px 4px 0px 4px;
 }
 
 #battery.charging, #battery.plugged /*#custom-battery.charging*/ {
-background-color: #27D301;
+background-color: /*#27D301*/#00aa01;
 }
 
 @keyframes blink {

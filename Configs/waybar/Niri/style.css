@@ -18,6 +18,10 @@ window#waybar {
   color: white;
 }
 
+#workspaces button:hover {
+  color: black;
+  }
+
 #backlight:hover,
 #pulseaudio:hover {
     background-color: #5962ff;
