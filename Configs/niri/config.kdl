@@ -205,6 +205,7 @@ binds {
     Mod+Ctrl+S {spawn-sh "bash $HOME/.config/mango/full_screenshot.sh";}
     Mod+space {spawn-sh "pkill rofi || rofi -show drun";}
     Mod+Ctrl+L { spawn-sh "bash ~/.config/hypr/randomwall.sh"; }
+    Mod+Ctrl+O { spawn-sh "systemctl poweroff"; }
     Mod+Ctrl+T { spawn "alacritty"; }
     Mod+Ctrl+delete { spawn-sh "cliphist wipe"; }
 
