@@ -79,7 +79,7 @@
         "on-scroll-up": "brightnessctl set 1%+",
         "on-scroll-down": "brightnessctl set 1%-",
         "tooltip": true,
-        "tooltip-format": "Current brightness is {percent} percent",
+        "tooltip-format": "Current brightness: {percent}%",
         "format": "{icon}   {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"]
         },
