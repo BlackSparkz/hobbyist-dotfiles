@@ -9,7 +9,6 @@ bluez-utils
 brightnessctl
 btop
 btrfs-progs
-clang
 cliphist
 cmus
 efibootmgr
@@ -42,6 +41,7 @@ mpv
 ncdu
 neovim
 networkmanager
+niri-wip-git
 nwg-look
 otf-font-awesome
 pipewire-alsa
