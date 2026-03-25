@@ -9,10 +9,10 @@ layer-rule {
 }
 
 blur {
-    passes 4
+    passes 3
     offset 6
     noise 0.02
-    saturation 1.5
+    saturation 2.0
 }
 
 window-rule {
@@ -24,8 +24,8 @@ window-rule {
 
 layer-rule {
     match namespace="^waybar$"
-    match namespace="^mako$"
-    match namespace="^wlogout$"
+    match namespace="^notifications$"
+    match namespace="^logout_dialog$"
     background-effect {
         blur true
     }
@@ -36,10 +36,10 @@ overview {
     backdrop-color "#ffffff"
 
     workspace-shadow {
-        softness 60
-        spread 40
-        offset x=0 y=10
-        color "#00000080"
+        softness 200
+        spread 10
+        offset x=0 y=0
+        color "#000000"
     }
 }
 
