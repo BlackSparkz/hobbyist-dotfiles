@@ -1,4 +1,4 @@
-# My Arch dotfiles
+# Arch Linux dotfiles
 
 ## MangoWM
 > [MangoWM](https://github.com/mangowm/mango) is as lightweight as dwl and can be built completely within a few seconds. Despite this, Mango does not compromise on functionality.
@@ -12,7 +12,7 @@
 ## DriftWM
 > [DriftWM](https://github.com/malbiruk/driftwm) is a trackpad-first infinite canvas Wayland compositor.
 
-## Curious about what it looks like? Here's a glimpse.
+### Curious about what it looks like? Here's a glimpse.
 
 | **Desktop & Status Bar** |
 |:---:|
@@ -36,7 +36,7 @@
 
 ## Components
 
-> List of all applications and tools used in this setup.
+> List of all applications and tools are used in this setup.
 
 | **Category** | **Application** | **Description** |
 |:---:|:---|:---|
