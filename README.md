@@ -85,8 +85,8 @@
 ### 1. Install Required Packages
 
 ```bash
-sudo pacman -S niri waybar kitty alacritty fish starship neovim btop \
-  yazi rofi mako hyprlock wlogout mpv cava swappy swaybg tmux lazygit
+sudo pacman -S niri waybar kitty fish neovim btop \
+  yazi rofi mako hyprlock wlogout mpv cava swaybg tmux lazygit
 ```
 
 > **Note:** `hyprland`, `mangowm`, and `driftwm` may need to be installed via the AUR:
