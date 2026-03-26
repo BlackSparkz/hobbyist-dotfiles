@@ -2,8 +2,6 @@
 
 > A highly configured, minimal, and aesthetic collection of dotfiles for the [Niri](https://github.com/YaLTeR/niri) scrollable tiling window manager. 
 
----
-
 ## Some screenshots
 
 If you are just browsing, here is what this setup looks like.
@@ -27,8 +25,6 @@ If you are just browsing, here is what this setup looks like.
 | **Screenlock** |
 |:---:|
 | ![Main](Screenshots/hyprlock.png) |
-
----
 
 ## Components
 
@@ -55,11 +51,10 @@ List of all applications and tools that used in this setup.
 | **Git Client** | [Lazygit](https://github.com/jesseduffield/lazygit) | Simple terminal UI for git commands. |
 | **Multiplexer** | [Tmux](https://github.com/tmux/tmux) | Terminal multiplexer. |
 
----
-
 ## Essential keybindings
 
-Essential keybindings work across all listed window managers.\nExplore the window manager’s configuration file for the complete list of keybindings.
+Essential keybindings work across all listed wayland compositor.
+Explore the wayland compositor’s configuration file for the complete list of keybindings.
 
 | **Key Combination** | **Action** |
 |:---|:---|
@@ -69,9 +64,7 @@ Essential keybindings work across all listed window managers.\nExplore the windo
 | <kbd>Super</kbd> + <kbd>B</kbd> | Open Browser (`Librewolf`) |
 | <kbd>Super</kbd> + <kbd>N</kbd> | Open File Manager (`Yazi`) |
 | <kbd>Super</kbd> + <kbd>P</kbd> | Power Menu (`Wlogout`) |
-| <kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>E</kbd> | Exit current WC(`Hyprland`) |
-
----
+| <kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>E</kbd> | Exit wayland compositor |
 
 ## Installation
 
