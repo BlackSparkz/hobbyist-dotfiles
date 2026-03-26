@@ -8,33 +8,25 @@
 
 If you are just browsing, here is what this setup looks like.
 
-| **Desktop & Waybar** |
+| **Desktop & Status Bar** |
 |:---:|
 | ![Desktop](Screenshots/waybar.png) |
 
-| **Rofi launcher** |
+| ** App launcher** |
 |:---:|
 | ![Rofi](Screenshots/rofi.png) |
 
-| **Clipboard** |
+| **Clipboard manager** |
 |:---:|
 | ![clipboard](Screenshots/clipboard.png) |
 
-| **Terminal** (Kitty & Alacritty) |
+| **Power menu** |
 |:---:|
-| ![Terminals](Screenshots/alacritty.png) |
+| ![Wlogout](Screenshots/wlogout.png) |
 
-| **Audio Visualizer** |
+| **Screenlock** |
 |:---:|
-| ![Cava](Screenshots/cava.png) |
-
-| **Game Dev (Godot)** |
-|:---:|
-| ![Godot](Screenshots/godot.png) |
-
-| **Main Landing Page** |
-|:---:|
-| ![Main](Screenshots/landing.png) |
+| ![Main](Screenshots/hyprlock.png) |
 
 ---
 
