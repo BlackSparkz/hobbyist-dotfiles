@@ -10,7 +10,7 @@ If you are just browsing, here is what this setup looks like.
 
 | **Desktop & Waybar** |
 |:---:|
-| ![Desktop](Screenshots/desktopnwaybar.png) |
+| ![Desktop](Screenshots/waybar.png) |
 
 | **Rofi launcher** |
 |:---:|
