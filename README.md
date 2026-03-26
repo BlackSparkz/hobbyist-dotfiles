@@ -1,6 +1,16 @@
 # My Arch dotfiles
 
-> A highly configured, minimal, and aesthetic collection of dotfiles for the [Niri](https://github.com/YaLTeR/niri) scrollable tiling window manager. 
+## Mango Wayland Compositor
+> [MangoWM](https://github.com/mangowm/mango) is as lightweight as dwl, and can be built completely within a few seconds. Despite this, Mango does not compromise on functionality.
+
+## Niri Wayland compositor
+> A highly configured, minimal, and aesthetic collection of dotfiles for the [Niri](https://github.com/YaLTeR/niri) scrollable tiling window manager.
+
+## Hyprland Wayland compositor
+> [Hyprland](https://github.com/hyprwm/Hyprland) is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.
+
+## DriftWM Wayland compositor
+> [DriftWM](https://github.com/malbiruk/driftwm) is a trackpad-first infinite canvas Wayland compositor.
 
 ## Some screenshots
 
@@ -37,6 +47,7 @@ List of all applications and tools that used in this setup.
 |  | [Hyprland](https://github.com/hyprwm/Hyprland) | Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor |
 |  | [DriftWM](https://github.com/malbiruk/driftwm) | A trackpad-first infinite canvas Wayland compositor. |
 | **Status Bar** | [Waybar](https://github.com/Alexays/Waybar) | Highly customizable modular status bar. |
+| **Wallpaper manager** | [SwayBG](https://github.com/swaywm/swaybg) | Wallpaper tool for Wayland compositors |
 | **Terminal** | [Kitty](https://github.com/kovidgoyal/kitty) | Kitty - The fast, feature-rich, cross-platform, GPU based terminal |
 |  | [Alacritty](https://github.com/alacritty/alacritty) | GPU-accelerated terminal emulator. |
 | **Shell** | [Fish](https://fishshell.com/) | User-friendly command line shell. |
