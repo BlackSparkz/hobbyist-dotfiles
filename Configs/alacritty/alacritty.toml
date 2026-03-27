@@ -37,7 +37,7 @@ text = "#1e1e1e"
 cursor = "#ffffff"
 
 [colors.normal]
-black = "#2e3436"
+black = "#000000"#"#2e3436"
 red = "#cc0000"
 green = "#4e9a06"
 yellow = "#c4a000"
@@ -49,7 +49,7 @@ white = "#d3d7cf"
 [colors.bright]
 black = "#555753"
 red = "#ef2929"
-green = "#8ae234"
+green = "#00ff00"
 yellow = "#fce94f"
 blue = "#729fcf"
 magenta = "#ad7fa8"

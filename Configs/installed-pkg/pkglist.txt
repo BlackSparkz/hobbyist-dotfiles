@@ -1,4 +1,5 @@
 7zip
+alacritty
 amd-ucode
 android-tools
 base

@@ -26,7 +26,7 @@
     "format": "<span color='#1793ff'>󰣇  </span>Arch Linux",
     "tooltip": false,
     "tooltip-format": "App launcher",
-    "on-click": "pkill rofi || rofi -show drun",
+    "on-click": "pkill rofi || rofi -show drun -theme ~/.config/rofi/hyprconfig.rasi",
     "on-click-right": "alacritty"
     },
 

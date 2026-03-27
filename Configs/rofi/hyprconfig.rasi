@@ -1,5 +1,4 @@
 configuration {
-	modi:				"drun";
 	font:				"Google Sans Flex 12";
 	show-icons:                     true;
 	// icon-theme: 			"Reversal-dark";
