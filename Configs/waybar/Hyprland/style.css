@@ -31,7 +31,8 @@ window#waybar {
 #pulseaudio:hover {
     background-color: #404040;
     border-radius: 24px;
-    margin: 4px 8px 4px 8px;
+    margin: 0px 12px 0px 12px;
+    font-size: 18px;
     transition: all 0.2s ease-in-out;
 }
 
