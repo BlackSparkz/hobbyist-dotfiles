@@ -16,16 +16,12 @@ window#waybar {
 #workspaces button {
     color: white;
     border-radius: 24px;
-    padding: 1px 6px 0px 6px;
 }
 
 #workspaces button.active {
-    background-color: rgba(255, 255, 255, 0.2);
     transition: all 0.2s ease-in-out;
     color: white;
     border-radius: 24px;
-    margin: 0px -3px 0px -3px;
-    padding: 0px 8px 0px 8px;
 }
 
 #workspaces button:hover {

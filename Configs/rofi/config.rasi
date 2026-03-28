@@ -8,6 +8,7 @@ entry {
 
 configuration {
     font: "Google Sans Flex 10";
+    drun-display-format: "{name}";
 }
 
 inputbar {

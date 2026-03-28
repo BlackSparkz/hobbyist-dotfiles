@@ -24,7 +24,7 @@
     ],
 
 "custom/logo": {
-    "format" : "󰣇   Arch Linux",
+    "format" : "󰣇   Niri",
     "tooltip": false,
     "tooltip-format": "App launcher",
     "on-click": "pkill rofi || rofi -show drun",

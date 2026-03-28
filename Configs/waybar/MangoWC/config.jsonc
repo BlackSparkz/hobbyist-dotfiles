@@ -44,6 +44,10 @@
 
   "ext/workspaces": {
     "format": "{icon}",
+    "format-icons": {
+		"active": "",
+		"default": ""
+	},
     "ignore-hidden": true,
     "on-click": "activate",
     "on-click-right": "deactivate",
@@ -51,7 +55,7 @@
   },
 
 "custom/logo": {
-    "format" : "󰣇   Arch Linux",
+    "format" : "󰣇   MangoWM",
     "tooltip": false,
     "tooltip-format": "App launcher",
     "on-click": "pkill rofi || rofi -show drun",
