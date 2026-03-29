@@ -2,3 +2,8 @@
 on   = [ "<C-s>" ]
 run  = "plugin kdeconnect-send"
 desc = "Send selected files via KDE Connect"
+
+[[mgr.prepend_keymap]]
+on = [ "<C-w>" ]
+run = 'shell "pkill swaybg; swaybg -i $s -m fill &" '
+desc = "Set wallpaper"
