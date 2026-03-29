@@ -78,7 +78,7 @@
 ## Installation
 
 ### Prerequisites
-- Arch Linux or an Arch-based distro (e.g. EndeavourOS, Manjaro)
+- Arch Linux (recommended) or an Arch-based distro (e.g. EndeavourOS, Manjaro)
 - A Wayland session (X11 is not supported)
 - AUR helper recommended for AUR packages (e.g. `yay` or `paru`)
 
