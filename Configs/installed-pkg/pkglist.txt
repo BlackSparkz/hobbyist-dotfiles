@@ -21,6 +21,7 @@ fzf
 git
 github-cli
 gparted
+gpu-screen-recorder
 grim
 grub
 hyprland
@@ -41,6 +42,7 @@ linux
 linux-firmware
 localsend-bin
 mako
+man-db
 mangowm-git
 mpv
 ncdu
@@ -66,6 +68,7 @@ timeshift
 tmux
 tree
 unzip
+viu
 waybar
 wayland
 wayland-protocols
