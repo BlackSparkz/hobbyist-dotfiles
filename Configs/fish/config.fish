@@ -4,19 +4,17 @@ set -g fish_greeting ""
 # Basic
 # ==============================
 alias c='clear'
-alias h='history'
 alias n='nvim'
 alias reload='source ~/.config/fish/config.fish ; kitty @ load-config'
 alias bip='pacman -Qqe > ~/Dotfiles/Configs/installed-pkg/pkglist.txt && notify-send "Backup" "Package list saved successfully" && echo "Saved path: ~/Dotfiles/Configs/installed-pkg/pkglist.txt"'
 alias rip='yay -S --needed --answerclean All --answerdiff None - < Configs/installed-pkg/pkglist.txt'
-alias ls="eza --no-time --reverse --no-filesize --no-permissions --no-user --icons=always -hl --group-directories-first"
-alias tree='tree -C'
+alias ls="eza -1h -s modified -r --icons=always --group-directories-first"
 
 # ==============================
 # Navigation
 # ==============================
 alias b='cd ..'
-alias h='cd ~'
+alias h='cd'
 alias d='cd ~/Downloads'
 
 # ==============================
@@ -36,7 +34,6 @@ alias aptr='sudo apt remove'
 # ==============================
 # Arch based
 # ==============================
-# alias pacup='sudo timeshift --create --comments "Before update" --tags O && sudo pacman -Syu --noconfirm && yay -Syu'
 alias pacup='sudo timeshift --create --comments "Before update" --tags O && yay -Syu'
 alias paci='yay -S --needed'
 alias pacr='yay -Rns'
