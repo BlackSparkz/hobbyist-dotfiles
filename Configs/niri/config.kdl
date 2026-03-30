@@ -1,3 +1,5 @@
+include "Animations.kdl"
+
 prefer-no-csd
 
 layer-rule {
@@ -12,7 +14,7 @@ blur {
     passes 3
     offset 6
     noise 0.02
-    saturation 2.0
+    saturation 2
 }
 
 window-rule {
@@ -24,7 +26,7 @@ window-rule {
 
 layer-rule {
     match namespace="^waybar$"
-   // match namespace="^notifications$"
+    match namespace="^mako$"
     match namespace="^logout_dialog$"
     background-effect {
         blur true
@@ -61,45 +63,43 @@ input {
         natural-scroll
         accel-speed 1.0
         accel-profile "adaptive"
-	scroll-factor 3.0
+	      scroll-factor 3.0
         scroll-method "two-finger"
     }
 
     mouse {
         accel-speed 1.0
         accel-profile "adaptive"
-	scroll-factor 3.0
+	      scroll-factor 3.0
     }
 
-       focus-follows-mouse max-scroll-amount="10%"
+    focus-follows-mouse max-scroll-amount="10%"
 }
 
 layout {
     gaps 10
     center-focused-column "never"
-    preset-column-widths {
+      preset-column-widths {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
-    }
-    default-column-width { proportion 0.5; }
-    focus-ring {
-	off
-        width 4
-        active-color "#7fc8ff"
-        inactive-color "#505050"
-
-        // active-gradient from="#80c8ff" to="#c7ff7f" angle=45
-    }
+      }
+        default-column-width { proportion 0.5; }
+          focus-ring {
+	           off
+             width 4
+             active-color "#7fc8ff"
+             inactive-color "#505050"
+           //active-gradient from="#80c8ff" to="#c7ff7f" angle=45
+           }
 
     border {
         off
-
         width 4
         active-color "#ffc87f"
         inactive-color "#505050"
         urgent-color "#9b0000"
-        // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
+      //active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
     }
 
     shadow {
@@ -131,59 +131,14 @@ hotkey-overlay {
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-animations {
-
-    workspace-switch {
-        spring damping-ratio=0.6 stiffness=1000 epsilon=0.0001
-    }
-
-    window-open {
-        duration-ms 200
-        curve "ease-out-expo"
-    }
-
-    window-close {
-        duration-ms 200
-        curve "ease-out-quad"
-    }
-
-    horizontal-view-movement {
-        spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
-    }
-
-    window-movement {
-        spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
-    }
-
-    window-resize {
-        spring damping-ratio=0.8 stiffness=800 epsilon=0.0001
-    }
-
-    config-notification-open-close {
-        spring damping-ratio=0.6 stiffness=1000 epsilon=0.001
-    }
-
-    exit-confirmation-open-close {
-        spring damping-ratio=0.6 stiffness=500 epsilon=0.01
-    }
-
-    screenshot-ui-open {
-        duration-ms 200
-        curve "ease-out-quad"
-    }
-
-    overview-open-close {
-        spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
-    }
-
-    recent-windows-close {
-        spring damping-ratio=0.6 stiffness=800 epsilon=0.001
-    }
-}
-
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id="librewolf" title="^Picture-in-Picture$"
     open-floating true
+    open-focused false
+    default-floating-position x=32 y=32 relative-to="bottom-right"
+    default-column-width { proportion 0.3; }
+    default-window-height { proportion 0.3; }
 }
 
 window-rule {
