@@ -7,7 +7,7 @@
 
 {
     "label" : "suspend",
-    "action" : "systemctl suspend ; bash ~/.config/hypr/randomwall.sh",
+    "action" : "systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh",
     "text" : "Suspend",
     "keybind" : "u"
 }
@@ -35,7 +35,7 @@
 
 {
     "label" : "lock",
-    "action" : "bash ~/.config/hypr/randomwall.sh",
+    "action" : "bash ~/.config/Scripts/random_wall_on_lockscr.sh",
     "text" : "Lock",
     "keybind" : "l"
 }
