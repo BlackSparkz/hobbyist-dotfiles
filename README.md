@@ -22,7 +22,7 @@
 |:---:|
 | ![Rofi](Screenshots/rofi.png) |
 
-| **Clipboard manager** |
+| **Clipboard history** |
 |:---:|
 | ![clipboard](Screenshots/clipboard.png) |
 
