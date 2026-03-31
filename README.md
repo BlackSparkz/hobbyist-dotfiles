@@ -1,4 +1,4 @@
-# Arch Linux dotfiles
+# Hobbyist dotfiles
 
 ## MangoWM
 > [MangoWM](https://github.com/mangowm/mango) is as lightweight as dwl and can be built completely within a few seconds. Despite this, Mango does not compromise on functionality.
@@ -85,13 +85,14 @@
 ### 1. Install Required Packages
 
 ```bash
-sudo pacman -S niri waybar kitty fish neovim btop \
-  yazi rofi mako hyprlock wlogout mpv cava swaybg tmux lazygit
+yay -S waybar kitty fish neovim btop \
+  yazi rofi mako hyprlock wlogout mpv \
+  cava swaybg tmux lazygit fastfetch
 ```
 
 > **Note:** `hyprland`, `mangowm`, and `driftwm` may need to be installed via the AUR:
 > ```bash
-> yay -S hyprland-git mangowm driftwm
+> yay -S hyprland
 > ```
 
 ### 2. Clone Repository
