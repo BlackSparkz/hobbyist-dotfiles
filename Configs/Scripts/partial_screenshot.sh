@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # =========================
-# ⚙️ CONFIG
+# CONFIG
 # =========================
 
 DIR="$HOME/Pictures/Screenshots"
@@ -13,7 +13,7 @@ TIME=$(date +"%d-%m-%Y_%H-%M-%S")
 FILE="$DIR/Screenshot_${TIME}.png"
 
 # =========================
-# 🖥️ WAYLAND CHECK
+# WAYLAND CHECK
 # =========================
 
 if [ -z "$WAYLAND_DISPLAY" ]; then
@@ -22,7 +22,7 @@ if [ -z "$WAYLAND_DISPLAY" ]; then
 fi
 
 # =========================
-# 🖱️ AREA SELECT
+# AREA SELECT
 # =========================
 
 GEOM=$(slurp 2>/dev/null)
@@ -34,7 +34,7 @@ if [ -z "$GEOM" ]; then
 fi
 
 # =========================
-# 📸 SCREENSHOT
+# SCREENSHOT
 # =========================
 
 if ! grim -g "$GEOM" "$FILE"; then
@@ -46,13 +46,13 @@ fi
 wl-copy < "$FILE"
 
 # =========================
-# 🔊 SOUND
+# SOUND
 # =========================
 
 [ -f "$SOUND" ] && paplay "$SOUND" &
 
 # =========================
-# 📱 KDE CONNECT
+# KDE CONNECT
 # =========================
 
 if ! pgrep -x kdeconnectd >/dev/null; then

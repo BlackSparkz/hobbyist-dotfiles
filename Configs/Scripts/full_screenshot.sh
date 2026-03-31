@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # =========================
-# ⚙️ CONFIG
+# CONFIG
 # =========================
 
 DIR="$HOME/Pictures/Screenshots"
-DEVICE_NAME=""   # Optional (recommended: apna phone name daal)
+DEVICE_NAME=""   # Optional
 
 SOUND="/usr/share/sounds/freedesktop/stereo/screen-capture.oga"
 
 # =========================
-# 📸 SETUP
+# SETUP
 # =========================
 
 mkdir -p "$DIR"
@@ -18,7 +18,7 @@ TIME=$(date +"%d-%m-%Y_%H-%M-%S")
 FILE="$DIR/Screenshot_${TIME}.png"
 
 # =========================
-# 📸 SCREENSHOT
+# SCREENSHOT
 # =========================
 
 if ! grim - | tee "$FILE" | wl-copy; then
@@ -27,7 +27,7 @@ if ! grim - | tee "$FILE" | wl-copy; then
 fi
 
 # =========================
-# 🔊 PLAY SOUND
+# PLAY SOUND
 # =========================
 
 if [ -f "$SOUND" ]; then
@@ -35,7 +35,7 @@ if [ -f "$SOUND" ]; then
 fi
 
 # =========================
-# ⏳ FILE READY CHECK
+# FILE READY CHECK
 # =========================
 
 for i in {1..10}; do
@@ -44,7 +44,7 @@ for i in {1..10}; do
 done
 
 # =========================
-# 🔌 KDE CONNECT READY
+# KDE CONNECT READY
 # =========================
 
 if ! pgrep -x kdeconnectd >/dev/null; then
@@ -53,7 +53,7 @@ if ! pgrep -x kdeconnectd >/dev/null; then
 fi
 
 # =========================
-# 📱 DEVICE DETECTION
+# DEVICE DETECTION
 # =========================
 
 if [ -n "$DEVICE_NAME" ]; then
@@ -63,7 +63,7 @@ else
 fi
 
 # =========================
-# 📤 SEND FILE
+# SEND FILE
 # =========================
 
 if [ -n "$DEVICE_ID" ]; then
