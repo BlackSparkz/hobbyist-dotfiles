@@ -32,7 +32,8 @@
 
 | **Screenlock** |
 |:---:|
-| ![Main](Screenshots/hyprlock.png) |
+| ![hyprlock](Screenshots/hyprlock.png) |
+| ![hyprlock_alt](Screenshots/hyprlock_alt.png) |
 
 | **Fastfetch** |
 |:---:|
