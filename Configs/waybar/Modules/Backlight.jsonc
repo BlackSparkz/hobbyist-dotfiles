@@ -9,7 +9,8 @@
         "format": "{icon}   {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
         "on-click": "brightnessctl set 5%+",
-        "on-click-right": "bash $HOME/.config/Scripts/random_wall_on_home.sh"
+        "on-click-right": "brightnessctl set 5%-",
+        "on-click-middle": "bash $HOME/.config/Scripts/random_wall_on_home.sh"
        }
 
 }
