@@ -1,0 +1,14 @@
+{
+  "pulseaudio": {
+        "scroll-step": 1,
+        "reverse-scrolling": true,
+        "smooth-scrolling-threshold": 2.0,
+        "format": "{icon} {volume}%",
+        "format-bluetooth":" {icon} {volume}%",
+        "format-muted": "   Muted",
+        "format-icons": { "default": [" ", "  ", "   "]},
+	      "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+	      "on-click-right": "kitty -e pulsemixer"
+    }
+
+}

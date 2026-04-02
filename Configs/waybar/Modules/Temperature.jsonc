@@ -1,0 +1,11 @@
+{
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+    "critical-threshold": 80,
+    "warning-threshold": 60,
+    "format": "  {temperatureC}°C",
+    "tooltip": true,
+    "tooltip-format": "CPU temperature: {temperatureC}°C",
+    "on-click-right": "kitty sh -c 'sensors; read'"
+  }
+}

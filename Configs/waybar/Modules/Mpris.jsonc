@@ -1,0 +1,11 @@
+{
+  "custom/mpris": {
+    "exec": "~/.config/Scripts/mpris.sh",
+    "interval": 2,
+    "return-type": "json",
+    "max-length": 15,
+    "on-click": "playerctl play-pause",
+    "tooltip": false
+}
+
+}

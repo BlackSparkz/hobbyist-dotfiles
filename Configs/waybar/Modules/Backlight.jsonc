@@ -1,0 +1,15 @@
+{
+  "backlight": {
+        "reverse-scrolling": true,
+        "smooth-scrolling-threshold": 5.0,
+        "on-scroll-up": "brightnessctl set 1%+",
+        "on-scroll-down": "brightnessctl set 1%-",
+        "tooltip": true,
+        "tooltip-format": "Current brightness is {percent} percent",
+        "format": "{icon}   {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-click": "brightnessctl set 5%+",
+        "on-click-right": "bash $HOME/.config/Scripts/random_wall_on_home.sh"
+       }
+
+}

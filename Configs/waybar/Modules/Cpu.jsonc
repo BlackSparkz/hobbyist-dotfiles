@@ -1,0 +1,10 @@
+{
+  "cpu": {
+    "interval": 1,
+    "format": "   {}%",
+    "format-alt": "   {avg_frequency} GHz",
+    "on-click-right": "kitty -e btop",
+    "tooltip": true
+    }
+
+}

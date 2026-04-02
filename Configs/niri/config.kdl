@@ -117,7 +117,7 @@ layout {
     }
 }
 
-spawn-sh-at-startup "waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/Niri/style.css &"
+spawn-sh-at-startup "waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/style.css &"
 spawn-sh-at-startup "bash $HOME/.config/Scripts/random_wall_on_home.sh"
 spawn-at-startup "kitty"
 spawn-at-startup "kdeconnect-indicator"
@@ -148,7 +148,7 @@ window-rule {
 
 binds {
     Mod+T { spawn "kitty"; }
-    Mod+R { spawn-sh "pkill waybar || waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/Niri/style.css &"; }
+    Mod+R { spawn-sh "pkill waybar || waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/style.css &"; }
     Mod+W repeat=false { spawn-sh "bash $HOME/.config/Scripts/random_wall_on_home.sh"; }
     Mod+B { spawn "librewolf"; }
     Mod+M { spawn "telegram"; }

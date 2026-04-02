@@ -1,0 +1,11 @@
+{
+  "clock": {
+    "interval": 1,
+    "tooltip": true,
+    "format": "It's {:%H:%M:%S}",
+    "format-alt": "It’s {:%H:%M:%S on %A, %d %B %Y}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "on-click-right": "kitty -e bluetui"
+    }
+
+}
