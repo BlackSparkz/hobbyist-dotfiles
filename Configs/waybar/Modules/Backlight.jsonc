@@ -8,8 +8,8 @@
         "tooltip-format": "Current brightness is {percent} percent",
         "format": "{icon}   {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
-        "on-click": "brightnessctl set 5%+",
-        "on-click-right": "brightnessctl set 5%-",
+        "on-click": "brightnessctl set 10%+",
+        "on-click-right": "brightnessctl set 10%-",
         "on-click-middle": "bash $HOME/.config/Scripts/random_wall_on_home.sh"
        }
 
