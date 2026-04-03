@@ -1,7 +1,7 @@
 {
   "battery": { "states": {"warning": 25,"critical": 15 },
         "interval": 1,
-        "format": "{icon}   {capacity}%",
+        "format": "{icon}  {capacity}%",
         "format-time": "{H} hours {M} minutes",
         "on-click-right": "kitty sh -c 'upower -i /org/freedesktop/UPower/devices/battery_BAT0; read'",
         "format-full": "{icon}   Battery full {capacity}%",
