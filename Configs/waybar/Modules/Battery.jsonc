@@ -2,7 +2,7 @@
   "battery": { "states": {"warning": 25,"critical": 15 },
         "interval": 1,
         "format": "{icon}   {capacity}%",
-	      "format-time": "{H} hours {M} minutes",
+        "format-time": "{H} hours {M} minutes",
         "on-click-right": "kitty sh -c 'upower -i /org/freedesktop/UPower/devices/battery_BAT0; read'",
         "format-full": "{icon}   Battery full {capacity}%",
         "format-warning": "{icon}   Battery low {capacity}%",
@@ -11,7 +11,7 @@
         "format-alt": "{icon}   Health ({health}%)  Charge cycles ({cycles})",
         "format-icons": { "default": ["", "", "", "", ""] },
         "tooltip": true,
-	      "tooltip-format": "Battery level: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
+        "tooltip-format": "Battery level: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
         "tooltip-format-charging": "Charging at {capacity}%\nPower usage: {power} watts\nFull charge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
         "tooltip-format-critical": "Battery low: {capacity}%\nPower usage: {power} watts\nShutdown in: {time}\nConnect the charger immediately.",
         "tooltip-format-warning": "Battery low: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nConnect the charger soon."
