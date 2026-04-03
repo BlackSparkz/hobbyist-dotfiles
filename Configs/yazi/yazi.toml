@@ -1,10 +1,12 @@
+# A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
+# If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [mgr]
 ratio          = [ 2, 4, 3 ]
 sort_by        = "mtime"
 sort_sensitive = true
-sort_reverse   = true
+sort_reverse 	 = true
 sort_dir_first = true
 sort_translit  = false
 linemode       = "size_and_mtime"
