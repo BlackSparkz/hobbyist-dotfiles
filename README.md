@@ -52,6 +52,7 @@
 | | [Hyprland](https://github.com/hyprwm/Hyprland) | Highly customizable dynamic tiling Wayland compositor. |
 | | [DriftWM](https://github.com/malbiruk/driftwm) | A trackpad-first infinite canvas Wayland compositor. |
 | **Status Bar** | [Waybar](https://github.com/Alexays/Waybar) | Highly customizable modular status bar. |
+| **Info fetch** | [Fastfetch](https://github.com/fastfetch-cli/fastfetch) | Fastfetch is a neofetch-like tool for fetching system information |
 | **Wallpaper Manager** | [swaybg](https://github.com/swaywm/swaybg) | Wallpaper tool for Wayland compositors. |
 | **Terminal** | [Kitty](https://github.com/kovidgoyal/kitty) | Fast, feature-rich, GPU-based terminal emulator. |
 | | [Alacritty](https://github.com/alacritty/alacritty) | GPU-accelerated terminal emulator. |
