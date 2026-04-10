@@ -24,7 +24,6 @@ gparted
 gpu-screen-recorder
 grim
 grub
-hyprland
 hyprlock
 kdeconnect
 kitty
