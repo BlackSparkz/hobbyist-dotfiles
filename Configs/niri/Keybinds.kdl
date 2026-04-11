@@ -4,7 +4,7 @@ binds {
     Mod+W repeat=false { spawn-sh "bash $HOME/.config/Scripts/random_wall_on_home.sh"; }
     Mod+B { spawn "librewolf"; }
     Mod+Ctrl+B { spawn "librewolf"; }
-    Mod+M { spawn "telegram"; }
+    Mod+M { spawn "telegram-desktop"; }
     Mod+Z { spawn "localsend"; }
     Mod+N { spawn-sh "kitty -e yazi"; }
     Mod+X { spawn-sh "kitty -e cmus"; }
