@@ -126,13 +126,13 @@ https://github.com/BlackSparkz/hobbyist-dotfiles.git
 **Option A — Using `stow` (recommended):**
 ```bash
 sudo pacman -S stow
-cd hobbyist-dotfiles
+cd ~/hobbyist-dotfiles/
 stow -t ~/.config Configs
 ```
 
 **Option B — Manual copy:**
 ```bash
-cd dotfiles/Configs
+cd ~/hobbyist-dotfiles/
 cp -r niri hyprland waybar kitty alacritty fish btop rofi mako wlogout ~/.config/
 # Add mangowm, driftwm, etc. as needed
 ```
