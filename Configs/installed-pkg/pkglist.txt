@@ -24,6 +24,7 @@ gparted
 gpu-screen-recorder
 grim
 grub
+hyprland
 hyprlock
 kdeconnect
 kitty
@@ -47,7 +48,7 @@ mpv
 ncdu
 neovim
 networkmanager
-niri-wip-git
+niri-git
 nodejs
 npm
 nwg-look
@@ -79,6 +80,7 @@ xdg-desktop-portal
 xdg-desktop-portal-wlr
 xorg-xwayland
 yay
+yay-debug
 yazi
 zoxide
 zram-generator

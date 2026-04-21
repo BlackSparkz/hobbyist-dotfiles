@@ -18,7 +18,7 @@ binds {
     Alt+R { spawn-sh "systemctl reboot"; }
     Alt+S { spawn-sh "systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh"; }
     Mod+Ctrl+T { spawn "alacritty"; }
-    Mod+Ctrl+delete { spawn-sh "cliphist wipe"; }
+    Mod+delete { spawn-sh "cliphist wipe"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.2"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
