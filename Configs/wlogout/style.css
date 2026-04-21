@@ -20,7 +20,7 @@ button {
     background-size: 25%;
 }
 
-button:active, button:focus, button:hover {
+button:active, /*button:focus,*/ button:hover {
     background-color: alpha(#ffffff, 0.20);
     color: #ffffff;
 }
