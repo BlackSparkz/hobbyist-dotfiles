@@ -86,53 +86,10 @@
 ## Installation
 
 ### Prerequisites
-- Arch Linux (recommended) or an Arch-based distro (e.g. EndeavourOS, Manjaro)
-- A Wayland session (X11 is not supported)
-- AUR helper recommended for AUR packages (e.g. `yay` or `paru`)
-
-### 1. Install Required Packages
-
-```bash
-yay -S waybar kitty fish neovim btop \
-  yazi rofi mako hyprlock wlogout mpv \
-  cava swaybg tmux lazygit fastfetch
-```
-
-> **Note:** `hyprland`, `niri`, `mangowm`, and `driftwm` may need to be installed via the AUR:
-> ```bash
-> yay -S mangowm-git
-> ```
-
-> ```bash
-> yay -S niri
-> ```
-
-> ```bash
-> yay -S hyprland
-> ```
-
-> ```bash
-> yay -S driftwm
-> ```
-
-### 2. Clone Repository
+- Clean Arch Linux (recommended) or an Arch-based distro (e.g. EndeavourOS, Manjaro)
 
 ```bash
 git clone https://github.com/BlackSparkz/hobbyist-dotfiles.git
-```
-
-### 3. Deploy Configs
-
-**Option A — Using `stow` (recommended):**
-```bash
-sudo pacman -S stow
 cd ~/hobbyist-dotfiles/
-stow -t ~/.config Configs
-```
-
-**Option B — Manual copy:**
-```bash
-cd ~/hobbyist-dotfiles/
-cp -r niri hyprland waybar kitty alacritty fish btop rofi mako wlogout ~/.config/
-# Add mangowm, driftwm, etc. as needed
+bash install.sh
 ```
