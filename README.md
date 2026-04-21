@@ -89,6 +89,10 @@
 - Clean Arch Linux (recommended) or an Arch-based distro (e.g. EndeavourOS, Manjaro)
 
 ```bash
+sudo pacman -S git
+```
+
+```bash
 git clone https://github.com/BlackSparkz/hobbyist-dotfiles.git
 cd ~/hobbyist-dotfiles/
 bash install.sh
