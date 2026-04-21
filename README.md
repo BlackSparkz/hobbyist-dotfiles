@@ -89,7 +89,7 @@
 - Clean Arch Linux (recommended) or an Arch-based distro (e.g. EndeavourOS, Manjaro)
 
 ```bash
-sudo pacman -S git
+sudo pacman -S --needed --noconfirm git
 ```
 
 ```bash
