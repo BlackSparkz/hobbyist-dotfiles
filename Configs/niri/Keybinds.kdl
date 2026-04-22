@@ -3,7 +3,6 @@ binds {
     Mod+R { spawn-sh "pkill waybar || waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/style.css &"; }
     Mod+W repeat=false { spawn-sh "bash $HOME/.config/Scripts/random_wall_on_home.sh"; }
     Mod+B { spawn "librewolf"; }
-    Mod+Ctrl+B { spawn "librewolf"; }
     Mod+M { spawn "telegram-desktop"; }
     Mod+Z { spawn "localsend"; }
     Mod+A { spawn "alacritty"; }
@@ -21,6 +20,7 @@ binds {
     Alt+R { spawn-sh "systemctl reboot"; }
     Alt+S { spawn-sh "systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh"; }
     Mod+delete { spawn-sh "cliphist wipe"; }
+    Mod+Alt+B { spawn "brave-origin-beta"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.2"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
