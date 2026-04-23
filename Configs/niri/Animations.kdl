@@ -1,13 +1,13 @@
 animations {
 
-  slowdown 1.0
+  slowdown 1.4
 
   workspace-switch {
-    spring damping-ratio=0.6 stiffness=1000 epsilon=0.0001
+    spring damping-ratio=0.5 stiffness=900 epsilon=0.0003
   }
 
   window-open {
-    duration-ms 240
+    duration-ms 100
     curve "linear"
     custom-shader r"
     const float PI = 3.14159265358979;
@@ -140,7 +140,7 @@ animations {
   }
 
   window-close {
-    duration-ms 200
+    duration-ms 160
     curve "linear"
     custom-shader r"
     const float PI = 3.14159265358979;
@@ -271,16 +271,88 @@ animations {
   }
 
   horizontal-view-movement {
-    spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
+    spring damping-ratio=0.4 stiffness=800 epsilon=0.0001
   }
 
   window-movement {
-    spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
+    spring damping-ratio=0.4 stiffness=800 epsilon=0.0001
   }
 
-  window-resize {
-    spring damping-ratio=0.45 stiffness=750 epsilon=0.0003
-  }
+window-resize {
+        duration-ms 150
+        curve "linear"
+
+        custom-shader r"
+        float gh(float n) {
+            return fract(sin(n) * 43758.5453);
+        }
+
+        float hash(vec2 p) {
+            return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
+        }
+
+        float noise(vec2 p) {
+            vec2 i = floor(p);
+            vec2 f = fract(p);
+
+            float a = hash(i);
+            float b = hash(i + vec2(1.0, 0.0));
+            float c = hash(i + vec2(0.0, 1.0));
+            float d = hash(i + vec2(1.0, 1.0));
+
+            vec2 u = f * f * (3.0 - 2.0 * f);
+
+            return mix(a, b, u.x) +
+                    (c - a) * u.y * (1.0 - u.x) +
+                    (d - b) * u.y * u.x;
+        }
+        
+        vec4 resize_color(vec3 coords_geo, vec3 size_geo) {
+            if (coords_geo.x < 0.0 || coords_geo.x > 1.0 ||
+                coords_geo.y < 0.0 || coords_geo.y > 1.0) {
+                return vec4(0.0);
+            }
+
+            float p = niri_clamped_progress;
+            vec2 uv = coords_geo.xy;
+
+            float intensity = (p * p) * 0.5;
+
+            float niri_random_seed = 0.5 ;
+            float tick = floor(p * 60.0) + niri_random_seed * 1000.0;
+            float r1 = gh(tick * 1.13);
+            float r2 = gh(tick * 2.37);
+            float r3 = gh(tick * 3.71);
+            float r4 = gh(tick * 4.19);
+            float r5 = gh(tick * 5.53);
+            float r6 = gh(tick * 6.91);
+
+            vec2 off_r = vec2(r1 - 0.5, r2 - 0.5) * intensity * 0.15;
+            vec2 off_g = vec2(r3 - 0.5, r4 - 0.5) * intensity * 0.15;
+            vec2 off_b = vec2(r5 - 0.5, r6 - 0.5) * intensity * 0.15;
+
+            float slice = floor(uv.y * 20.0);
+            float slice_offset = (gh(slice + tick) - 0.5) * intensity * 0.08;
+
+            vec4 color;
+            color.r = texture2D(niri_tex_next, uv + off_r + vec2(slice_offset * 0.7, 0.0)).r;
+            color.g = texture2D(niri_tex_next, uv + off_g + vec2(slice_offset * 0.7, 0.0)).g;
+            color.b = texture2D(niri_tex_next, uv + off_b + vec2(slice_offset * 0.7, 0.0)).b;
+            color.a = 1.0;
+
+            float big_glitch = step(0.86, gh(tick * 0.77));
+            vec2 shift = vec2((gh(tick * 1.5) - 0.5) * 0.06 * big_glitch * intensity, 0.0);
+            vec3 tc_shift = size_geo * vec3(uv + shift, 1.0);
+            vec4 shifted = texture2D(niri_tex_next, tc_shift.st);
+            color = mix(color, shifted, intensity * 0.4 );
+
+            float scanline = 1.0 - sin(uv.y * size_geo.y * 3.14159) * 0.06 * intensity;
+            color.rgb *= scanline;
+
+            return color ;
+        }
+        "
+    }
 
   config-notification-open-close {
     spring damping-ratio=0.6 stiffness=800 epsilon=0.001
@@ -296,10 +368,10 @@ animations {
   }
 
   overview-open-close {
-    spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
+    spring damping-ratio=0.4 stiffness=900 epsilon=0.0001
   }
 
   recent-windows-close {
-    spring damping-ratio=0.6 stiffness=800 epsilon=0.001
+    spring damping-ratio=0.4 stiffness=900 epsilon=0.001
   }
 }
