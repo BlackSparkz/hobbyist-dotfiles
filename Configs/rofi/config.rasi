@@ -41,7 +41,7 @@ window {
   width: 45%;
   height: 60%;
   // location: south;
-  // y-offset : -5px;
+  // y-offset : 1px;
 }
 
 
