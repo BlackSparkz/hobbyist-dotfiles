@@ -93,7 +93,7 @@ fi
 
 # ── rofi selection ───────────────────────────────────────────────────────────
 selection=$(build_rofi_input | rofi -dmenu -i \
-    -p "Search wallpaper" \
+    -p "" \
     -show-icons \
     -theme "$ROFI_THEME")
 
@@ -107,39 +107,7 @@ if [[ ! -f "$selected_path" ]]; then
     exit 1
 fi
 
-# ── apply wallpaper ──────────────────────────────────────────────────────────
-
-# Persist path for hypr session restore
-if [[ -f "$HOME/.config/hypr/shellwrapper.sh" ]]; then
-    sed -i "s|^WALLPAPER=.*|WALLPAPER=\"$selected_path\"|" \
-        "$HOME/.config/hypr/shellwrapper.sh"
-fi
-
-# Pywal (optional — skip if wal not found)
-WAL="$HOME/.local/bin/wal"
-if command -v "$WAL" &>/dev/null || command -v wal &>/dev/null; then
-    "${WAL:-wal}" -i "$selected_path"
-    sleep 2
-fi
-
 # swaybg
 pkill -x swaybg 2>/dev/null
 swaybg -i "$selected_path" -m fill &
-
-# dunst
-pkill -x dunst 2>/dev/null
-dunst &
-
-# eww
-touch "$HOME/.config/eww/eww.scss"
-pkill -9 -x eww 2>/dev/null
-eww daemon
-for _ in $(seq 20); do eww ping &>/dev/null && break; sleep 0.1; done
-eww open bar-window
-eww open top-bar-window
-
-# hyprland
-hyprctl reload
-
 notify-send "Wallpaper Changed" "$(basename "$selected_path")"
-

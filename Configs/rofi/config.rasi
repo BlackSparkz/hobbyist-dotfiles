@@ -1,6 +1,6 @@
 entry {
   placeholder: "Type here to search";
-  placeholder-color: white;
+  placeholder-color: rgba(255,255,255,0.6);
   text-color: white;
   font: "Google Sans Flex 12";
   padding: 8px 0 8px 24px;

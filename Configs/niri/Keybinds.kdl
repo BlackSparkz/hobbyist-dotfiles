@@ -21,6 +21,7 @@ binds {
   Alt+O { spawn-sh "systemctl poweroff"; }
   Alt+R { spawn-sh "systemctl reboot"; }
   Alt+S { spawn-sh "systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh"; }
+  Alt+W {spawn-sh "pkill rofi || bash $HOME/.config/Scripts/wallpaper_switcher.sh";}
   Mod+delete { spawn-sh "cliphist wipe"; }
   Mod+Alt+B { spawn "brave-origin-beta"; }
 
@@ -42,7 +43,6 @@ binds {
   Alt+C allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
   Alt+M allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
   Alt+N allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
-  Alt+W {spawn-sh "bash $HOME/.config/Scripts/wallpaper_switcher.sh";}
 
   Mod+O repeat=false { toggle-overview; }
   Mod+Q repeat=true { close-window; }

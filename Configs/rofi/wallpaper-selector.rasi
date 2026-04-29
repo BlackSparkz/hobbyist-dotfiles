@@ -29,6 +29,12 @@ inputbar {
     border: none;
 }
 
+entry {
+  placeholder: "Search wallpapers";
+  placeholder-color: rgba(255,255,255,0.6);
+  font: "Google Sans Flex 12";
+}
+
 listview {
     columns: 4;
     lines: 3;
