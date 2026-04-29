@@ -1,6 +1,9 @@
 7zip
 alacritty
 android-tools
+imagemagick
+libjpeg-turbo
+ffmpeg
 base-devel
 bat
 bibata-cursor-theme-bin
