@@ -17,6 +17,7 @@ binds {
   Mod+C { spawn-sh "pkill rofi ||cliphist list | rofi -dmenu -display-columns 2 -theme ~/.config/rofi/clipboard.rasi | cliphist decode | wl-copy"; }
   Mod+Ctrl+R {spawn-sh "bash $HOME/.config/Scripts/partial_screenshot.sh";}
   Mod+Ctrl+S {spawn-sh "bash $HOME/.config/Scripts/full_screenshot.sh";}
+  Mod+Shift+R {spawn-sh "bash $HOME/.config/Scripts/screen_recorder.sh";}
   Mod+space {spawn-sh "pkill rofi || rofi -show drun";}
   Alt+L { spawn-sh "bash ~/.config/Scripts/random_wall_on_lockscr.sh"; }
   Alt+O { spawn-sh "systemctl poweroff"; }
