@@ -11,5 +11,5 @@ function gacp
         git push
     end
 
-    cd ~
+    cd
 end
