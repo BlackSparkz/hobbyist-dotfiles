@@ -15,7 +15,6 @@ fi
 
 GEOM=$(slurp 2>/dev/null)
 
-# cancel case
 if [ -z "$GEOM" ]; then
     notify-send "Screenshot cancelled"
     exit 0
