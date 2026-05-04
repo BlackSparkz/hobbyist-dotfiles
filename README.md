@@ -27,9 +27,14 @@
 |:---:|
 | ![clipboard](Screenshots/clipboard.png) |
 
+| **Wallpaper picker** |
+|:---:|
+| ![wall_picker](Screenshots/wall_picker.png) |
+
 | **Power menu** |
 |:---:|
 | ![Wlogout](Screenshots/wlogout.png) |
+| ![Power_menu](Screenshots/Powermenu_1.png) |
 
 | **Screenlock** |
 |:---:|
