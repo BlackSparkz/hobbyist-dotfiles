@@ -21,9 +21,9 @@ inputbar {
 
 * {
   separatorcolor: transparent;
-  selected-normal-background: rgba(255,255,255, 10%);
-  normal-background: rgba(255,255,255, 0%);
-  alternate-normal-background: rgba(255,255,255, 0%);
+  selected-normal-background: rgba(255,255,255, 15%);
+  normal-background: transparent;
+  alternate-normal-background: transparent;
 }
 
 mainbox {
@@ -34,9 +34,8 @@ mainbox {
 
 window {
   border-radius: 50px;
-  background-color: rgba(00,00,00,20%);
-  border:2px;
-  border-color: rgba(00,00,00,0%);
+  background-color: rgba(00,00,00,40%);
+  border: none;
   padding: 24px;
   width: 45%;
   height: 60%;
