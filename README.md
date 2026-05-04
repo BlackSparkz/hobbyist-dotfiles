@@ -34,7 +34,7 @@
 | **Power menu** |
 |:---:|
 | ![Wlogout](Screenshots/wlogout.png) |
-| ![Power_menu](Screenshots/Powermenu_1.png) |
+| ![powermenu_rofi](Screenshots/powermenu_1.png) |
 
 | **Screenlock** |
 |:---:|
