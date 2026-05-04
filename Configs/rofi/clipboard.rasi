@@ -1,7 +1,7 @@
 * {
 font: "Google Sans Flex 14";
 
-bg0:    rgba(00,00,00,20%);
+bg0:    rgba(00,00,00,30%);
 bg1:    #7E7E7E80;
 bg2:    rgba(255,255,255, 14%);
 fg0:    #DEDEDE;
