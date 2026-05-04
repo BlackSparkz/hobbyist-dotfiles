@@ -6,7 +6,7 @@ binds {
   Mod+B { spawn "librewolf"; }
   Mod+M { spawn "Telegram"; }
   Mod+Z { spawn "localsend"; }
-  Mod+S { spawn "gtk-launch" "brave-agimnkijcaahngcdmfeangaknmldooml-Default.desktop"; }
+  Mod+S { spawn-sh "brave -new-window || brave-origin-beta https://www.youtube.com"; }
   Mod+A { spawn "alacritty"; }
   Mod+N { spawn-sh "kitty -e yazi"; }
   Mod+G { spawn-sh "kitty -e btop"; }
