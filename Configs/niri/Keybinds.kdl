@@ -39,12 +39,12 @@ binds {
   XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
   XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
-  Alt+B allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.2"; }
-  Alt+V allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+  Alt+BracketRight allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.2"; }
+  Alt+BracketLeft allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
   Alt+X allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
   Alt+C allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
-  Alt+M allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-  Alt+N allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+  Alt+Period allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+  Alt+Comma allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
   Mod+O repeat=false { toggle-overview; }
   Mod+Q repeat=true { close-window; }
