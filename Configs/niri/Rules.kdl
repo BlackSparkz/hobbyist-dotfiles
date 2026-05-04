@@ -44,8 +44,10 @@ layer-rule {
 }
 
 // layer-rule {
-//   match namespace="^notifications$"
-//   background-effect {
-//     blur true
-//   }
+//     match namespace="^notifications$"
+//     geometry-corner-radius 32
+//
+//     background-effect {
+//         blur true
+//     }
 // }
