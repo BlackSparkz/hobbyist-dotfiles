@@ -55,3 +55,13 @@ window-rule {
     // open-floating true
     // open-focused true
 }
+
+window-rule {
+  match app-id="org.kde.kdeconnect.app$"
+  match app-id="localsend$"
+  open-floating true
+  open-focused true
+  default-floating-position x=32 y=32 relative-to="bottom-right"
+  default-column-width { proportion 0.22; }
+  default-window-height { proportion 0.74; }
+}
