@@ -42,10 +42,9 @@ ShellRoot {
                 Keys.onPressed: event => {
                     switch (event.key) {
                         case Qt.Key_Escape: Qt.quit();                             break
-                        case Qt.Key_L:      root.execute("hyprlock"); break
+                        case Qt.Key_L:      root.execute("bash ~/.config/Scripts/random_wall_on_lockscr.sh"); break
                         case Qt.Key_E:      root.execute("hyprctl dispatch exit"); break
                         case Qt.Key_S:      root.execute("systemctl suspend");     break
-                        // case Qt.Key_H:      root.execute("systemctl hibernate");   break
                         case Qt.Key_R:      root.execute("systemctl reboot");      break
                         case Qt.Key_P:      root.execute("systemctl poweroff");    break
                     }
@@ -63,10 +62,9 @@ ShellRoot {
 
                 Repeater {
                     model: [
-                        { icon: "\uf023", label: "Lock",      key: "L", cmd: "hyprlock" },
+                        { icon: "\uf023", label: "Lock",      key: "L", cmd: "bash ~/.config/Scripts/random_wall_on_lockscr.sh" },
                         { icon: "\uf08b", label: "Logout",    key: "E", cmd: "hyprctl dispatch exit" },
                         { icon: "\uf236", label: "Suspend",   key: "S", cmd: "systemctl suspend"     },
-                        // { icon: "\uf28b", label: "Hibernate", key: "H", cmd: "systemctl hibernate"   },
                         { icon: "\uf01e", label: "Reboot",    key: "R", cmd: "systemctl reboot"      },
                         { icon: "\uf011", label: "Shutdown",  key: "O", cmd: "systemctl poweroff"    },
                     ]

@@ -41,6 +41,7 @@ pipewire-pulse
 pixman
 plymouth
 pulsemixer
+quickshell
 rofi
 slurp
 stow
