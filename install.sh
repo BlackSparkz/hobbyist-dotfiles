@@ -63,4 +63,10 @@ systemctl --user enable --now niri.service
 systemctl --user daemon-reload
 systemctl --user enable --now mako-sound
 
+# --- Installing icon pack ---
+git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git ~/
+cd ~/WhiteSur-icon-theme
+bash install.sh
+rm -rf ~/WhiteSur-icon-theme/
+
 echo "[✓] Setup completed successfully!"
