@@ -5,12 +5,6 @@ window-rule {
 
 window-rule {
   match app-id="^kitty$"
-  background-effect {
-    blur true
-  }
-}
-
-window-rule {
   match app-id="^Alacritty$"
   background-effect {
     blur true
@@ -18,8 +12,8 @@ window-rule {
 }
 
 window-rule {
-  match app-id="librewolf" title="^Picture-in-Picture$"
-  match app-id="brave-origin-beta" title="^Picture-in-Picture$"
+  match title="^Picture-in-Picture$"
+  match title=r#"^Picture in picture$"#
   open-floating true
   open-focused false
   default-floating-position x=32 y=32 relative-to="bottom-right"
@@ -43,11 +37,21 @@ layer-rule {
   }
 }
 
-// layer-rule {
-//     match namespace="^notifications$"
-//     geometry-corner-radius 32
-//
-//     background-effect {
-//         blur true
-//     }
-// }
+window-rule {
+  match app-id="Brave-origin-beta"
+  match app-id="librewolf"
+    // open-fullscreen true
+    open-maximized true
+    // open-maximized-to-edges true
+    // open-floating true
+    // open-focused true
+}
+
+window-rule {
+  match app-id="jetbrains-idea"
+    open-fullscreen true
+    // open-maximized true
+    // open-maximized-to-edges true
+    // open-floating true
+    // open-focused true
+}
