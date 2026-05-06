@@ -2,7 +2,7 @@
 live_config_reload = true
 
 [window]
-# dimensions = { columns = 160, lines = 44 }
+dimensions = { columns = 100, lines = 30 }
 padding = { x = 30, y = 20 }
 decorations = "none"
 dynamic_padding = false
