@@ -1,7 +1,7 @@
 window-rule {
   geometry-corner-radius 24
   clip-to-geometry true
-  open-maximized true
+  // open-maximized true
 }
 
 window-rule {
@@ -44,11 +44,16 @@ layer-rule {
 window-rule {
   match app-id="Brave-origin-beta"
   match app-id="librewolf"
+  match app-id="org.telegram.desktop"
+  opacity 0.8
     // open-fullscreen true
     open-maximized true
     // open-maximized-to-edges true
     // open-floating true
     // open-focused true
+  background-effect {
+    blur true
+  }
 }
 
 window-rule {
