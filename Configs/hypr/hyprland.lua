@@ -84,7 +84,7 @@ hl.config({
         -- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
         allow_tearing = false,
 
-        layout = "master",
+        layout = "scrolling",
     },
 
     decoration = {
@@ -104,9 +104,17 @@ hl.config({
 
         blur = {
             enabled   = true,
-            size      = 6,
             passes    = 4,
+            size      = 6,
+            new_optimizations = true,
+            xray = false,
+            popups = true,
+            popups_ignorealpha = 0,
+            noise = 0.02,
+            contrast = 1.6,
+            brightness = 0.9,
             vibrancy  = 0.4,
+            vibrancy_darkness = 0.4,
         },
     },
 
@@ -138,7 +146,7 @@ hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 1.46, bezier = "
 hl.animation({ leaf = "fade",          enabled = true,  speed = 3.03, bezier = "quick" })
 hl.animation({ leaf = "layers",        enabled = true,  speed = 3.81, bezier = "easeOutQuint" })
 hl.animation({ leaf = "layersIn",      enabled = true,  speed = 4,    bezier = "easeOutQuint", style = "slide bottom" })
-hl.animation({ leaf = "layersOut",     enabled = true,  speed = 3,    bezier = "linear",       style = "slide top" })
+hl.animation({ leaf = "layersOut",     enabled = true,  speed = 3,    bezier = "linear",       style = "slide bottom" })
 hl.animation({ leaf = "fadeLayersIn",  enabled = true,  speed = 1.79, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 1.39, bezier = "almostLinear" })
 hl.animation({ leaf = "workspaces",    enabled = true,  speed = 8,    spring = "hobbyist",     style = "slidevert" })
@@ -177,6 +185,7 @@ hl.config({
         new_status = "master",
         mfact = 0.50,
         orientation = "right",
+        new_on_top = true,
     },
 })
 
@@ -184,7 +193,12 @@ hl.config({
 hl.config({
     scrolling = {
         fullscreen_on_one_column = true,
-        column_width = 0.5
+        column_width = 0.5,
+        follow_focus = true,
+        focus_fit_method = 1,
+        follow_min_visible = 0.1,
+        wrap_focus = true,
+        direction = "right",
     },
 })
 
@@ -256,7 +270,7 @@ hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("notify-send 'Hyprland doesnt have an
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("pkill wlogout || wlogout"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close(), { repeating = true })
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("pkill waybar || waybar -c $HOME/.config/waybar/Hyprland/config.jsonc -s $HOME/.config/waybar/style.css"))
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("brave -new-window || brave-origin-beta https://www.youtube.com"))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("brave-origin-beta https://www.youtube.com"))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("kitty"))
 
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
@@ -264,13 +278,15 @@ hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/random_wa
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("kitty -e cmus"), { repeating = false })
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("kitty -e nmtui"))
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("localsend"), { repeating = false })
-hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd("pkill rofi || rofi -show drun -theme ~/.config/rofi/launchpad.rasi"))
+
+hl.bind(mainMod .. " + Space",  hl.dsp.exec_cmd("pkill rofi || rofi -show drun -theme ~/.config/rofi/launchpad.rasi"))
 hl.bind(mainMod .. " + Delete", hl.dsp.exec_cmd("cliphist wipe"))
-hl.bind(mainMod .. " + ALT + B", hl.dsp.exec_cmd("brave-origin-beta"))
-hl.bind(mainMod .. " + CTRL + R", hl.dsp.exec_cmd(" bash ~/.config/Scripts/partial_screenshot.sh"),   { locked = true, repeating = false })
-hl.bind(mainMod .. " + CTRL + S", hl.dsp.exec_cmd(" bash ~/.config/Scripts/full_screenshot.sh"),      { locked = true, repeating = false })
-hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd(" bash ~/.config/Scripts/screen_recorder.sh"),     { locked = true, repeating = false })
-hl.bind(mainMod .. " + CTRL + E", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+
+hl.bind(mainMod .. " + ALT + B",    hl.dsp.exec_cmd("brave-origin-beta"))
+hl.bind(mainMod .. " + CTRL + R",   hl.dsp.exec_cmd(" bash ~/.config/Scripts/partial_screenshot.sh"),   { locked = true, repeating = false })
+hl.bind(mainMod .. " + CTRL + S",   hl.dsp.exec_cmd(" bash ~/.config/Scripts/full_screenshot.sh"),      { locked = true, repeating = false })
+hl.bind(mainMod .. " + CTRL + E",   hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(mainMod .. " + SHIFT + R",  hl.dsp.exec_cmd(" bash ~/.config/Scripts/screen_recorder.sh"),      { locked = true, repeating = false })
 
 -- hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 -- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
@@ -297,10 +313,10 @@ hl.bind(mainMod .. " + SHIFT + L",     hl.dsp.window.move({ direction = "r" }))
 hl.bind(mainMod .. " + SHIFT + K",     hl.dsp.window.move({ direction = "u" }))
 hl.bind(mainMod .. " + SHIFT + J",     hl.dsp.window.move({ direction = "d" }))
 
-hl.bind(mainMod .. " + I",    hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + U",    hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + I",     hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + U",     hl.dsp.focus({ workspace = "e-1" }))
 
-hl.bind(mainMod .. " + down",    hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + down",  hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ workspace = "e-1" }))
 
 -- -- Resize windows (hold mainMod + Ctrl)
@@ -318,8 +334,8 @@ for i = 1, 10 do
 end
 
 -- Example special workspace (scratchpad)
-hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+hl.bind("ALT + Space",          hl.dsp.workspace.toggle_special("magic"))
+hl.bind("ALT + SHIFT + Space",  hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
@@ -353,18 +369,22 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
+-- hl.bind("XF86Lock",       hl.dsp.exec_cmd(" bash ~/.config/Scripts/random_wall_on_lockscr.sh"),         { repeating = false })
 
 hl.bind("Print",        hl.dsp.exec_cmd("bash ~/.config/Scripts/full_screenshot.sh"),      { locked = true, repeating = false })
 hl.bind("ALT + Print",  hl.dsp.exec_cmd("bash ~/.config/Scripts/partial_screenshot.sh"),   { locked = true, repeating = false })
 hl.bind("CTRL + Print", hl.dsp.exec_cmd("bash ~/.config/Scripts/screen_recorder.sh"),      { locked = true, repeating = false })
 
+hl.bind("ALT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 hl.bind("ALT + W", hl.dsp.exec_cmd("bash ~/.config/Scripts/wallpaper_switcher.sh"))
 hl.bind("ALT + L", hl.dsp.exec_cmd("bash ~/.config/Scripts/random_wall_on_lockscr.sh"),                      { locked = false, repeating = false })
 hl.bind("ALT + Z", hl.dsp.exec_cmd("hyprctl reload"),                                                        { locked = true, repeating = false })
 hl.bind("ALT + O", hl.dsp.exec_cmd("systemctl poweroff"),                                                    { locked = true, repeating = false })
 hl.bind("ALT + R", hl.dsp.exec_cmd("systemctl reboot"),                                                      { locked = true, repeating = false })
 hl.bind("ALT + S", hl.dsp.exec_cmd("systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh"),  { locked = true, repeating = false })
-hl.bind("ALT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+
+hl.bind(mainMod .. "+ period", hl.dsp.layout("move +col"))
+hl.bind(mainMod .. "+ comma", hl.dsp.layout("swapcol l"))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
@@ -375,14 +395,13 @@ hl.bind("ALT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "tog
 
 -- Example window rules that are useful
 
-local suppressMaximizeRule = hl.window_rule({
+hl.window_rule({
     -- Ignore maximize requests from all apps. You'll probably like this.
     name  = "suppress-maximize-events",
     match = { class = ".*" },
 
     suppress_event = "maximize",
 })
--- suppressMaximizeRule:set_enabled(false)
 
 hl.window_rule({
     -- Fix some dragging issues with XWayland
@@ -399,26 +418,70 @@ hl.window_rule({
     no_focus = true,
 })
 
--- Layer rules also return a handle.
-local overlayLayerRule = hl.layer_rule({
+hl.window_rule({
+    name  = "pip-for-firefox-based",
+    match = { title = "Picture-in-Picture", },
+    float = true,
+    move = {1420,790},
+    opacity = "1.0",
+    keep_aspect_ratio = true,
+    size = {"(monitor_w*0.25)", "(monitor_h*0.25)"},
+    no_initial_focus = true,
+})
+
+hl.window_rule({
+    name  = "pip-for-chromium-based",
+    match = { title = "Picture in picture",},
+    float = true,
+    move = {1420,780},
+    opacity = "1.0",
+    keep_aspect_ratio = true,
+    size = {"(monitor_w*0.24)", "(monitor_h*0.24)"},
+    no_initial_focus = true,
+})
+
+hl.layer_rule({
     name  = "wlogout",
-    match = { namespace = "^logout_dialog$" },
+    match = { namespace = "logout_dialog" },
     blur = true,
+    ignore_alpha = 0,
 })
 
-local overlayLayerRule = hl.layer_rule({
+hl.layer_rule({
     name  = "waybar",
-    match = { namespace = "^waybar$" },
+    match = { namespace = "waybar" },
     blur = true,
+    ignore_alpha = 0,
+    animation = "slide top",
 })
 
-local overlayLayerRule = hl.layer_rule({
+hl.layer_rule({
     name  = "rofi",
-    match = { namespace = "^rofi$" },
+    match = { namespace = "rofi" },
     blur = true,
+    ignore_alpha = 0,
 })
 
--- overlayLayerRule:set_enabled(false)
+hl.layer_rule({
+    name  = "quickshell",
+    match = { namespace = "quickshell" },
+    blur = true,
+    ignore_alpha = 0,
+})
+
+hl.layer_rule({
+    name  = "mako",
+    match = { namespace = "notifications" },
+    blur = true,
+    ignore_alpha = 0,
+    animation = "slide right",
+})
+
+hl.layer_rule({
+  name      = "no-anim-for-selection",
+  match     = { namespace = "selection" },
+  no_anim   = true,
+})
 
 -- Hyprland-run windowrule
 hl.window_rule({
@@ -426,4 +489,40 @@ hl.window_rule({
     match = { class = "hyprland-run" },
     move  = "20 monitor_h-120",
     float = true,
+})
+
+hl.window_rule({
+    name  = "localsend",
+    match = { class = "localsend" },
+    animation = "slide right",
+    float = true,
+    no_initial_focus = false,
+    move = {1505,300},
+    opacity = "0.8",
+    pin = true,
+    size = {"(monitor_w*0.20)", "(monitor_h*0.70)"},
+})
+
+hl.window_rule({
+    name  = "kdeconnect",
+    match = { class = "org.kde.kdeconnect.app" },
+    animation = "slide right",
+    float = true,
+    no_initial_focus = false,
+    move = {1510,300},
+    opacity = "0.8",
+    pin = true,
+    size = {"(monitor_w*0.20)", "(monitor_h*0.70)"},
+})
+
+hl.window_rule({
+    name  = "kdeconnect daemon",
+    match = { class = "org.kde.kdeconnect.daemon" },
+    animation = "slide right",
+    float = true,
+    size = {"(monitor_w*0.24)", "(monitor_h*0.24)"},
+    no_initial_focus = false,
+    move = {1430,790},
+    opacity = "0.8",
+    pin = true,
 })
