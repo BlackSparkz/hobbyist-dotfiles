@@ -196,7 +196,7 @@ hl.device({
 
 local mainMod = "SUPER"
 
-hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("alacritty"))
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/auto_detect_terminal.sh"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("librewolf"))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/rofi_clipboard.sh"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("kdeconnect-app"))
@@ -222,6 +222,7 @@ hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("localsend"), { repeating = false })
 hl.bind(mainMod .. " + Space",  hl.dsp.exec_cmd("pkill rofi || rofi -show drun -theme ~/.config/rofi/launchpad.rasi"))
 hl.bind(mainMod .. " + Delete", hl.dsp.exec_cmd("cliphist wipe"))
 hl.bind(mainMod .. " + Grave",  hl.dsp.layout("swapwithmaster master"))
+hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/auto_detect_terminal.sh"))
 
 hl.bind(mainMod .. " + ALT + B",    hl.dsp.exec_cmd("brave-origin-beta"))
 hl.bind(mainMod .. " + CTRL + R",   hl.dsp.exec_cmd(" bash ~/.config/Scripts/partial_screenshot.sh"),   { locked = true, repeating = false })

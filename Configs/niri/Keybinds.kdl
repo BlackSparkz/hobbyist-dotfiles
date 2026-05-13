@@ -7,7 +7,7 @@ binds {
   Mod+M { spawn "Telegram"; }
   Mod+Z repeat=false { spawn "localsend"; }
   Mod+S { spawn-sh "brave -new-window || brave-origin-beta https://www.youtube.com"; }
-  Mod+A { spawn "alacritty"; }
+  Mod+A { spawn-sh "bash $HOME/.config/Scripts/auto_detect_terminal.sh"; }
   Mod+N { spawn-sh "kitty -e yazi"; }
   Mod+G { spawn-sh "kitty -e btop"; }
   Mod+E { spawn-sh "kitty -e bluetui"; }
@@ -18,13 +18,14 @@ binds {
   Mod+Ctrl+R {spawn-sh "bash $HOME/.config/Scripts/partial_screenshot.sh";}
   Mod+Ctrl+S {spawn-sh "bash $HOME/.config/Scripts/full_screenshot.sh";}
   Mod+Shift+R {spawn-sh "bash $HOME/.config/Scripts/screen_recorder.sh";}
-  Mod+space {spawn-sh "pkill rofi || rofi -show drun";}
+  Mod+Space {spawn-sh "pkill rofi || rofi -show drun";}
+  Mod+Return { spawn-sh "bash $HOME/.config/Scripts/auto_detect_terminal.sh"; }
   Alt+L repeat=false { spawn-sh "bash ~/.config/Scripts/random_wall_on_lockscr.sh"; }
   Alt+O repeat=false { spawn-sh "systemctl poweroff"; }
   Alt+R repeat=false { spawn-sh "systemctl reboot"; }
   Alt+S repeat=false { spawn-sh "systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh"; }
   Alt+W repeat=false {spawn-sh "pkill rofi || bash $HOME/.config/Scripts/wallpaper_switcher.sh";}
-  Mod+delete { spawn-sh "cliphist wipe"; }
+  Mod+Delete { spawn-sh "cliphist wipe"; }
   Mod+Alt+B { spawn "brave-origin-beta"; }
 
   XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.2"; }
