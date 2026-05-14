@@ -47,6 +47,7 @@ layer-rule {
 
 layer-rule {
   match namespace="^waybar$"
+  match namespace="quickshell"
   match namespace="^logout_dialog$"
   background-effect {
     xray false
