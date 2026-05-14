@@ -11,6 +11,7 @@ scrollbar = never
 window-height = 30
 window-width = 100
 cursor-style = bar
+adjust-cursor-thickness = 1
 cursor-style-blink = true
 mouse-hide-while-typing = true
 confirm-close-surface = false

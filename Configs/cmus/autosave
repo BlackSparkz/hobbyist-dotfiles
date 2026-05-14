@@ -59,7 +59,7 @@ set dsp.alsa.device=
 set dsp.jack.resampling_quality=2
 set dsp.jack.server_name=
 set dsp.oss.device=
-set follow=false
+set follow=true
 set format_clipped_text=…
 set format_current= %a - %l%! - %n. %t%= %y 
 set format_heading_album=%a - %l%= %y %{duration}
@@ -102,7 +102,7 @@ set play_library=true
 set play_sorted=false
 set progress_bar=line
 set repeat=false
-set repeat_current=true
+set repeat_current=false
 set replaygain=disabled
 set replaygain_limit=true
 set replaygain_preamp=0.000000

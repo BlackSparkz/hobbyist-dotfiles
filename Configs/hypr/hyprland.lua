@@ -97,8 +97,8 @@ hl.curve("almostLinear",   { type = "bezier", points = { {0.5, 0.5},   {0.75, 1}
 hl.curve("quick",          { type = "bezier", points = { {0.1, 0},     {0.0, 1}     } })
 
 hl.curve("easy",           { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
-hl.curve( "hobbyist",      { type = "spring", mass = 1, stiffness = 40, dampening = 5 } )
-hl.curve( "cat",           { type = "spring", mass = 1.4, stiffness = 30, dampening = 6 } )
+hl.curve("hobbyist",       { type = "spring", mass = 1, stiffness = 40, dampening = 5 } )
+hl.curve("cat",            { type = "spring", mass = 1, stiffness = 30, dampening = 6 } )
 
 hl.animation({ leaf = "global",        enabled = true,  speed = 8,    bezier = "default" })
 hl.animation({ leaf = "border",        enabled = true,  speed = 2,    bezier = "almostLinear" })
@@ -164,6 +164,14 @@ hl.config({
     misc = {
         force_default_wallpaper = 0,
         disable_hyprland_logo   = true,
+        animate_manual_resizes = true,
+        animate_mouse_windowdragging = true,
+        mouse_move_enables_dpms = false,
+        key_press_enables_dpms = true,
+        initial_workspace_tracking = 0,
+        enable_swallow = true,
+        swallow_regex = "(kitty|Alacritty|ghostty)",
+        middle_click_paste = true,
     },
 })
 
@@ -325,15 +333,15 @@ hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + mouse:272",  hl.dsp.window.drag(),   { mouse = true })
 hl.bind(mainMod .. " + mouse:273",  hl.dsp.window.resize(), { mouse = true })
 
-hl.bind("XF86AudioRaiseVolume",   hl.dsp.exec_cmd("wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+"), { locked = true, repeating = true })
-hl.bind("XF86AudioLowerVolume",   hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-"),        { locked = true, repeating = true })
+hl.bind("XF86AudioRaiseVolume",   hl.dsp.exec_cmd("wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"), { locked = true, repeating = true })
+hl.bind("XF86AudioLowerVolume",   hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"),        { locked = true, repeating = true })
 hl.bind("XF86AudioMute",          hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),        { locked = true, repeating = false })
 hl.bind("XF86AudioMicMute",       hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),      { locked = true, repeating = false })
 hl.bind("XF86MonBrightnessUp",    hl.dsp.exec_cmd("brightnessctl set 10%+"),                            { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessDown",  hl.dsp.exec_cmd("brightnessctl set 10%-"),                            { locked = true, repeating = true })
 
-hl.bind("ALT + BracketRight",     hl.dsp.exec_cmd("wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+"), { locked = true, repeating = true })
-hl.bind("ALT + BracketLeft",      hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-"),        { locked = true, repeating = true })
+hl.bind("ALT + BracketRight",     hl.dsp.exec_cmd("wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"), { locked = true, repeating = true })
+hl.bind("ALT + BracketLeft",      hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"),        { locked = true, repeating = true })
 hl.bind("ALT + slash",            hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),        { locked = true, repeating = false })
 hl.bind("ALT + backslash",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),      { locked = true, repeating = false })
 hl.bind("ALT + apostrophe",       hl.dsp.exec_cmd("brightnessctl set 10%+"),                            { locked = true, repeating = true })
