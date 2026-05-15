@@ -28,8 +28,8 @@ binds {
   Mod+Delete { spawn-sh "cliphist wipe"; }
   Mod+Alt+B { spawn "brave-origin-beta"; }
 
-  XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+ -l 1.2"; }
-  XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01-"; }
+  XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"; }
+  XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"; }
   XF86AudioMute repeat=false allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
   XF86AudioMicMute repeat=false allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
@@ -42,8 +42,8 @@ binds {
   Alt+apostrophe allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
   Alt+semicolon allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
-  Alt+BracketRight allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+ -l 1.2"; }
-  Alt+BracketLeft allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01-"; }
+  Alt+BracketRight allow-when-locked=true { spawn-sh "wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"; }
+  Alt+BracketLeft allow-when-locked=true { spawn-sh "wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"; }
   Alt+slash repeat=false allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
   Alt+backslash repeat=false allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
   Alt+Period allow-when-locked=true {spawn-sh "bash $HOME/.config/Scripts/full_screenshot.sh";}
