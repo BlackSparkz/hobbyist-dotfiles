@@ -1,5 +1,5 @@
 window-rule {
-  geometry-corner-radius 24
+  geometry-corner-radius 32
   clip-to-geometry true
   // open-maximized true
   // open-maximized true

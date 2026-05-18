@@ -1,5 +1,4 @@
 7zip
-alacritty
 android-tools
 bat
 bibata-cursor-theme-bin
@@ -40,6 +39,7 @@ pipewire-alsa
 pipewire-pulse
 pixman
 plymouth
+foot
 pulsemixer
 quickshell
 rofi
@@ -49,7 +49,6 @@ stow
 swaybg
 telegram-desktop
 timeshift
-tmux
 tree
 unzip
 waybar
