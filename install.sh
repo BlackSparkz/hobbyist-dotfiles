@@ -90,6 +90,7 @@ else
   printf "[!] System is not running on $init\n"
 fi
 
+printf "[+] Fixing bash config\n"
 if [[ -f "$HOME/.config/Scripts/bashfix.sh" ]]; then
   bash "$HOME/.config/Scripts/bashfix.sh"
 else
