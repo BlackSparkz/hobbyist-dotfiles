@@ -1,6 +1,6 @@
 [mgr]
 prepend_keymap = [
-  { on = [ "<C-w>" ], run = 'shell --orphan "bash -c \"pkill swaybg; swaybg -i %s -m fill\""' },
-  { on = [ "<C-s>" ], run = 'shell --orphan "bash -c \"bash ~/.config/Scripts/kde-send.sh %s\""' },
+  { on = [ "u" ], run = 'shell --orphan "bash -c \"pkill swaybg; swaybg -i %s -m fill\""' },
+  { on = [ "i" ], run = 'shell --orphan "bash -c \"bash ~/.config/Scripts/kde-send.sh %s\""' },
   { on = ["d"], run = "remove --permanently", desc = "Permanently delete selected files" },
 ]

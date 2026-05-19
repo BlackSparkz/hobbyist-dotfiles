@@ -88,14 +88,11 @@
 /home/blackspark/Music/Armaan Bedil, Raashi Sood - Tutte Dil Wala.m4a
 /home/blackspark/Music/Akhil - Bachalo.m4a
 /home/blackspark/Music/Sarrb, Starboy X - Kamlee.m4a
-/home/blackspark/Music/Shubh - Safety Off.m4a
 /home/blackspark/Music/Vicky - Top Notch Gabru.m4a
 /home/blackspark/Music/Khan Saab, Pav Dharia - Zindagi Tere Naal.m4a
 /home/blackspark/Music/Kaka - Mitti De Tibbe.m4a
 /home/blackspark/Music/Harnoor, ILAM - Moonlight.m4a
 /home/blackspark/Music/Ayushmann Khurrana - Mitti Di Khushboo.m4a
-/home/blackspark/Music/Yo Yo Honey Singh - Call Aundi.m4a
-/home/blackspark/Music/Miss Pooja - Sohnea.m4a
 /home/blackspark/Music/B Praak - Jannat.m4a
 /home/blackspark/Music/Sidhu Moose Wala, Sunny Malton - Levels.m4a
 /home/blackspark/Music/Kaka - Libaas.m4a
@@ -106,7 +103,6 @@
 /home/blackspark/Music/B Praak, Divya Bhatt - Kaun Hoyega.m4a
 /home/blackspark/Music/Muzical Doctorz Sukh-E, Bohemia - Jaguar.m4a
 /home/blackspark/Music/B Praak - Mann Bharrya.m4a
-/home/blackspark/Music/Alfaaz, Honey Singh - Hai Mera Dil.m4a
 /home/blackspark/Music/Guru Randhawa - Ishq Tera.m4a
 /home/blackspark/Music/Shubh - Still Rollin.m4a
 /home/blackspark/Music/Zehr Vibe - Distance Love.m4a

@@ -47,6 +47,7 @@ seatd
 slurp
 stow
 swaybg
+swayimg
 telegram-desktop
 timeshift
 tree
