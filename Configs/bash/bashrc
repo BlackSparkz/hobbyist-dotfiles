@@ -85,7 +85,7 @@ gacp() {
         return 1
     fi
 
-    cd ~/minimal-dotfiles/ || return 1
+    cd ~/hobbyist-dotfiles/ || return 1
     git add .
 
     if git commit -m "$*"; then
