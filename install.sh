@@ -5,7 +5,7 @@ set -euo pipefail
 printf "[+] Starting Arch setup...\n"
 
 printf "[+] Installing base packages...\n"
-sudo pacman -S --needed --noconfirm base-devel stow fish eza git
+sudo pacman -Syu --needed --noconfirm base-devel stow fish eza git
 
 printf "[+] Verifying whether yay is installed or not...\n"
 if ! command -v yay &>/dev/null; then
