@@ -26,7 +26,7 @@ window-rule {
   shadow {
         on
         softness 60
-        spread 5
+        spread 10
         offset x=0 y=10
         draw-behind-window true
         color "#000000"
@@ -102,7 +102,7 @@ window-rule {
   shadow {
         on
         softness 60
-        spread 5
+        spread 10
         offset x=0 y=10
         draw-behind-window true
         color "#000000"
