@@ -13,31 +13,13 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name  = "suppress-maximize-events",
-    match = { class = ".*" },
-    suppress_event = "maximize",
-})
-
-hl.window_rule({
-    name  = "fix-xwayland-drags",
-    match = {
-        class      = "^$",
-        title      = "^$",
-        xwayland   = true,
-        float      = true,
-        fullscreen = false,
-        pin        = false,
-    },
-    no_focus = true,
-})
-
-hl.window_rule({
     name  = "pip n kdeconnect daemon popups",
     match = { title = "Picture-in-Picture|Picture in picture", },
     match = { class = "org.kde.kdeconnect.daemon" },
     float = true,
     move = {1470,820},
     opacity = "1.0",
+    border_size = 2,
     pin = true,
     keep_aspect_ratio = true,
     size = {"(monitor_w*0.22)","(monitor_h*0.22)"},
@@ -79,11 +61,25 @@ hl.window_rule({
     match = { class = "org.kde.kdeconnect.app|localsend" },
     animation = "slide right",
     float = true,
+    border_size = 2,
     no_initial_focus = false,
     move = {1500,300},
     opacity = "0.8",
     pin = true,
     size = {"(monitor_w*0.20)","(monitor_h*0.70)"},
+})
+
+hl.window_rule({
+    name  = "Dashboard",
+    match = { class = "dashboard" },
+    -- animation = "slide right",
+    float = true,
+    border_size = 2,
+    no_initial_focus = false,
+    move = {1260,755},
+    opacity = "1.0",
+    pin = true,
+    size = {"(monitor_w*0.33)","(monitor_h*0.28)"},
 })
 
 hl.window_rule({
@@ -113,4 +109,16 @@ local suppressMaximizeRule = hl.window_rule({
     match = { class = ".*" },
 
     suppress_event = "maximize",
+})
+
+hl.window_rule({
+    name  = "Floating windows",
+    match = { class = "sensors|bluetui|aichat|nmtui|battery|pulsemixer" },
+    float = true,
+    no_initial_focus = false,
+    border_size = 2,
+    move = {930,510},
+    opacity = "1.0",
+    pin = true,
+    size = {"(monitor_w*0.50)","(monitor_h*0.50)"},
 })

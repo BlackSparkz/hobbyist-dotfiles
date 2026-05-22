@@ -40,6 +40,7 @@ hl.bind(mainMod .. " + CTRL + S",   hl.dsp.exec_cmd(" bash ~/.config/Scripts/ful
 hl.bind(mainMod .. " + SHIFT + R",  hl.dsp.exec_cmd(" bash ~/.config/Scripts/screen_recorder.sh"),      { locked = true, repeating = false })
 hl.bind(mainMod .. " + CTRL + E",   hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 
+hl.bind("ALT + Return",                hl.dsp.exec_cmd("bash $HOME/.config/Scripts/dashboard_toggle.sh"))
 hl.bind("SHIFT + Return",              hl.dsp.exec_cmd("footclient --app-id aichat -e aichat"))
 hl.bind("CTRL + Backslash",            hl.dsp.window.pseudo())
 hl.bind("CTRL + SHIFT + Backslash",    hl.dsp.layout("togglesplit"))    -- dwindle only
