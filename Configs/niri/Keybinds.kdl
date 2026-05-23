@@ -24,7 +24,7 @@ binds {
     Mod+W repeat=false {spawn-sh "bash $HOME/.config/Scripts/random_wall_on_home.sh";}
     Mod+X repeat=false {spawn-sh "footclient --app-id cmus -e cmus";}
     Mod+Y {spawn-sh "footclient --app-id nmtui -e nmtui";}
-    Mod+Z repeat=false {spawn "localsend";}
+    Mod+Z repeat=false {spawn-sh "pkill localsend||localsend";}
 
     Mod+Ctrl+R {spawn-sh "bash $HOME/.config/Scripts/partial_screenshot.sh";}
     Mod+Ctrl+S {spawn-sh "bash $HOME/.config/Scripts/full_screenshot.sh";}

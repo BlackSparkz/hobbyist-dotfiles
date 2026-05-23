@@ -34,7 +34,7 @@ alias aptr='sudo apt remove'
 # ==============================
 alias pacup='sudo timeshift --create --comments "Before update" --tags O && yay -Syu'
 alias paci='yay -S --needed'
-alias pacr='yay -Rns'
+alias pacr='yay -Rns --noconfirm'
 
 # ==============================
 # Power control
