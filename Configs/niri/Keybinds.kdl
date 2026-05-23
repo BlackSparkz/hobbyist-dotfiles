@@ -17,7 +17,7 @@ binds {
     Mod+P {spawn-sh "pkill wlogout || wlogout";}
     Mod+Q repeat=true {close-window;}
     Mod+R {spawn-sh "pkill waybar || waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/style.css &";}
-    Mod+S {spawn-sh "brave -new-window || brave-origin-beta https://www.youtube.com";}
+    Mod+S {spawn-sh "~/Applications/helium-0.12.4.1-x86_64.AppImage https://www.youtube.com";}
     Mod+T {spawn "kitty";}
     Mod+U {focus-workspace-up;}
     Mod+V {toggle-window-floating;}

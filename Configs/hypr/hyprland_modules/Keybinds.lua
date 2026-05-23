@@ -18,7 +18,7 @@ hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("notify-send 'Hyprland doesnt have an
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("quickshell -p $HOME/.config/quickshell/power_menu/"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close(), { repeating = true })
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("pkill waybar || waybar -c $HOME/.config/waybar/Hyprland/config.jsonc -s $HOME/.config/waybar/style.css"))
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("brave-origin-beta https://www.youtube.com"))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("~/Applications/helium-0.12.4.1-x86_64.AppImage https://youtube.com/"))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("kitty"))
 
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))

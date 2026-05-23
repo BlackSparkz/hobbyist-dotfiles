@@ -53,6 +53,7 @@ layer-rule {
 window-rule {
   match app-id="Brave-origin-beta"
   match app-id="librewolf"
+  match app-id="Helium"
   // match app-id="foot"
   match app-id="com.mitchellh.ghostty"
   open-maximized true
