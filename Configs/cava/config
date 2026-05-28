@@ -15,4 +15,4 @@ gradient_color_8 = '#f38ba8'
 ; theme = 'none'
 
 [smoothing]
-noise_reduction = 60
+noise_reduction = 40
