@@ -27,7 +27,6 @@ libnotify
 librewolf-bin
 localsend-bin
 mako
-mangowm
 niri
 hyprland
 mpv

@@ -71,7 +71,8 @@ if [[ "$init" == "systemd" ]]; then
   fi
 
 else
-  printf "[!] System is not running on $init\n"
+  printf "[!] System is not running on Systemd\n"
+  printf "[!] Skipping"
 fi
 
 printf "[+] Fixing bash config\n"
@@ -81,7 +82,7 @@ else
   printf "bashfix not found\n"
 fi
 
-xhost +si:localuser:root
+# xhost +si:localuser:root
 
 if [[ -f "$HOME/.local/share/icons/WhiteSur/index.theme" ]]; then
   printf "[✓] WhiteSur-icon-theme already installed\n"

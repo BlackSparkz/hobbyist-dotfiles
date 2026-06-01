@@ -88,13 +88,13 @@
 
 ## Installation
 
-> Please verify the [pkglist](Configs/installed-pkg/pkglist.txt) before executing install.sh so you have an idea of what will be installed. By default, you will get Niri, Hyprland, and Mango.
+> Please verify the [pkglist](Configs/installed-pkg/pkglist.txt) before executing install.sh so you have an idea of what will be installed. By default, you will get Niri (Default) and Hyprland.
 
 ### Prerequisites
 - Clean Arch Linux (recommended) or an Arch-based distro (e.g. EndeavourOS, Manjaro)
 
 ```bash
-sudo pacman -S --needed --noconfirm git
+sudo pacman -Syu --needed --noconfirm git
 ```
 ```bash
 cd ~ && git clone https://github.com/BlackSparkz/hobbyist-dotfiles.git
