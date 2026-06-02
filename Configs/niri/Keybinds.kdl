@@ -39,6 +39,7 @@ binds {
     Alt+R repeat=false {spawn-sh "systemctl reboot";}
     Alt+S repeat=false {spawn-sh "systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh";}
     Alt+W repeat=false {spawn-sh "pkill rofi || bash $HOME/.config/Scripts/wallpaper_switcher.sh";}
+    Alt+D repeat=false {spawn-sh "rfkill toggle all";}
     Mod+Delete {spawn-sh "cliphist wipe";}
     Mod+Alt+B {spawn-sh "~/Applications/helium*";}
 

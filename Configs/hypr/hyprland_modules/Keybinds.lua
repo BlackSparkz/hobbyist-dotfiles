@@ -134,6 +134,7 @@ hl.bind("ALT + N", hl.dsp.exec_cmd("hyprctl reload && notify-send 'Hyprland' 'Co
 hl.bind("ALT + O", hl.dsp.exec_cmd("systemctl poweroff"),                                                    { locked = true, repeating = false })
 hl.bind("ALT + R", hl.dsp.exec_cmd("systemctl reboot"),                                                      { locked = true, repeating = false })
 hl.bind("ALT + S", hl.dsp.exec_cmd("systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh"),  { locked = true, repeating = false })
+hl.bind("ALT + D", hl.dsp.exec_cmd("rfkill toggle all"),                                                      { locked = true, repeating = false })
 
 hl.bind(mainMod .. "+ BracketRight", hl.dsp.layout("consume_or_expel next"))
 hl.bind(mainMod .. "+ BracketLeft",  hl.dsp.layout("consume_or_expel prev"))

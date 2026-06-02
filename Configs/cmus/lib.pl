@@ -1,4 +1,3 @@
-/home/blackspark/Music/Tu Jaane Na - Pritam & Atif Aslam.mp3
 /home/blackspark/Music/Afreen Afreen - Rahat Fateh Ali Khan.mp3
 /home/blackspark/Music/Ishqa Ve - Zeeshan Ali.flac
 /home/blackspark/Music/5_6309641720459954371.m4a
