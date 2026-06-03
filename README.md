@@ -12,8 +12,8 @@
 ## DriftWM
 > [DriftWM](https://github.com/malbiruk/driftwm) is a trackpad-first infinite canvas Wayland compositor.
 
-# Qtile
-*(No Longer Maintained)*
+
+<h1>Qtile <span style="font-weight: normal;">(No Longer Maintained)</span></h1>
 > [Qtile](https://github.com/qtile/qtile/) is a full-featured, hackable tiling window manager written and configured in Python
 
 ### Curious about what it looks like? Here's a glimpse.
