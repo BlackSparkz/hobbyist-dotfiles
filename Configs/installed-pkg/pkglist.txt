@@ -14,6 +14,7 @@ fastfetch
 fd
 fish
 ttf-firacode-nerd
+ttf-profont-nerd
 fzf
 git
 github-cli
