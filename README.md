@@ -3,11 +3,10 @@
 # Hobbyist dotfiles
 **Beautifully crafted desktop rice for Arch Linux**
 
-![Arch](https://img.shields.io/badge/Distro-Arch_Linux-1793d1?style=flat-square&logo=archlinux&logoColor=white)
-![MangoWM](https://img.shields.io/badge/WM-MangoWM-e8a87c?style=flat-square)
+![Arch](https://img.shields.io/badge/OS-Arch_Linux-1793d1?style=flat-square&logo=archlinux&logoColor=white)
 ![Wayland](https://img.shields.io/badge/Protocol-Wayland-ffbc42?style=flat-square&logo=wayland&logoColor=white)
-![Shell](https://img.shields.io/badge/Shell-Fish_+_Starship-4e9a06?style=flat-square)
-![License](https://img.shields.io/badge/License-Personal-lightgrey?style=flat-square)
+![Shell](https://img.shields.io/badge/Shell-Fish-4e9a06?style=flat-square)
+![License](https://img.shields.io/badge/License-GPL_V3-lightgrey?style=flat-square)
 
 <br>
 
