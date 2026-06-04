@@ -4,7 +4,7 @@ input {
       layout "us"
     }
 
-    repeat-rate 60
+    repeat-rate 100
     repeat-delay 300
   }
 

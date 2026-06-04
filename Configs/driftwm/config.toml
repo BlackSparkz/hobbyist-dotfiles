@@ -13,7 +13,7 @@ focus_follows_mouse = true
 
 [input.keyboard]
 layout = "us"
-repeat_rate = 60
+repeat_rate = 100
 repeat_delay = 300
 
 [input.trackpad]
