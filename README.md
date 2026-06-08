@@ -141,3 +141,295 @@ bash ~/hobbyist-dotfiles/stow-configs.sh --adopt
 ```
 
 `--adopt` can overwrite existing files, so only use it when you intend to merge local state into the repo.
+
+## Structure
+
+<!-- TREE_START -->
+```
+Configs/
+├── alacritty
+│   └── alacritty.toml
+├── bash
+│   └── bashrc
+├── bat
+│   └── config
+├── btop
+│   ├── themes
+│   └── btop.conf
+├── cava
+│   ├── shaders
+│   │   ├── bar_spectrum.frag
+│   │   ├── eye_of_phi.frag
+│   │   ├── northern_lights.frag
+│   │   ├── pass_through.vert
+│   │   ├── spectrogram.frag
+│   │   └── winamp_line_style_spectrum.frag
+│   ├── themes
+│   │   ├── solarized_dark
+│   │   └── tricolor
+│   └── config
+├── cmus
+│   ├── playlists
+│   │   └── Default
+│   ├── autosave
+│   ├── cache
+│   ├── command-history
+│   ├── lib.pl
+│   ├── rc
+│   └── search-history
+├── driftwm
+│   └── config.toml
+├── fastfetch
+│   ├── Arch.png
+│   └── config.jsonc
+├── fish
+│   ├── functions
+│   │   ├── cd.fish
+│   │   ├── clean.fish
+│   │   ├── fish_prompt.fish
+│   │   ├── gacp.fish
+│   │   ├── ydl.fish
+│   │   └── y.fish
+│   ├── config.fish
+│   └── fish_variables
+├── foot
+│   ├── foot_for_smassh.ini
+│   └── foot.ini
+├── ghostty
+│   └── config
+├── gtk-3.0
+│   └── settings.ini
+├── gtk-4.0
+│   └── settings.ini
+├── hypr
+│   ├── hyprland_modules
+│   │   ├── Autostart.lua
+│   │   ├── Gestures.lua
+│   │   ├── Input.lua
+│   │   ├── Keybinds.lua
+│   │   ├── Look_and_feel.lua
+│   │   ├── Misc.lua
+│   │   ├── Monitors.lua
+│   │   └── Rules.lua
+│   ├── hyprlock_themes
+│   │   ├── hyprlock_0.conf
+│   │   └── hyprlock_1.conf
+│   └── hyprland.lua
+├── installed-pkg
+│   └── pkglist.txt
+├── kdedefaults
+│   ├── kcminputrc
+│   ├── kdeglobals
+│   ├── ksplashrc
+│   ├── kwinrc
+│   ├── package
+│   └── plasmarc
+├── kitty
+│   └── kitty.conf
+├── klassy
+│   ├── klassyrc
+│   └── windecopresetsrc
+├── lazygit
+│   └── config.yml
+├── mako
+│   └── config
+├── mango
+│   ├── Animations.conf
+│   ├── Autostart.conf
+│   ├── Blur.conf
+│   ├── config.conf
+│   ├── Dwindle_layout.conf
+│   ├── Environments.conf
+│   ├── General.conf
+│   ├── Keybinds.conf
+│   ├── Master-Stack.conf
+│   ├── Monitors.conf
+│   ├── Rules.conf
+│   ├── Scroller_layout.conf
+│   ├── Shadows.conf
+│   └── Tagrules.conf
+├── mpv
+│   ├── fonts
+│   │   └── modernz-icons.ttf
+│   ├── script-opts
+│   │   ├── modernz.conf
+│   │   └── modernz-locale.json
+│   ├── scripts
+│   │   └── modernz.lua
+│   ├── input.conf
+│   └── mpv.conf
+├── niri
+│   ├── Animations.kdl
+│   ├── Autostart.kdl
+│   ├── Blur.kdl
+│   ├── config.kdl
+│   ├── Cursor.kdl
+│   ├── Input.kdl
+│   ├── Keybinds.kdl
+│   ├── Layout.kdl
+│   ├── Others.kdl
+│   ├── Outputs.kdl
+│   ├── Overview.kdl
+│   └── Rules.kdl
+├── nvim
+│   ├── lua
+│   │   ├── configs
+│   │   │   ├── conform.lua
+│   │   │   ├── lazy.lua
+│   │   │   └── lspconfig.lua
+│   │   ├── plugins
+│   │   │   └── init.lua
+│   │   ├── autocmds.lua
+│   │   ├── chadrc.lua
+│   │   ├── mappings.lua
+│   │   └── options.lua
+│   ├── init.lua
+│   ├── lazy-lock.json
+│   └── .stylua.toml
+├── qtile
+│   └── config.py
+├── quickshell
+│   └── power_menu
+│       └── shell.qml
+├── Resources
+│   ├── fonts
+│   │   ├── Betterlett.ttf
+│   │   ├── GoogleSansCodeNF-Bold.ttf
+│   │   ├── GoogleSansCodeNF-Medium.ttf
+│   │   ├── GoogleSansCodeNF-Regular.ttf
+│   │   └── GoogleSansFlex-VariableFont_GRAD,ROND,opsz,slnt,wdth,wght.ttf
+│   ├── images
+│   │   ├── PFP.jpg
+│   │   └── red_dots.png
+│   └── walls_for_driftwm
+│       └── pink_cloud.glsl
+├── rofi
+│   ├── clipboard.rasi
+│   ├── config.rasi
+│   ├── launchpad.rasi
+│   └── wallpaper-selector.rasi
+├── Scripts
+│   ├── auto_detect_terminal.sh
+│   ├── bashfix.sh
+│   ├── clipboard.sh
+│   ├── clipboard_toggle.sh
+│   ├── dashboard.sh
+│   ├── dashboard_toggle.sh
+│   ├── full_screenshot.sh
+│   ├── kde-send.sh
+│   ├── launcher.sh
+│   ├── launcher_toggle.sh
+│   ├── lockscr_greet.sh
+│   ├── mako-sound.sh
+│   ├── mpris.sh
+│   ├── partial_screenshot.sh
+│   ├── powermenu.sh
+│   ├── powermenu_toggle.sh
+│   ├── random_wall_on_home.sh
+│   ├── random_wall_on_lockscr.sh
+│   ├── rofi_clipboard.sh
+│   ├── rofi_powermenu.sh
+│   ├── screen_recorder.sh
+│   ├── smassh.sh
+│   ├── structure_update.py
+│   ├── wallpaper_switcher.sh
+│   └── ydl.py
+├── smassh
+│   └── smassh.json
+├── swayimg
+│   └── init.lua
+├── systemd
+│   └── user
+│       ├── default.target.wants
+│       │   ├── mako-sound.service -> /home/blackspark/.config/systemd/user/mako-sound.service
+│       │   └── niri.service -> /home/blackspark/.config/systemd/user/niri.service
+│       ├── mako-sound.service
+│       └── niri.service
+├── waybar
+│   ├── DriftWM
+│   │   ├── config.jsonc
+│   │   └── style.css
+│   ├── Hyprland
+│   │   └── config.jsonc
+│   ├── MangoWM
+│   │   └── config.jsonc
+│   ├── Modules
+│   │   ├── Backlight.jsonc
+│   │   ├── Battery.jsonc
+│   │   ├── Bluetooth.jsonc
+│   │   ├── Center.jsonc
+│   │   ├── Clock.jsonc
+│   │   ├── Cpu.jsonc
+│   │   ├── Disk.jsonc
+│   │   ├── Memory.jsonc
+│   │   ├── Mpris.jsonc
+│   │   ├── Network.jsonc
+│   │   ├── Power.jsonc
+│   │   ├── Pulseaudio.jsonc
+│   │   ├── Right.jsonc
+│   │   ├── Temperature.jsonc
+│   │   └── Tray.jsonc
+│   ├── Niri
+│   │   └── config.jsonc
+│   └── style.css
+├── wezterm
+│   └── wezterm.lua
+├── wlogout
+│   ├── icons
+│   │   ├── hibernate.png
+│   │   ├── lock.png
+│   │   ├── logout.png
+│   │   ├── power.png
+│   │   ├── restart.png
+│   │   └── sleep.png
+│   ├── layout
+│   └── style.css
+├── xsettingsd
+│   └── xsettingsd.conf
+├── yazi
+│   ├── flavors
+│   │   └── dracula.yazi
+│   │       ├── flavor.toml
+│   │       ├── LICENSE
+│   │       ├── LICENSE-tmtheme
+│   │       ├── preview.png
+│   │       ├── README.md
+│   │       └── tmtheme.xml
+│   ├── plugins
+│   │   └── full-border.yazi
+│   │       ├── LICENSE
+│   │       ├── main.lua
+│   │       └── README.md
+│   ├── init.lua
+│   ├── keymap.toml
+│   ├── package.toml
+│   ├── theme.toml
+│   └── yazi.toml
+├── dolphinrc
+├── kactivitymanagerdrc
+├── kactivitymanagerd-statsrc
+├── kcminputrc
+├── kconf_updaterc
+├── kded5rc
+├── kdeglobals
+├── kfontinstuirc
+├── kglobalshortcutsrc
+├── kiorc
+├── klipperrc
+├── kmenueditrc
+├── kservicemenurc
+├── ksmserverrc
+├── ksplashrc
+├── ktimezonedrc
+├── ktrashrc
+├── kwinoutputconfig.json
+├── kwinrc
+├── plasma-localerc
+├── plasma-nm
+├── plasma-org.kde.plasma.desktop-appletsrc
+├── plasmaparc
+├── plasmarc
+├── plasmashellrc
+└── powermanagementprofilesrc
+```
+<!-- TREE_END -->
