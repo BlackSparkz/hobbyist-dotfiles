@@ -40,7 +40,7 @@ focus_follows_mouse = true
 #                        the viewport center), then BFS to neighbors. Falls
 #                        back to "center" when no focused window or no valid
 #                        placement was found.
-# window_placement = "center"
+window_placement = "auto"
 
 # Commands to run at startup (after WAYLAND_DISPLAY is set).
 # Each entry is passed to sh -c, so full shell syntax works (pipes, &&, env vars).
@@ -150,7 +150,7 @@ font_weight = "medium"         # thin/extralight/light/regular/medium/
                                  # centers short titles and left-aligns +
                                  # ellipsizes long ones
 
-# default_mode = "client"        # decoration mode for windows without a rule.
+default_mode = "minimal"        # decoration mode for windows without a rule.
                                  # "client":  CSD — client draws its own titlebar (default)
                                  # "minimal": SSD — no titlebar; shadow, corners, and border
                                  #            still apply via [decorations] + per-window rules
