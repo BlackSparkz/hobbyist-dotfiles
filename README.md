@@ -338,6 +338,7 @@ Configs/
 │   ├── smassh.sh
 │   ├── structure_update.py
 │   ├── wallpaper_switcher.sh
+│   ├── yazi_wall_setter.sh
 │   └── ydl.py
 ├── smassh
 │   └── smassh.json

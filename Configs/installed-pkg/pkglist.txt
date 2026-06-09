@@ -47,7 +47,7 @@ rofi
 seatd
 slurp
 stow
-swaybg
+awww
 swayimg
 telegram-desktop
 timeshift

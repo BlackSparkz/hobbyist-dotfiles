@@ -167,3 +167,10 @@ window-rule {
         color "#000000"
     }
 }
+
+layer-rule {
+    // This is for swaybg; change for other wallpaper tools.
+    // Find the right namespace by running niri msg layers.
+    match namespace="^awww-daemonniri$"
+    place-within-backdrop true
+}

@@ -1,4 +1,5 @@
-spawn-at-startup "awww-daemon"
+spawn-sh-at-startup "awww-daemon"
+spawn-sh-at-startup "awww-daemon --namespace niri"
 spawn-sh-at-startup "sleep 0.2 && bash $HOME/.config/Scripts/random_wall_on_home.sh"
 spawn-sh-at-startup "waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/style.css &"
 spawn-at-startup "mako"
