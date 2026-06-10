@@ -1,6 +1,6 @@
 * {
     font: "Google Sans Flex 13";
-    text-color: #1e1e2e;
+    text-color: #202020;
     background-color: transparent;
     margin: 0px;
     padding: 0px;
@@ -8,12 +8,13 @@
 }
 
 window {
-    location: northwest;
-    y-offset : 10px;
-    x-offset : 10px;
+    location: center;
+    // location: northwest;
+    // y-offset : 10px;
+    // x-offset : 10px;
     width: 480;
     border-radius: 32px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.4);
     border: 2px;
     border-color: #ffffff60;
 }
@@ -31,8 +32,8 @@ inputbar {
 
 entry {
     placeholder: "Search...";
-    placeholder-color: #1e1e2e;
-    text-color: #151529;
+    placeholder-color: #202020;
+    text-color: #202020;
 }
 
 listview {
@@ -51,7 +52,7 @@ element {
 }
 
 element selected normal, element selected active {
-    background-color:#337BCC80;
+    background-color:#5962ff80;
     text-color: #ffffff;
 }
 
