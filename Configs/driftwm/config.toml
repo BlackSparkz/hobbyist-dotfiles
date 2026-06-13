@@ -93,7 +93,7 @@ size = 24                   # sets XCURSOR_SIZE
 [navigation]
 trackpad_speed = 1.5        # trackpad (scroll/gestures) pan multiplier
 mouse_speed = 1.5           # mouse (drag) pan multiplier (1.0 = direct)
-drift = 1                   # momentum decay (0.90=snappy, 0.98=floaty)
+drift = 0.5                   # momentum decay (0.90=snappy, 0.98=floaty)
 animation_speed = 0.3       # camera lerp factor (higher = faster)
 auto_navigate_on_close = true  # on close, pan to the newly focused window if off-screen
 nudge_step = 60             # px per nudge-window action (mod-shift-arrow by default)
