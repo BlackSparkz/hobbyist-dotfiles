@@ -25,6 +25,7 @@ kdeconnect
 kitty
 libnotify
 librewolf-bin
+helium-browser-bin
 localsend-bin
 mako
 niri
