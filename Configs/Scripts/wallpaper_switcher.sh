@@ -125,4 +125,4 @@ if [[ $status == "niri" ]]; then
   awww img --namespace niri "$NIRI" --transition-type "$chosen" --transition-fps 60 --transition-bezier 0.33,1.0,0.68,1.0 --transition-duration 1.6
 fi
 
-sleep 1.5 && notify-send "Wallpaper changed" "$(basename "$selected_path")" -i "$selected_path"
+# sleep 1 && notify-send "Wallpaper changed" "$(basename "$selected_path")" -i "$selected_path"

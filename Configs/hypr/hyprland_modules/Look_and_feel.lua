@@ -77,7 +77,7 @@ hl.curve("hobbyist",       { type = "spring", mass = 1, stiffness = 40, dampenin
 hl.curve("cat",            { type = "spring", mass = 1, stiffness = 30, dampening = 6 } )
 
 hl.animation({ leaf = "global",        enabled = true,  speed = 8,    bezier = "default" })
-hl.animation({ leaf = "border",        enabled = true,  speed = 4,    bezier = "almostLinear" })
+hl.animation({ leaf = "border",        enabled = true,  speed = 1,    bezier = "almostLinear" })
 hl.animation({ leaf = "windows",       enabled = true,  speed = 10,   spring = "cat",        style = "slide" })
 hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 10,   spring = "cat",        style = "slide" })
 hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 10,   spring = "cat",        style = "slide bottom" })

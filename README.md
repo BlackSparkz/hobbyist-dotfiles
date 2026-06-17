@@ -198,6 +198,7 @@ Configs/
 │   ├── config.fish
 │   └── fish_variables
 ├── foot
+│   ├── foot_for_cmus.ini
 │   ├── foot_for_smassh.ini
 │   └── foot.ini
 ├── ghostty
@@ -303,11 +304,9 @@ Configs/
 │   │   ├── GoogleSansCodeNF-Medium.ttf
 │   │   ├── GoogleSansCodeNF-Regular.ttf
 │   │   └── GoogleSansFlex-VariableFont_GRAD,ROND,opsz,slnt,wdth,wght.ttf
-│   ├── images
-│   │   ├── PFP.jpg
-│   │   └── red_dots.png
-│   └── walls_for_driftwm
-│       └── pink_cloud.glsl
+│   └── images
+│       ├── PFP.jpg
+│       └── red_dots.png
 ├── rofi
 │   ├── clipboard.rasi
 │   ├── config.rasi

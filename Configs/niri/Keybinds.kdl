@@ -2,7 +2,7 @@ binds {
     Mod+A {spawn-sh "bash $HOME/.config/Scripts/auto_detect_terminal.sh";}
     Mod+B {spawn "librewolf";}
     Mod+C {spawn-sh "bash $HOME/.config/Scripts/rofi_clipboard.sh";}
-    Mod+D {spawn "kdeconnect-app";}
+    Mod+D {spawn-sh "pkill thunar || thunar";}
     Mod+E {spawn-sh "footclient --app-id bluetui -e bluetui";}
     Mod+F {maximize-column;}
     Mod+G {spawn-sh "footclient --app-id btop -e btop";}
@@ -17,14 +17,41 @@ binds {
     Mod+P {spawn-sh "pkill wlogout || wlogout";}
     Mod+Q repeat=true {close-window;}
     Mod+R {spawn-sh "pkill waybar || waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/style.css &";}
-    Mod+S {spawn "helium-browser";}
+    Mod+S {spawn-sh "pkill helium-browser || helium-browser";}
     Mod+T {spawn "kitty";}
     Mod+U {focus-workspace-up;}
     Mod+V {toggle-window-floating;}
     Mod+W repeat=false {spawn-sh "bash $HOME/.config/Scripts/random_wall_on_home.sh";}
     Mod+X repeat=false {spawn-sh "footclient --app-id cmus -e cmus";}
     Mod+Y {spawn-sh "footclient --app-id nmtui -e nmtui";}
-    Mod+Z repeat=false {spawn-sh "pkill localsend||localsend";}
+    Mod+Z repeat=false {spawn-sh "pkill localsend || localsend";}
+
+    Alt+A {expand-column-to-available-width;}
+    Alt+B allow-when-locked=true {spawn-sh "playerctl position 1+";}
+    Alt+C allow-when-locked=true {spawn-sh "playerctl play-pause";}
+    Alt+D repeat=false {spawn-sh "rfkill toggle all";}
+    Alt+E repeat=false {spawn-sh "rfkill toggle bluetooth";}
+    Alt+F {maximize-window-to-edges;}
+    Alt+G {spawn-sh "notify-send 'Not registered'";}
+    Alt+H {spawn-sh "notify-send 'Not registered'";}
+    Alt+I {spawn-sh "notify-send 'Not registered'";}
+    Alt+J {spawn-sh "notify-send 'Not registered'";}
+    Alt+K {spawn-sh "notify-send 'Not registered'";}
+    Alt+L repeat=false {spawn-sh "bash ~/.config/Scripts/random_wall_on_lockscr.sh";}
+    Alt+M {fullscreen-window;}
+    Alt+N {spawn-sh "niri msg action load-config-file && notify-send 'Config reloaded'";}
+    Alt+O repeat=false {spawn-sh "systemctl poweroff";}
+    Alt+P {spawn-sh "notify-send 'Not registered'";}
+    Alt+Q repeat=false {spawn-sh "foot -c $HOME/.config/foot/foot_for_cmus.ini --app-id cava -e cava";}
+    Alt+R repeat=false {spawn-sh "systemctl reboot";}
+    Alt+S repeat=false {spawn-sh "systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh";}
+    Alt+T {spawn-sh "notify-send 'Not registered'";}
+    Alt+U {spawn-sh "notify-send 'Not registered'";}
+    Alt+V allow-when-locked=true {spawn-sh "playerctl next";}
+    Alt+W repeat=false {spawn-sh "pkill rofi || bash $HOME/.config/Scripts/wallpaper_switcher.sh";}
+    Alt+X allow-when-locked=true {spawn-sh "playerctl previous";}
+    Alt+Y repeat=false {spawn-sh "rfkill toggle wifi";}
+    Alt+Z allow-when-locked=true {spawn-sh "playerctl position 1-";}
 
     Mod+Ctrl+R {spawn-sh "bash $HOME/.config/Scripts/partial_screenshot.sh";}
     Mod+Ctrl+S {spawn-sh "bash $HOME/.config/Scripts/full_screenshot.sh";}
@@ -37,12 +64,6 @@ binds {
     Mod+Return {spawn-sh "bash $HOME/.config/Scripts/auto_detect_terminal.sh";}
     Mod+Backslash {spawn-sh "bash $HOME/.config/Scripts/smassh.sh";}
     Mod+Delete {spawn-sh "cliphist wipe";}
-    Alt+L repeat=false {spawn-sh "bash ~/.config/Scripts/random_wall_on_lockscr.sh";}
-    Alt+O repeat=false {spawn-sh "systemctl poweroff";}
-    Alt+R repeat=false {spawn-sh "systemctl reboot";}
-    Alt+S repeat=false {spawn-sh "systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh";}
-    Alt+W repeat=false {spawn-sh "pkill rofi || bash $HOME/.config/Scripts/wallpaper_switcher.sh";}
-    Alt+D repeat=false {spawn-sh "rfkill toggle all";}
 
     XF86AudioRaiseVolume allow-when-locked=true {spawn-sh "wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga";}
     XF86AudioLowerVolume allow-when-locked=true {spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga";}
@@ -53,12 +74,6 @@ binds {
     XF86AudioStop        allow-when-locked=true {spawn-sh "playerctl stop";}
     XF86AudioPrev        allow-when-locked=true {spawn-sh "playerctl previous";}
     XF86AudioNext        allow-when-locked=true {spawn-sh "playerctl next";}
-
-    Alt+V                allow-when-locked=true {spawn-sh "playerctl next";}
-    Alt+C                allow-when-locked=true {spawn-sh "playerctl play-pause";}
-    Alt+X                allow-when-locked=true {spawn-sh "playerctl previous";}
-    Alt+B                allow-when-locked=true {spawn-sh "playerctl position 10+";}
-    Alt+Z                allow-when-locked=true {spawn-sh "playerctl position 10-";}
 
     XF86MonBrightnessUp allow-when-locked=true {spawn "brightnessctl" "--class=backlight" "set" "+10%";}
     XF86MonBrightnessDown allow-when-locked=true {spawn "brightnessctl" "--class=backlight" "set" "10%-";}
@@ -72,7 +87,6 @@ binds {
     Alt+Period allow-when-locked=true {spawn-sh "bash $HOME/.config/Scripts/full_screenshot.sh";}
     Alt+Comma allow-when-locked=true {spawn-sh "bash $HOME/.config/Scripts/partial_screenshot.sh";}
 
-
     Mod+Left  {focus-column-left;}
     Mod+Right {focus-column-right;}
     Mod+Up    {focus-workspace-up;}
@@ -80,11 +94,11 @@ binds {
 
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }
-    Mod+Shift+Home { move-column-to-first; }
-    Mod+Shift+End  { move-column-to-last; }
+    Mod+Shift+Home  { move-column-to-first; }
+    Mod+Shift+End   { move-column-to-last; }
 
-    Mod+Shift+U         { move-workspace-down; }
-    Mod+Shift+I         { move-workspace-up; }
+    Mod+Shift+U     { move-workspace-down; }
+    Mod+Shift+I     { move-workspace-up; }
 
     Mod+Shift+Left  {move-column-left;}
     Mod+Shift+Down  {move-window-down;}
@@ -126,9 +140,6 @@ binds {
     Mod+Comma  {consume-window-into-column;}
     Mod+Period {expel-window-from-column;}
 
-    Alt+M {fullscreen-window;}
-    Alt+F {maximize-window-to-edges;}
-    Alt+A {expand-column-to-available-width;}
 
     Mod+Minus {set-column-width "-10%";}
     Mod+Equal {set-column-width "+10%";}

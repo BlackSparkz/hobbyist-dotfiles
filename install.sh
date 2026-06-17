@@ -2,15 +2,14 @@
 
 set -euo pipefail
 
-printf "[+] Starting Arch setup...\n"
-
-sudo pacman -Syu --needed --noconfirm terminus-font
-
 if [[ "$(tty)" == /dev/tty* ]]; then
-  setfont ter-128b
+  # setfont sun12x22
+  setfont latarcyrheb-sun32
 else
   printf "[!] Not in TTY, skipping font size...\n"
 fi
+
+printf "[+] Starting Arch setup...\n"
 
 printf "[+] Installing base packages...\n"
 sudo pacman -Syu --needed --noconfirm base-devel stow fish eza git
@@ -61,8 +60,9 @@ if ! pacman -Q bluez bluez-utils &>/dev/null; then
 fi
 
 if [[ -f /etc/vconsole.conf ]]; then
-  printf "[+] Setting console font permanently to ter-128b\n"
-  sudo sed -i '/^FONT=/c\FONT=ter-128b' /etc/vconsole.conf
+  printf "[+] Setting console font permanently to latarcyrheb-sun32\n"
+  # sudo sed -i '/^FONT=/c\FONT=sun12x22' /etc/vconsole.conf
+  sudo sed -i '/^FONT=/c\FONT=latarcyrheb-sun32' /etc/vconsole.conf
 fi
 
 init=$(ps -p 1 -o comm=)

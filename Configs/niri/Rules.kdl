@@ -5,11 +5,6 @@ window-rule {
 }
 
 window-rule {
-  match app-id="btop"
-  open-fullscreen true
-}
-
-window-rule {
   match app-id="^kitty$"
   match app-id="^Alacritty$"
   background-effect {
@@ -36,6 +31,16 @@ window-rule {
         draw-behind-window false
         color "#000000"
     }
+}
+
+window-rule {
+  match app-id="cava"
+  geometry-corner-radius 0
+  open-floating true
+  open-focused false
+  default-floating-position x=8 y=0 relative-to="bottom"
+  default-column-width { fixed 1920; }
+  default-window-height { fixed 160; }
 }
 
 layer-rule {
@@ -67,35 +72,12 @@ window-rule {
   match app-id="Brave-origin-beta"
   match app-id="librewolf"
   match app-id="Helium"
-  // match app-id="foot"
+  match app-id="foot"
   match app-id="com.mitchellh.ghostty"
+  match app-id="jetbrains-idea"
+  match app-id="btop"
+  match app-id="yazi"
   open-maximized true
-}
-
-// window-rule {
-//   match app-id="jetbrains-idea"
-//   open-fullscreen true
-// }
-
-window-rule {
-  match app-id="org.kde.kdeconnect.app"
-  match app-id="localsend"
-  open-floating true
-  open-focused true
-  open-maximized false
-  open-maximized-to-edges false
-  open-fullscreen false
-  default-floating-position x=20 y=20 relative-to="bottom-right"
-  default-column-width { fixed 400; }
-  default-window-height { proportion 0.72; }
-    shadow {
-        on
-        softness 100
-        spread 10
-        offset x=0 y=10
-        draw-behind-window false
-        color "#000000"
-      }
 }
 
 window-rule {
@@ -123,16 +105,13 @@ window-rule {
 }
 
 window-rule {
-  match app-id="yazi"
-  open-maximized true
-}
-
-window-rule {
   match app-id="bluetui"
   match app-id="pulsemixer"
   match app-id="nmtui"
+  match app-id="localsend"
   match app-id="dashboard"
   match app-id="ncdu"
+  match app-id="org.kde.kdeconnect.app"
   match app-id="org.gnome.Nautilus"
   match app-id="org.kde.kdeconnect.sms"
   match app-id="thunar"
@@ -177,7 +156,6 @@ window-rule {
 }
 
 layer-rule {
-    // Find the right namespace by running niri msg layers.
     match namespace="^awww-daemonniri$"
     place-within-backdrop true
 }

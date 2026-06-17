@@ -58,25 +58,11 @@ hl.layer_rule({
 })
 
 hl.window_rule({
-    name  = "Floating apps",
-    match = { class = "org.kde.kdeconnect.app|localsend" },
-    animation = "slide right",
-    float = true,
-    border_size = 2,
-    no_initial_focus = false,
-    move = {1500,300},
-    opacity = "0.8",
-    pin = true,
-    decorate = false,
-    size = {"(monitor_w*0.20)","(monitor_h*0.70)"},
-})
-
-hl.window_rule({
     name  = "Dashboard",
     match = { class = "dashboard" },
     -- animation = "slide right",
     float = true,
-    border_size = 2,
+    border_size = 3,
     no_initial_focus = false,
     move = {1260,730},
     opacity = "1.0",
@@ -85,9 +71,23 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name  = "Cava window rule",
+    match = { class = "cava" },
+    float = true,
+    no_blur = true,
+    rounding = 0,
+    border_size = 0,
+    no_initial_focus = true,
+    move = {6,888},
+    opacity = "1.0",
+    pin = true,
+    size = {"(monitor_w*1.00)","(monitor_h*0.18)"},
+})
+
+
+hl.window_rule({
     name  = "move-hyprland-run",
     match = { class = "hyprland-run" },
-
     move  = "20 monitor_h-120",
     float = true,
 })
@@ -102,20 +102,18 @@ hl.window_rule({
         fullscreen = false,
         pin        = false,
     },
-
     no_focus = true,
 })
 
 local suppressMaximizeRule = hl.window_rule({
     name  = "suppress-maximize-events",
     match = { class = ".*" },
-
     suppress_event = "maximize",
 })
 
 hl.window_rule({
     name  = "Floating windows",
-    match = { class = "sensors|bluetui|thunar|org.kde.kdeconnect.sms|aichat|nmtui|battery|pulsemixer|org.gnome.Nautilus" },
+    match = { class = "sensors|bluetui|thunar|org.kde.kdeconnect.sms|aichat|nmtui|battery|pulsemixer|org.gnome.Nautilus|org.kde.kdeconnect.app|localsend" },
     float = true,
     no_initial_focus = false,
     border_size = 2,

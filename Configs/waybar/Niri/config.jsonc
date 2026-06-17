@@ -16,12 +16,16 @@
     "tooltip": false,
     "tooltip-format": "App launcher",
     "on-click": "pkill rofi || rofi -show drun",
-    "on-click-right": "foot"
+    "on-click-right": "foot",
+    "on-click-middle": "niri msg action close-window"
   },
 
   "niri/workspaces": {
     "format": "{icon}",
-    "format-icons": { "active": "", "default": "" }
+    "format-icons": { "active": "", "default": "" },
+    "on-click-middle": "niri msg action maximize-column",
+    "on-scroll-up": "niri msg action focus-workspace-up",
+    "on-scroll-down": "niri msg action focus-workspace-down"
   },
 
   "include": [

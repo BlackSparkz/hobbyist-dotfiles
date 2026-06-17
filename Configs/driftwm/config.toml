@@ -21,7 +21,7 @@ autostart = [
   "systemd-run --user --no-block --collect --unit=fix-portal-env bash -c sleep 2 && systemctl --user import-environment WAYLAND_DISPLAY && systemctl --user restart xdg-desktop-portal-gtk xdg-desktop-portal",
   "wl-paste --type image --watch cliphist store",
   "wl-paste --type text --watch cliphist store",
-  "waybar -c $HOME/.config/waybar/DriftWM/config.jsonc -s $HOME/.config/waybar/DriftWM/style.css",
+  # "waybar -c $HOME/.config/waybar/DriftWM/config.jsonc -s $HOME/.config/waybar/DriftWM/style.css",
   "mako",
   "foot --server",
 ]
@@ -75,10 +75,10 @@ num_lock = false             # num lock state on startup
 # tap_to_click = true         # enable tap-to-click
 natural_scroll = true         # reverse scroll direction (content follows fingers)
 # tap_and_drag = true         # double-tap-hold to drag
-# accel_speed = 0.0           # pointer acceleration (-1.0 to 1.0)
-# accel_profile = "adaptive"  # "flat" or "adaptive"
+accel_speed = 1.0           # pointer acceleration (-1.0 to 1.0)
+accel_profile = "adaptive"  # "flat" or "adaptive"
 # click_method = "none"       # none = device default; clickfinger = finger count (1=left, 2=right, 3=middle); button_areas = position on trackpad
-# disable_while_typing = true  # ignore trackpad input shortly after a key press (palm rejection)
+disable_while_typing = true  # ignore trackpad input shortly after a key press (palm rejection)
 
 [input.mouse]
 accel_speed = 1.0           # pointer acceleration (-1.0 to 1.0)
@@ -173,7 +173,7 @@ default_mode = "minimal"        # decoration mode for windows without a rule.
 [effects]
 blur_radius = 3                # number of Kawase down+up passes (default: 2)
 blur_strength = 1.0            # per-pass texel spread (default: 1.1)
-# animate_blur = false           # re-blur every frame when the wallpaper is animated
+animate_blur = true            # re-blur every frame when the wallpaper is animated
                                  # (expensive; default: false — blur is captured once and
                                  # only refreshed when geometry/camera/static bg change)
 
@@ -207,21 +207,18 @@ blur_strength = 1.0            # per-pass texel spread (default: 1.1)
 [background]
 # Three background types: "shader", "tile", "wallpaper". `path` is the source.
 type = "shader"
-path = "~/.config/Resources/walls_for_driftwm/pink_cloud.glsl"
-# Examples:
-# # type = "shader" — procedural GLSL (scrolls with canvas)
-# # path = "/usr/local/share/driftwm/wallpapers/animated/fast_smoke.glsl"
-# # type = "tile" — image tiled across the canvas
-# # path = "~/Pictures/Wallpapers/tile.png"
-# # type = "wallpaper" — single image fixed to viewport (does not scroll/zoom)
-# # path = "~/Pictures/Wallpapers/wallpaper.jpg"
-#
-# A "shader" can also sample an image via `texture` (bound to the shader's
-# `tex` sampler) — a procedural effect *on* your image. See docs/shaders.md.
-# # type = "shader"
-# # path = "/usr/local/share/driftwm/wallpapers/textured/ripple.glsl"
-# # texture = "~/Pictures/Wallpapers/photo.jpg"
-#
+path = "/usr/share/driftwm/wallpapers/animated/dense_clouds.glsl"
+
+# type = "tile"
+# path = "~/Wallpapers/a_beach_with_waves_and_rocks.jpg"
+
+# type = "wallpaper"
+# path = "~/Wallpapers/a_beach_with_waves_and_rocks.jpg"
+
+# type = "shader"
+# path = "/usr/share/driftwm/wallpapers/textured/ripple.glsl"
+# texture = "~/Wallpapers/a_beach_with_waves_and_rocks.jpg"
+
 # cache_shader = false
 #   Bake a heavy static shader to a texture once, then pan that — so it pans as
 #   cheaply as an image instead of recomputing every frame.
@@ -275,15 +272,15 @@ path = "~/.config/Resources/walls_for_driftwm/pink_cloud.glsl"
   "Mod+A" = "spawn bash $HOME/.config/Scripts/auto_detect_terminal.sh"
   "Mod+B" = "exec librewolf"
   "Mod+C" = "spawn bash $HOME/.config/Scripts/rofi_clipboard.sh"
-  "Mod+D" = "exec kdeconnect-app"
+  "Mod+D" = "spawn pkill thunar || thunar"
   "Mod+E" = "spawn footclient --app-id bluetui -e bluetui"
   "Mod+F" = "toggle-fullscreen"
   "Mod+G" = "spawn footclient --app-id btop -e btop"
-  # Mod+H "focus-column-left
-  # Mod+I "focus-workspace-down
-  # Mod+J "focus-window-down
-  # Mod+K "focus-window-up
-  # Mod+L "focus-column-right
+  "Mod+H" = "center-nearest left"
+
+  "Mod+J" = "center-nearest down"
+  "Mod+K" = "center-nearest up"
+  "Mod+L" = "center-nearest right"
   "Mod+M" = "exec Telegram"
   "Mod+N" = "spawn footclient --app-id yazi -e yazi"
   "Mod+O" = "zoom-to-fit"
@@ -292,11 +289,15 @@ path = "~/.config/Resources/walls_for_driftwm/pink_cloud.glsl"
   "Mod+R" = "spawn pkill waybar || waybar -c $HOME/.config/waybar/DriftWM/config.jsonc -s $HOME/.config/waybar/DriftWM/style.css &"
   "Mod+S" = "spawn pkill helium-browser || helium-browser"
   "Mod+T" = "exec footclient"
+
+
   "Mod+W" = "none"
   "Mod+X" = "spawn footclient --app-id cmus -e cmus"
   "Mod+Y" = "spawn footclient --app-id nmtui -e nmtui"
-  "Mod+Z" = "spawn pkill localsend||localsend"
+  "Mod+Z" = "spawn pkill localsend || localsend"
+
   "Alt+F" = "fit-window"
+  "Alt+Q" = "spawn foot -c $HOME/.config/foot/foot_for_cmus.ini --app-id cava -e cava"
 
   "Mod+Ctrl+R" = "spawn bash $HOME/.config/Scripts/partial_screenshot.sh"
   "Mod+Ctrl+S" = "spawn bash $HOME/.config/Scripts/full_screenshot.sh"
@@ -314,6 +315,8 @@ path = "~/.config/Resources/walls_for_driftwm/pink_cloud.glsl"
   "Alt+S" = "spawn systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh"
   "Alt+W" = "spawn pkill rofi || bash $HOME/.config/Scripts/wallpaper_switcher.sh"
   "Alt+D" = "spawn rfkill toggle all"
+  "Alt+E" = "spawn rfkill toggle bluetooth"
+  "Alt+Y" = "spawn rfkill toggle wifi"
   "Alt+N" = "reload-config"
 
   "XF86AudioRaiseVolume" = "spawn wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
@@ -328,8 +331,8 @@ path = "~/.config/Resources/walls_for_driftwm/pink_cloud.glsl"
   "Alt+V" = "spawn playerctl next"
   "Alt+C" = "spawn playerctl play-pause"
   "Alt+X" = "spawn playerctl previous"
-  "Alt+B" = "spawn playerctl position 10+"
-  "Alt+Z" = "spawn playerctl position 10-"
+  "Alt+B" = "spawn playerctl position 1+"
+  "Alt+Z" = "spawn playerctl position 1-"
 
   "XF86MonBrightnessUp" = "spawn brightnessctl --class=backlight set +10%"
   "XF86MonBrightnessDown" = "spawn brightnessctl --class=backlight set 10%-"
@@ -340,14 +343,9 @@ path = "~/.config/Resources/walls_for_driftwm/pink_cloud.glsl"
   "Alt+BracketLeft" = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
   "Alt+slash" = "spawn wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
   "Alt+backslash" = "spawn wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-  "Alt+Period" = "spawn bash $HOME/.config/Scripts/full_screenshot.sh"
+  "Alt+Period" = "spawn bash $HOME/.confcenter-nearestig/Scripts/full_screenshot.sh"
   "Alt+Comma" = "spawn bash $HOME/.config/Scripts/partial_screenshot.sh"
-          # "mod+c" = "center-window"
-          # "mod+h" = "home-toggle"
-  "Mod+Tab" = "cycle-windows forward"
-  "mod+Shift+Tab" = "cycle-windows backward"
-  "Mod+equal" = "zoom-in"
-  "Mod+minus" = "zoom-out"
+  "mod+HOME" = "home-toggle"
   "Mod+0" = "zoom-reset"
   "Mod+Ctrl+E" = "quit"
 
@@ -374,8 +372,8 @@ path = "~/.config/Resources/walls_for_driftwm/pink_cloud.glsl"
 # "mod+ctrl+down" = "pan-viewport down"
 # "mod+ctrl+left" = "pan-viewport left"
 # "mod+ctrl+right" = "pan-viewport right"
-# "alt+tab" = "cycle-windows forward"
-# "alt+shift+tab" = "cycle-windows backward"
+"mod+tab" = "cycle-windows forward"
+"mod+shift+tab" = "cycle-windows backward"
 # "mod+equal" = "zoom-in"
 # "mod+minus" = "zoom-out"
 # "mod+0" = "zoom-reset"
@@ -492,8 +490,6 @@ path = "~/.config/Resources/walls_for_driftwm/pink_cloud.glsl"
 # "4-finger-swipe" = "center-nearest"       # threshold (accumulate, detect direction, fire once)
 # "mod+3-finger-swipe" = "center-nearest"   # mod makes 3-finger swipe navigate too
 # Per-direction overrides examples (threshold only, checked before swipe fallback):
-# # "4-finger-swipe-up" = "exec brightnessctl set +5%"
-# # "4-finger-swipe-down" = "exec brightnessctl set 5%-"
 # "mod+2-finger-pinch" = "zoom"             # mod overrides app forwarding
 # "3-finger-pinch" = "zoom"                 # continuous
 # "4-finger-pinch-in" = "zoom-to-fit"       # threshold

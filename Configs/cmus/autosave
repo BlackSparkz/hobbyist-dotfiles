@@ -59,7 +59,7 @@ set dsp.alsa.device=
 set dsp.jack.resampling_quality=2
 set dsp.jack.server_name=
 set dsp.oss.device=
-set follow=false
+set follow=true
 set format_clipped_text=…
 set format_current= %a - %l%! - %n. %t%= %y 
 set format_heading_album=%a - %l%= %y %{duration}
@@ -116,7 +116,7 @@ set show_current_bitrate=false
 set show_hidden=false
 set show_playback_position=true
 set show_remaining_time=false
-set shuffle=off
+set shuffle=tracks
 set skip_track_info=false
 set smart_artist_sort=true
 set softvol=false
@@ -134,9 +134,9 @@ bind browser i toggle show_hidden
 bind browser space win-activate
 bind browser u win-update
 bind common ! push shell 
-bind common + vol +10%
+bind common + vol +1%
 bind common , seek -1m
-bind common - vol -10%
+bind common - vol -1%
 bind common . seek +1m
 bind common / search-start
 bind common 1 view tree
@@ -146,7 +146,7 @@ bind common 4 view queue
 bind common 5 view browser
 bind common 6 view filters
 bind common 7 view settings
-bind common = vol +10%
+bind common = vol +1%
 bind common ? search-b-start
 bind common B player-next-album
 bind common C toggle continue
@@ -174,7 +174,7 @@ bind common ^R toggle repeat_current
 bind common ^U win-half-page-up
 bind common ^Y win-scroll-up
 bind common a win-add-l
-bind common b seek +10
+bind common b seek +1
 bind common c player-pause
 bind common d win-remove
 bind common delete win-remove
@@ -220,7 +220,7 @@ bind common up win-up
 bind common v player-next
 bind common x player-prev
 bind common y win-add-p
-bind common z seek -10
+bind common z seek -1
 bind common { vol -1% -0
 bind common } vol -0 -1%
 fset 90s=date>=1990&date<2000
