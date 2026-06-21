@@ -71,19 +71,19 @@ hl.bind(mainMod .. " + Down",  hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + Up",    hl.dsp.focus({ workspace = "e-1" }))
 
 for i = 1, 10 do
-    local key = i % 10
-    hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
-    hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
+  local key = i % 10
+  hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
+  hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
 end
 
 hl.bind("SUPER + SHIFT + V", function()
-    local active = hl.get_active_window()
+  local active = hl.get_active_window()
 
-    if active and active.floating then
-        hl.dispatch(hl.dsp.focus({ window = "tiled" }))
-    else
-        hl.dispatch(hl.dsp.focus({ window = "floating" }))
-    end
+  if active and active.floating then
+    hl.dispatch(hl.dsp.focus({ window = "tiled" }))
+  else
+    hl.dispatch(hl.dsp.focus({ window = "floating" }))
+  end
 end
 )
 

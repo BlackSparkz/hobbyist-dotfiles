@@ -3,8 +3,8 @@
 ------------------
 
 hl.monitor({
-    output   = "",
-    mode     = "preferred",
-    position = "auto",
-    scale    = "1.0",
+  output   = "",
+  mode     = "preferred",
+  position = "auto",
+  scale    = "1.0",
 })

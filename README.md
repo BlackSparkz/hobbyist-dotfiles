@@ -207,11 +207,15 @@ Configs/
 │   └── settings.ini
 ├── hypr
 │   ├── hyprland_modules
+│   │   ├── Animations_End4.lua
+│   │   ├── Animations.lua
 │   │   ├── Autostart.lua
+│   │   ├── Decorations.lua
+│   │   ├── Generals.lua
 │   │   ├── Gestures.lua
 │   │   ├── Input.lua
 │   │   ├── Keybinds.lua
-│   │   ├── Look_and_feel.lua
+│   │   ├── Layouts.lua
 │   │   ├── Misc.lua
 │   │   ├── Monitors.lua
 │   │   └── Rules.lua
