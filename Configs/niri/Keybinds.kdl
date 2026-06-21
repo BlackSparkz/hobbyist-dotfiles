@@ -32,7 +32,7 @@ binds {
     Alt+D repeat=false {spawn-sh "rfkill toggle all";}
     Alt+E repeat=false {spawn-sh "rfkill toggle bluetooth";}
     Alt+F {maximize-window-to-edges;}
-    Alt+G {spawn-sh "notify-send 'Not registered'";}
+    Alt+G {spawn-sh "pkill nwg-look || nwg-look";}
     Alt+H {spawn-sh "notify-send 'Not registered'";}
     Alt+I {spawn-sh "notify-send 'Not registered'";}
     Alt+J {spawn-sh "notify-send 'Not registered'";}
