@@ -52,6 +52,7 @@ awww
 swayimg
 telegram-desktop
 timeshift
+thunar
 tree
 unzip
 waybar
