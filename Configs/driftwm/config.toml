@@ -317,7 +317,7 @@ path = "/usr/share/driftwm/wallpapers/animated/dense_clouds.glsl"
   "Alt+Y" = "spawn rfkill toggle wifi"
   "Alt+N" = "reload-config"
   "Alt+F" = "fit-window"
-  "Alt+Q" = "spawn foot -c $HOME/.config/foot/foot_for_cmus.ini --app-id cava -e cava"
+  "Alt+Q" = "spawn foot -c $HOME/.config/foot/foot_for_cava.ini --app-id cava -e cava"
   "Alt+K" = "spawn pkill kdeconnect-app || kdeconnect-app"
   "Alt+G" = "spawn pkill nwg-look || nwg-look"
 

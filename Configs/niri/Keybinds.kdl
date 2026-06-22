@@ -42,7 +42,7 @@ binds {
     Alt+N {spawn-sh "niri msg action load-config-file && notify-send 'Config reloaded'";}
     Alt+O repeat=false {spawn-sh "systemctl poweroff";}
     Alt+P {spawn-sh "notify-send 'Not registered'";}
-    Alt+Q repeat=false {spawn-sh "foot -c $HOME/.config/foot/foot_for_cmus.ini --app-id cava -e cava";}
+    Alt+Q repeat=false {spawn-sh "foot -c $HOME/.config/foot/foot_for_cava.ini --app-id cava -e cava";}
     Alt+R repeat=false {spawn-sh "systemctl reboot";}
     Alt+S repeat=false {spawn-sh "systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh";}
     Alt+T {spawn-sh "notify-send 'Not registered'";}

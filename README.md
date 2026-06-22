@@ -196,7 +196,7 @@ Configs/
 │   ├── config.fish
 │   └── fish_variables
 ├── foot
-│   ├── foot_for_cmus.ini
+│   ├── foot_for_cava.ini
 │   ├── foot_for_smassh.ini
 │   └── foot.ini
 ├── ghostty
