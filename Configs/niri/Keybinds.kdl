@@ -161,4 +161,5 @@ binds {
     Ctrl+Print repeat=false {spawn-sh "bash $HOME/.config/Scripts/screen_recorder.sh";}
 
     Mod+ctrl+E repeat=false {quit skip-confirmation=true;}
+    Mod+Escape repeat=false {quit skip-confirmation=true;}
   }

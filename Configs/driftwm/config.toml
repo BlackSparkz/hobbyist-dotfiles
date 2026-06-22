@@ -350,6 +350,7 @@ path = "/usr/share/driftwm/wallpapers/animated/dense_clouds.glsl"
   "mod+HOME" = "home-toggle"
   "Mod+0" = "zoom-reset"
   "Mod+Ctrl+E" = "quit"
+  "Mod+Escape" = "quit"
 
 # "mod+return" = "exec <detected terminal>"
 # "mod+d" = "exec <detected launcher>"
