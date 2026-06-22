@@ -36,7 +36,6 @@ ncdu
 neovim
 networkmanager
 nwg-look
-otf-font-awesome
 pipewire-alsa
 pipewire-pulse
 pixman

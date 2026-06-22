@@ -141,6 +141,7 @@ hl.bind("ALT + Y", hl.dsp.exec_cmd("rfkill toggle wifi"),                       
 hl.bind("ALT + K", hl.dsp.exec_cmd("pkill kdeconnect-app || kdeconnect-app"),                                { repeating = false })
 hl.bind("ALT + G", hl.dsp.exec_cmd("pkill nwg-look || nwg-look"),                                { repeating = false })
 hl.bind("ALT + Q", hl.dsp.exec_cmd("foot -c $HOME/.config/foot/foot_for_cava.ini --app-id cava -e cava"),    { repeating = false })
+hl.bind("ALT + H", hl.dsp.dpms({ action = "toggle" }))
 
 hl.bind(mainMod .. "+ BracketRight", hl.dsp.layout("consume_or_expel next"))
 hl.bind(mainMod .. "+ BracketLeft",  hl.dsp.layout("consume_or_expel prev"))

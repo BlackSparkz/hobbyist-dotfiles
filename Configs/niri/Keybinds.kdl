@@ -33,7 +33,7 @@ binds {
     Alt+E repeat=false {spawn-sh "rfkill toggle bluetooth";}
     Alt+F {maximize-window-to-edges;}
     Alt+G {spawn-sh "pkill nwg-look || nwg-look";}
-    Alt+H {spawn-sh "notify-send 'Not registered'";}
+    Alt+H {spawn-sh "niri msg action power-off-monitors";}
     Alt+I {spawn-sh "notify-send 'Not registered'";}
     Alt+J {spawn-sh "notify-send 'Not registered'";}
     Alt+K {spawn-sh "pkill kdeconnect-app || kdeconnect-app";}
