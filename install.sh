@@ -3,7 +3,6 @@
 set -euo pipefail
 
 if [[ "$(tty)" == /dev/tty* ]]; then
-  # setfont sun12x22
   setfont latarcyrheb-sun32
 else
   printf "[!] Not in TTY, skipping font size...\n"
@@ -61,7 +60,6 @@ fi
 
 if [[ -f /etc/vconsole.conf ]]; then
   printf "[+] Setting console font permanently to latarcyrheb-sun32\n"
-  # sudo sed -i '/^FONT=/c\FONT=sun12x22' /etc/vconsole.conf
   sudo sed -i '/^FONT=/c\FONT=latarcyrheb-sun32' /etc/vconsole.conf
 fi
 
@@ -96,8 +94,6 @@ if [[ -f "$HOME/.config/Scripts/bashfix.sh" ]]; then
 else
   printf "[!] bashfix not found\n"
 fi
-
-# xhost +si:localuser:root
 
 if [[ -f "$HOME/.local/share/icons/Tela/index.theme" ]]; then
   printf "[✓] Tela-icon-theme already installed\n"
