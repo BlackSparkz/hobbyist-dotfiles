@@ -102,7 +102,6 @@
 /home/blackspark/Music/AP Dhillon, Gurinder Gill - TERE TE.m4a
 /home/blackspark/Music/Satbir Aujla - Tom And Jerry.m4a
 /home/blackspark/Music/Ninja - Oh Kyu Ni Jaan Ske.m4a
-/home/blackspark/Music/Armaan Bedil, Raashi Sood - Tutte Dil Wala.m4a
 /home/blackspark/Music/Akhil - Bachalo.m4a
 /home/blackspark/Music/Sarrb, Starboy X - Kamlee.m4a
 /home/blackspark/Music/Shubh - Safety Off.m4a
