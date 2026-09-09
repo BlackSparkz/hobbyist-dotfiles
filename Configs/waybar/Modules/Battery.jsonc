@@ -17,8 +17,8 @@
         "tooltip-format-warning": "Battery low: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nConnect the charger soon.",
 
         "events": {
-          "on-discharging-warning": "notify-send 'Battery Low (25%)' 'Connect the charger soon'",
-          "on-discharging-critical": "notify-send 'Battery Critical (15%)' 'Connect the charger immediately'",
+          "on-discharging-warning": "notify-send 'Battery Low' 'Connect the charger soon'",
+          "on-discharging-critical": "notify-send 'Battery Critical' 'Connect the charger immediately'",
           "on-charging-100": "notify-send 'Battery Full' 'Please unplug the charger'"
         }
       }
