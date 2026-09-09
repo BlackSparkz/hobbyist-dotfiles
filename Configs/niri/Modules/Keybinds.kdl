@@ -45,7 +45,7 @@ binds {
     Alt+Q repeat=false {spawn-sh "foot -c $HOME/.config/foot/foot_for_cava.ini --app-id cava -e cava";}
     Alt+R repeat=false {spawn-sh "systemctl reboot";}
     Alt+S repeat=false {spawn-sh "systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh";}
-    Alt+T {spawn-sh "notify-send 'Not registered'";}
+    Alt+T { spawn "xdg-open" "https://www.youtube.com"; }
     Alt+U {spawn-sh "notify-send 'Not registered'";}
     Alt+V allow-when-locked=true {spawn-sh "playerctl next";}
     Alt+W repeat=false {spawn-sh "pkill rofi || bash $HOME/.config/Scripts/wallpaper_switcher.sh";}

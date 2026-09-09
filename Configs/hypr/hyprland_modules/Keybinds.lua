@@ -144,6 +144,7 @@ hl.bind("ALT + D", hl.dsp.exec_cmd("rfkill toggle all"),                        
 hl.bind("ALT + E", hl.dsp.exec_cmd("rfkill toggle bluetooth"),                                               { locked = true, repeating = false })
 hl.bind("ALT + Y", hl.dsp.exec_cmd("rfkill toggle wifi"),                                                    { locked = true, repeating = false })
 hl.bind("ALT + K", hl.dsp.exec_cmd("pkill kdeconnect-app || kdeconnect-app"),                                { repeating = false })
+hl.bind("ALT + T", hl.dsp.exec_cmd("xdg-open https://www.youtube.com"),                                    { repeating = false })
 hl.bind("ALT + G", hl.dsp.exec_cmd("pkill nwg-look || nwg-look"),                                            { repeating = false })
 hl.bind("ALT + W", hl.dsp.exec_cmd("pkill rofi || bash ~/.config/Scripts/wallpaper_switcher.sh"),            { repeating = false })
 hl.bind("ALT + Q", hl.dsp.exec_cmd("foot -c $HOME/.config/foot/foot_for_cava.ini --app-id cava -e cava"),    { repeating = false })
