@@ -6,6 +6,7 @@ set -g fish_greeting ""
 alias c='clear'
 alias cat='bat'
 alias e='exit'
+alias q='exit'
 alias reload='source ~/.config/fish/config.fish ; kitty @ load-config'
 alias ls="eza -1h -s modified -r --icons=always --group-directories-first"
 alias bip="pacman -Qqe > ~/hobbyist-dotfiles/Configs/installed-pkg/pkglist.txt && echo 'Package names backed up'"
