@@ -85,13 +85,13 @@ window-rule {
 }
 
 window-rule {
-  match title="^save to$"
-  match title="^Authenticate$"
-  match title="^Library$"
-  match title="^Upload$"
+  match title="save to"
+  match title="Authenticate"
+  match title="Library"
+  match title="Upload"
   match title="Swayimg: clip-qr.png"
   match app-id="xdg-desktop-portal-gtk"
-  match title="^File Upload$"
+  match title="File Upload"
   open-floating true
   open-maximized false
   open-maximized-to-edges false
