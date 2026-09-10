@@ -10,7 +10,7 @@ local terminal = "kitty"
 
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/auto_detect_terminal.sh"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(primary_browser))
-hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/rofi_clipboard.sh"))
+hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("footclient --app-id cmus -e cmus"), { repeating = false })
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("pkill thunar || thunar"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("footclient --app-id bluetui -e bluetui"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
@@ -27,7 +27,7 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/random_wall_on_home.sh"))
-hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("footclient --app-id cmus -e cmus"), { repeating = false })
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/rofi_clipboard.sh"))
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("footclient --app-id nmtui -e nmtui"))
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("pkill localsend || localsend"), { repeating = false })
 

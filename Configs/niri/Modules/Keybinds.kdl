@@ -1,7 +1,7 @@
 binds {
     Mod+A {spawn-sh "bash $HOME/.config/Scripts/auto_detect_terminal.sh";}
     Mod+B {spawn "librewolf";}
-    Mod+C {spawn-sh "bash $HOME/.config/Scripts/rofi_clipboard.sh";}
+    Mod+C repeat=false {spawn-sh "pkill cmus || foot --app-id cmus -e cmus";}
     Mod+D {spawn-sh "pkill thunar || thunar";}
     Mod+E {spawn-sh "pkill bluetui || foot --app-id bluetui -e bluetui";}
     Mod+F {maximize-column;}
@@ -22,7 +22,7 @@ binds {
     Mod+U {focus-workspace-up;}
     Mod+V {toggle-window-floating;}
     Mod+W repeat=false {spawn-sh "bash $HOME/.config/Scripts/random_wall_on_home.sh";}
-    Mod+X repeat=false {spawn-sh "pkill cmus || foot --app-id cmus -e cmus";}
+    Mod+X {spawn-sh "bash $HOME/.config/Scripts/rofi_clipboard.sh";}
     Mod+Y {spawn-sh "pkill nmtui || foot --app-id nmtui -e nmtui";}
     Mod+Z repeat=false {spawn-sh "pkill localsend || localsend";}
 

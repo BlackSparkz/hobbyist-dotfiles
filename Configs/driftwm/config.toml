@@ -271,7 +271,7 @@ path = "/usr/share/driftwm/wallpapers/animated/dense_clouds.glsl"
 [keybindings]
   "Mod+A" = "spawn bash $HOME/.config/Scripts/auto_detect_terminal.sh"
   "Mod+B" = "exec librewolf"
-  "Mod+C" = "spawn bash $HOME/.config/Scripts/rofi_clipboard.sh"
+  "Mod+C" = "spawn footclient --app-id cmus -e cmus"
   "Mod+D" = "spawn pkill thunar || thunar"
   "Mod+E" = "spawn footclient --app-id bluetui -e bluetui"
   "Mod+F" = "toggle-fullscreen"
@@ -292,7 +292,7 @@ path = "/usr/share/driftwm/wallpapers/animated/dense_clouds.glsl"
 
 
   "Mod+W" = "none"
-  "Mod+X" = "spawn footclient --app-id cmus -e cmus"
+  "Mod+X" = "spawn bash $HOME/.config/Scripts/rofi_clipboard.sh"
   "Mod+Y" = "spawn footclient --app-id nmtui -e nmtui"
   "Mod+Z" = "spawn pkill localsend || localsend"
 
