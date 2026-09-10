@@ -21,4 +21,5 @@ function clean
     sudo journalctl --vacuum-time=7d
 
     echo "Cleanup done"
+    notify-send "Cleanup done" "The system is now bloat-free"
 end
