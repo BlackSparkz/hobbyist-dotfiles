@@ -54,6 +54,7 @@ slurp
 stow
 awww
 swayimg
+qrencode
 telegram-desktop
 timeshift
 thunar
