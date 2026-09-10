@@ -111,7 +111,7 @@
 > The Installation script uses [GNU Stow](https://www.gnu.org/software/stow/) under the hood, so do **not** delete or move `~/hobbyist-dotfiles/`, otherwise all Stow-based symlinks will break.
 
 ### Prerequisites
-- Clean Arch Linux (recommended) or an Arch-based distro (e.g. EndeavourOS, Manjaro)
+- Clean Arch Linux (recommended) or an Arch-based distro (e.g. EndeavourOS, CachyOS, Manjaro)
 
 ```bash
 sudo pacman -Syu --needed --noconfirm git
