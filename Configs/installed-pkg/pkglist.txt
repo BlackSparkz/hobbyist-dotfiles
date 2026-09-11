@@ -30,7 +30,7 @@ imagemagick
 kdeconnect
 kitty
 libnotify
-librewolf-bin
+librewolf
 helium-browser-bin
 localsend-bin
 mako
