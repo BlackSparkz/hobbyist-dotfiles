@@ -9,10 +9,16 @@ rofi -dmenu \
 
 exit_code=$?
 
+if [ -z "$selected" ]; then
+    exit 0
+fi
+
 if [ "$exit_code" -eq 10 ]; then
     # ctrl+q pressed
     cliphist decode <<< "$selected" | qrencode -o /tmp/clip-qr.png -s 6 -m 2 -t PNG
+    notify-send "QR Generated" "Scan QR to copy"
     timeout 8 swayimg /tmp/clip-qr.png
 else
     cliphist decode <<< "$selected" | wl-copy
+    notify-send "Clipboard" "Copied to clipboard"
 fi
