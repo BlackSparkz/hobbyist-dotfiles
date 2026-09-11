@@ -154,14 +154,7 @@ Configs/
 │   │   └── tricolor
 │   └── config
 ├── cmus
-│   ├── playlists
-│   │   └── Default
-│   ├── autosave
-│   ├── cache
-│   ├── command-history
-│   ├── lib.pl
-│   ├── rc
-│   └── search-history
+│   └── rc
 ├── driftwm
 │   └── config.toml
 ├── fastfetch
