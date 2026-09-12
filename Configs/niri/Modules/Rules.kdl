@@ -88,6 +88,7 @@ window-rule {
   match title="save to"
   match title="Authenticate"
   match title="Library"
+  match title="Media viewer"
   match title="Upload"
   match title="Swayimg: clip-qr.png"
   match app-id="xdg-desktop-portal-gtk"
