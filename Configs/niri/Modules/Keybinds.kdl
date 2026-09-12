@@ -35,7 +35,7 @@ binds {
     Alt+G {spawn-sh "pkill nwg-look || nwg-look";}
     Alt+H {spawn-sh "niri msg action power-off-monitors";}
     Alt+I {spawn-sh "notify-send 'Not registered'";}
-    Alt+J {spawn-sh "notify-send 'Not registered'";}
+    Alt+J {spawn-sh "pkill qrca || qrca";}
     Alt+K {spawn-sh "pkill kdeconnect-app || kdeconnect-app";}
     Alt+L repeat=false {spawn-sh "bash ~/.config/Scripts/random_wall_on_lockscr.sh";}
     Alt+M {fullscreen-window;}

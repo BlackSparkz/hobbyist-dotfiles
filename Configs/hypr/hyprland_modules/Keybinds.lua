@@ -139,6 +139,7 @@ hl.bind("ALT + L", hl.dsp.exec_cmd("bash ~/.config/Scripts/random_wall_on_locksc
 hl.bind("ALT + N", hl.dsp.exec_cmd("hyprctl reload && notify-send 'Hyprland' 'Config reloaded'"),            { locked = true, repeating = false })
 hl.bind("ALT + O", hl.dsp.exec_cmd("systemctl poweroff"),                                                    { locked = true, repeating = false })
 hl.bind("ALT + R", hl.dsp.exec_cmd("systemctl reboot"),                                                      { locked = true, repeating = false })
+hl.bind("ALT + J", hl.dsp.exec_cmd("pkill qrca || qrca"),                                                      { locked = true, repeating = false })
 hl.bind("ALT + S", hl.dsp.exec_cmd("systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh"),  { locked = true, repeating = false })
 hl.bind("ALT + D", hl.dsp.exec_cmd("rfkill toggle all"),                                                     { locked = true, repeating = false })
 hl.bind("ALT + E", hl.dsp.exec_cmd("rfkill toggle bluetooth"),                                               { locked = true, repeating = false })
