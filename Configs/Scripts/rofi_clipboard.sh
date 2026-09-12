@@ -15,7 +15,7 @@ fi
 
 if [ "$exit_code" -eq 10 ]; then
     # ctrl+q pressed
-    cliphist decode <<< "$selected" | qrencode -o /tmp/clip-qr.png -s 10 -m 2 -t PNG
+    cliphist decode <<< "$selected" | qrencode -o /tmp/clip-qr.png -s 12 -m 2 -t PNG
     notify-send "QR Generated" "Scan QR to copy"
     timeout 10 swayimg /tmp/clip-qr.png
 else
