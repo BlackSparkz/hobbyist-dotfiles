@@ -14,7 +14,7 @@ trap 'rm -f "$MAPPING_FILE"' EXIT
 
 collect_images() {
     shopt -s nullglob nocaseglob
-    for img in "$WALLPAPER_DIR"/*.{jpg,jpeg,png,webp,bmp,gif}; do
+    for img in "$WALLPAPER_DIR"/*.{jpg,jpeg,png,svg,webp,bmp,gif}; do
         [[ -f "$img" ]] && printf '%s\n' "$img"
     done
     shopt -u nullglob nocaseglob
