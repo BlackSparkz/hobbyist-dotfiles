@@ -13,10 +13,10 @@
 
   "custom/logo": {
     "format" : "󰣇   Niri",
-    "tooltip": false,
-    "tooltip-format": "App launcher",
+    "tooltip": true,
+    "tooltip-format": "Left click: App launcher\nRight click: Open foot\nMiddle click: Close focused window\nScroll up: Focus column left\nScroll down: Focus column right",
     "on-click": "pkill rofi || rofi -show drun",
-    "on-click-right": "foot",
+    "on-click-right": "bash $HOME/.config/Scripts/auto_detect_terminal.sh",
     "on-click-middle": "niri msg action close-window",
     "on-scroll-up": "niri msg action focus-column-left",
     "on-scroll-down": "niri msg action focus-column-right"

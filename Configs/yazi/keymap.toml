@@ -7,4 +7,5 @@ prepend_keymap = [
   { on = [ "d", "t" ], run = "remove --force", desc = "Move to Trash without confirmation" },
   { on = [ "g", "c" ], run  = "cd ~/hobbyist-dotfiles/Configs/", desc = "Cd to ~/hobbyist-dotfiles/Configs/" },
   { on = [ "g", "f" ], run  = "cd ~/.config", desc = "Cd to ~/.config" },
+  { on = [ "g", "w" ], run  = "cd ~/Wallpapers/", desc = "Cd to ~/Wallpapers/" },
 ]
