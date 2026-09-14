@@ -8,10 +8,17 @@ printf "[+] Starting Hobbyist dotfiles teardown...\n"
 
 # --- unstow dotfiles ---
 if [ -d "$DOTFILES" ]; then
-  printf "[+] Unstowing dotfiles...\n"
-  cd ~/hobbyist-dotfiles/
-  stow -D -t ~/.config Configs
-  stow -D -t ~/.config Plasma
+  read -rp "Remove stow based symlinks and restore backed up .config? (y/n) " unstow
+  if [[ "$unstow" == "y" ]]; then
+    printf "[+] Unstowing dotfiles and restoring .config...\n"
+    cd ~/hobbyist-dotfiles/
+    stow -D -t ~/.config Configs
+    stow -D -t ~/.config Plasma
+    rm -rf $HOME/.config
+    if [ -d "$HOME/.config.bak" ]; then
+      mv "$HOME/.config.bak" "$HOME/.config"
+    fi
+  fi
 fi
 
 pkglist="$DOTFILES/Configs/installed-pkg/pkglist.txt"
