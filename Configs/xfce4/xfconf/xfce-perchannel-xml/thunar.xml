@@ -3,12 +3,12 @@
 <channel name="thunar" version="1.0">
   <property name="last-view" type="string" value="ThunarIconView"/>
   <property name="last-icon-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_100_PERCENT"/>
-  <property name="last-window-width" type="int" value="921"/>
-  <property name="last-window-height" type="int" value="523"/>
-  <property name="last-window-maximized" type="bool" value="true"/>
+  <property name="last-window-width" type="int" value="854"/>
+  <property name="last-window-height" type="int" value="514"/>
+  <property name="last-window-maximized" type="bool" value="false"/>
   <property name="last-statusbar-visible" type="bool" value="false"/>
   <property name="last-menubar-visible" type="bool" value="true"/>
-  <property name="last-toolbar-items" type="string" value="menu:0,back:1,open-home:1,forward:1,open-parent:0,new-tab:0,new-window:0,toggle-split-view:0,undo:0,redo:0,zoom-out:0,zoom-in:0,zoom-reset:0,view-as-icons:0,view-as-detailed-list:0,view-as-compact-list:0,view-switcher:0,location-bar:1,reload:0,search:1,uca-action-1789119567543077-1:1"/>
+  <property name="last-toolbar-items" type="string" value="menu:0,back:0,open-home:0,forward:0,open-parent:0,new-tab:0,new-window:0,toggle-split-view:0,undo:0,redo:0,zoom-out:0,zoom-in:0,zoom-reset:0,view-as-icons:0,view-as-detailed-list:0,view-as-compact-list:0,view-switcher:0,location-bar:1,reload:0,search:1,uca-action-1789119567543077-1:1"/>
   <property name="last-separator-position" type="int" value="168"/>
   <property name="misc-single-click" type="bool" value="true"/>
   <property name="shortcuts-icon-size" type="string" value="THUNAR_ICON_SIZE_32"/>
@@ -25,4 +25,8 @@
   </property>
   <property name="last-focused-tab-left" type="int" value="0"/>
   <property name="last-focused-tab-right" type="int" value="0"/>
+  <property name="misc-single-click-timeout" type="uint" value="0"/>
+  <property name="last-location-bar" type="string" value="ThunarLocationButtons"/>
+  <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_38_PERCENT"/>
+  <property name="last-details-view-column-widths" type="string" value="50,50,150,50,50,103,50,50,405,50,50,64,50,72"/>
 </channel>

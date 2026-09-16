@@ -6,7 +6,7 @@
 	<submenu></submenu>
 	<unique-id>1789119567543077-1</unique-id>
 	<command>foot</command>
-	<description>Example for a custom action</description>
+	<description>Click to open foot terminal</description>
 	<range></range>
 	<patterns>*</patterns>
 	<startup-notify/>
