@@ -345,6 +345,9 @@ Configs/
 ├── systemd
 │   └── user
 │       └── niri.service
+├── Thunar
+│   ├── accels.scm
+│   └── uca.xml
 ├── waybar
 │   ├── DriftWM
 │   │   ├── config.jsonc
@@ -384,6 +387,10 @@ Configs/
 │   │   └── sleep.png
 │   ├── layout
 │   └── style.css
+├── xfce4
+│   └── xfconf
+│       └── xfce-perchannel-xml
+│           └── thunar.xml
 ├── xsettingsd
 │   └── xsettingsd.conf
 └── yazi
