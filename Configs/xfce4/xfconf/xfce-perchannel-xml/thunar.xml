@@ -2,7 +2,7 @@
 
 <channel name="thunar" version="1.0">
   <property name="last-view" type="string" value="ThunarIconView"/>
-  <property name="last-icon-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_100_PERCENT"/>
+  <property name="last-icon-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_150_PERCENT"/>
   <property name="last-window-width" type="int" value="854"/>
   <property name="last-window-height" type="int" value="514"/>
   <property name="last-window-maximized" type="bool" value="false"/>
@@ -13,11 +13,11 @@
   <property name="misc-single-click" type="bool" value="true"/>
   <property name="shortcuts-icon-size" type="string" value="THUNAR_ICON_SIZE_32"/>
   <property name="shortcuts-icon-emblems" type="bool" value="true"/>
-  <property name="tree-icon-size" type="string" value="THUNAR_ICON_SIZE_24"/>
+  <property name="tree-icon-size" type="string" value="THUNAR_ICON_SIZE_32"/>
   <property name="misc-symbolic-icons-in-sidepane" type="bool" value="false"/>
   <property name="misc-image-preview-mode" type="string" value="THUNAR_IMAGE_PREVIEW_MODE_EMBEDDED"/>
-  <property name="misc-middle-click-in-tab" type="bool" value="true"/>
-  <property name="misc-open-new-window-as-tab" type="bool" value="true"/>
+  <property name="misc-middle-click-in-tab" type="bool" value="false"/>
+  <property name="misc-open-new-window-as-tab" type="bool" value="false"/>
   <property name="misc-full-path-in-tab-title" type="bool" value="true"/>
   <property name="last-restore-tabs" type="bool" value="false"/>
   <property name="last-tabs-left" type="array">
@@ -27,6 +27,15 @@
   <property name="last-focused-tab-right" type="int" value="0"/>
   <property name="misc-single-click-timeout" type="uint" value="0"/>
   <property name="last-location-bar" type="string" value="ThunarLocationButtons"/>
-  <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_38_PERCENT"/>
-  <property name="last-details-view-column-widths" type="string" value="50,50,150,50,50,103,50,50,405,50,50,64,50,72"/>
+  <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_100_PERCENT"/>
+  <property name="last-details-view-column-widths" type="string" value="50,50,218,50,50,103,50,50,554,50,50,78,50,179"/>
+  <property name="last-side-pane" type="string" value="THUNAR_SIDEPANE_TYPE_TREE"/>
+  <property name="misc-use-csd" type="bool" value="false"/>
+  <property name="misc-change-window-icon" type="bool" value="false"/>
+  <property name="misc-thumbnail-mode" type="string" value="THUNAR_THUMBNAIL_MODE_ALWAYS"/>
+  <property name="misc-thumbnail-draw-frames" type="bool" value="false"/>
+  <property name="misc-text-beside-icons" type="bool" value="false"/>
+  <property name="misc-date-style" type="string" value="THUNAR_DATE_STYLE_SHORT"/>
+  <property name="misc-volume-management" type="bool" value="false"/>
+  <property name="last-image-preview-visible" type="bool" value="true"/>
 </channel>
