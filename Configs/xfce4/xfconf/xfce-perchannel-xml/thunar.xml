@@ -3,8 +3,8 @@
 <channel name="thunar" version="1.0">
   <property name="last-view" type="string" value="ThunarIconView"/>
   <property name="last-icon-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_150_PERCENT"/>
-  <property name="last-window-width" type="int" value="860"/>
-  <property name="last-window-height" type="int" value="520"/>
+  <property name="last-window-width" type="int" value="944"/>
+  <property name="last-window-height" type="int" value="1074"/>
   <property name="last-window-maximized" type="bool" value="false"/>
   <property name="last-statusbar-visible" type="bool" value="false"/>
   <property name="last-menubar-visible" type="bool" value="true"/>
