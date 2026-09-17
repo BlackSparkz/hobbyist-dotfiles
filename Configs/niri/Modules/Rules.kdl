@@ -74,6 +74,7 @@ window-rule {
   match app-id="Brave-origin-beta"
   match app-id="librewolf"
   match app-id="Helium"
+  match app-id="helium"
   match app-id="Brave-origin"
   match app-id="brave-origin"
   match app-id="foot"
