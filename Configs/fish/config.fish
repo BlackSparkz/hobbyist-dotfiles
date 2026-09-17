@@ -9,6 +9,7 @@ alias e='exit'
 alias q='exit'
 alias reload='source ~/.config/fish/config.fish ; kitty @ load-config'
 alias ls="eza -1h -s modified -r --icons=always --group-directories-first"
+alias gnomebackup="dconf dump / > ~/hobbyist-dotfiles/Gnome/gnome-settings-backup.conf && notify-send 'Gnome settings backed up'"
 alias bip="pacman -Qqe > ~/hobbyist-dotfiles/Configs/installed-pkg/pkglist.txt && echo 'Package names backed up'"
 
 # ==============================
