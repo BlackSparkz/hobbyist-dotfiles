@@ -7,7 +7,7 @@ hl.workspace_rule({ workspace = "3", layout = "dwindle" })
 
 hl.window_rule({
   name   = "float-file-pickers",
-  match  = { title = "^(Open File|Open Folder|Open|Save|Save As|Export|Import|Choose File|Rename)$" },
+  match  = { title = "Open File|Open Folder|Open|Save|Save As|Export|Import|Choose File|Rename" },
   match  = { class = "xdg-desktop-portal-gtk" },
   float  = true,
   center = true,
@@ -66,7 +66,7 @@ hl.window_rule({
   name  = "Dashboard",
   match = { class = "dashboard" },
   float = true,
-  no_initial_focus = false,
+  no_initial_focus = true,
   move = {1260,730},
   opacity = "1.0",
   pin = true,
