@@ -7,6 +7,7 @@ alias e='exit'
 alias q='exit'
 alias reload='source ~/.bashrc'
 alias ls="eza -1h -s modified -r --icons=always --group-directories-first"
+alias gnomebackup="dconf dump / > ~/hobbyist-dotfiles/Gnome/gnome-settings-backup.conf && notify-send 'Gnome settings backed up'"
 
 # ==============================
 # Navigation
