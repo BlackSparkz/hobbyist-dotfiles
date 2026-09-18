@@ -30,8 +30,8 @@
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_100_PERCENT"/>
   <property name="last-details-view-column-widths" type="string" value="50,50,218,50,50,103,50,50,554,50,50,78,50,179"/>
   <property name="last-side-pane" type="string" value="THUNAR_SIDEPANE_TYPE_TREE"/>
-  <property name="misc-use-csd" type="bool" value="false"/>
-  <property name="misc-change-window-icon" type="bool" value="false"/>
+  <property name="misc-use-csd" type="bool" value="true"/>
+  <property name="misc-change-window-icon" type="bool" value="true"/>
   <property name="misc-thumbnail-mode" type="string" value="THUNAR_THUMBNAIL_MODE_ONLY_LOCAL"/>
   <property name="misc-thumbnail-draw-frames" type="bool" value="false"/>
   <property name="misc-text-beside-icons" type="bool" value="false"/>
