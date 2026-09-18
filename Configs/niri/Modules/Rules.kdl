@@ -82,6 +82,7 @@ window-rule {
   match app-id="jetbrains-idea"
   match app-id="btop"
   match app-id="VSCodium"
+  match app-id="codium"
   match app-id="yazi"
   open-maximized true
 }
