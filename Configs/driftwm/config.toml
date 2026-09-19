@@ -21,7 +21,7 @@ autostart = [
   "systemd-run --user --no-block --collect --unit=fix-portal-env bash -c sleep 2 && systemctl --user import-environment WAYLAND_DISPLAY && systemctl --user restart xdg-desktop-portal-gtk xdg-desktop-portal",
   "wl-paste --type image --watch cliphist store",
   "wl-paste --type text --watch cliphist store",
-  "waybar -c $HOME/.config/waybar/DriftWM/config.jsonc -s $HOME/.config/waybar/DriftWM/style.css",
+  # "waybar -c $HOME/.config/waybar/DriftWM/config.jsonc -s $HOME/.config/waybar/DriftWM/style.css",
   "mako",
   "foot --server",
 ]
