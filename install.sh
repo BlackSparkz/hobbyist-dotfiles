@@ -28,8 +28,13 @@ fi
 printf "[+] Creating config directories...\n"
 mkdir -p ~/.local/share/fonts
 
-if [ -d "$HOME/.config" ]; then
+read -rp "Do you want to backup $HOME/.config? (y/n) " ans
+if [[ "$ans" == "y" ]]; then
+  if [ -d "$HOME/.config" ]; then
     mv "$HOME/.config" "$HOME/.config.bak"
+  fi
+else
+  printf "Skipping $HOME/.config backup\n"
 fi
 
 mkdir -p "$HOME/.config"
