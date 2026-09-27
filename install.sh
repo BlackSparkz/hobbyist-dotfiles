@@ -84,10 +84,13 @@ if [[ "$init" == "systemd" ]]; then
   sudo systemctl enable --now bluetooth.service
   sudo rfkill unblock bluetooth || true
 
-  printf "[+] Setting Niri as default...\n"
-  if [[ -f "$HOME/.config/systemd/user/niri.service" ]]; then
-    systemctl --user daemon-reload
-    systemctl --user enable niri.service
+  read -rp "Do you want to setup Niri as default session? (y/n) " niriasdef
+  if [[ "$niriasdef" == "y" ]]; then
+    printf "[+] Setting Niri as default...\n"
+    if [[ -f "$HOME/.config/systemd/user/niri.service" ]]; then
+      systemctl --user daemon-reload
+      systemctl --user enable niri.service
+    fi
   fi
 
   printf "[+] Enabling mako sound...\n"
