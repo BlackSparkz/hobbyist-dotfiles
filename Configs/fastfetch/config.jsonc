@@ -6,10 +6,10 @@
     "width": 25,           // Width in characters
     "height": 32,          // Height in characters
     "padding": {
-        "top": 1,          // Top padding
+        "top": 2,          // Top padding
         "left": 0,         // Left padding
         "right": 4         // Right padding
-    },
+    }
 },
 
     "display": {
@@ -53,9 +53,16 @@
         "terminal",
         "terminalfont",
         "uptime",
+
+        {
+          "type": "disk",
+          "keyIcon": "",
+          "format": "{create-time:10} [{days} days]"
+        },
+
         {
             "type": "custom",
             "format": "└{$1}───────────────{$1}┘"
-        },
+        }
     ]
 }
