@@ -26,7 +26,8 @@ binds {
     Mod+Y {spawn-sh "pkill nmtui || foot --app-id nmtui -e nmtui";}
     Mod+Z repeat=false {spawn-sh "pkill localsend || localsend";}
 
-    Alt+A {expand-column-to-available-width;}
+    // Alt+A {expand-column-to-available-width;}
+    Alt+A {spawn-sh "pkill codium || codium";}
     Alt+B allow-when-locked=true {spawn-sh "playerctl position 1+";}
     Alt+C allow-when-locked=true {spawn-sh "playerctl play-pause";}
     Alt+D repeat=false {spawn-sh "rfkill toggle all";}

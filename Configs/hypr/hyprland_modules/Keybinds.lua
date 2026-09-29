@@ -124,7 +124,7 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"),    { locked =
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"),    { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),      { locked = true })
 
-hl.bind("ALT + A",        hl.dsp.exec_cmd("codium"),                                                                { repeating = false })
+hl.bind("ALT + A",        hl.dsp.exec_cmd("pkill codium || codium"),                                                                { repeating = false })
 hl.bind("ALT + B",        hl.dsp.exec_cmd("playerctl position 1+"),   { locked = true, repeating = true })
 hl.bind("ALT + C",        hl.dsp.exec_cmd("playerctl play-pause"),    { locked = true })
 hl.bind("ALT + D",        hl.dsp.exec_cmd("rfkill toggle all"),                                                     { locked = true, repeating = false })
